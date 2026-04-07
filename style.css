@@ -848,6 +848,37 @@ body {
   color: var(--text-muted);
 }
 
+.mit-link {
+  color: var(--blue-bright);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+.mit-link:hover { text-decoration: underline; }
+
+.mit-section {
+  border-top: 1px solid var(--border);
+  padding: 28px 0 32px;
+  margin-top: 0;
+}
+
+.mit-section h4 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--blue-bright);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.mit-section p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 8px;
+  max-width: 900px;
+}
+
 /* ─── Animations ───────────────────────────────────────── */
 .fade-in {
   opacity: 0;

@@ -460,6 +460,32 @@ body {
 
 .service-link:hover { color: var(--blue-bright); gap: 10px; }
 
+.services-grid--two { grid-template-columns: repeat(2, 1fr); }
+
+.service-card--large { padding: 44px 36px; }
+
+.service-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.service-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.service-list li i {
+  color: var(--blue-bright);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
 /* ─── About ────────────────────────────────────────────── */
 .about { padding: 100px 0; }
 
@@ -873,6 +899,7 @@ body {
   .hero-logo-img { width: 75px; height: 75px; }
 
   .services-grid { grid-template-columns: 1fr; }
+  .services-grid--two { grid-template-columns: 1fr; }
   .portfolio-grid { grid-template-columns: 1fr; }
   .testimonials-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }

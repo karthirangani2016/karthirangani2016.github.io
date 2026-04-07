@@ -849,17 +849,38 @@ body {
 }
 
 .mit-link {
+  background: none;
+  border: none;
   color: var(--blue-bright);
-  text-decoration: none;
+  font-family: inherit;
+  font-size: 0.82rem;
   font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
   transition: var(--transition);
 }
-.mit-link:hover { text-decoration: underline; }
+.mit-link:hover { opacity: 0.8; }
+
+.mit-chevron {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+.mit-chevron.open { transform: rotate(180deg); }
 
 .mit-section {
   border-top: 1px solid var(--border);
-  padding: 28px 0 32px;
+  padding: 0 0;
   margin-top: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+.mit-section.open {
+  max-height: 600px;
+  padding: 28px 0 32px;
 }
 
 .mit-section h4 {

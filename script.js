@@ -133,15 +133,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
-
-// ─── MIT License toggle ────────────────────────────────
-const mitToggle = document.getElementById('mitToggle');
-const mitSection = document.getElementById('mit');
-const mitChevron = document.getElementById('mitChevron');
-
-if (mitToggle) {
-  mitToggle.addEventListener('click', () => {
-    const isOpen = mitSection.classList.toggle('open');
-    mitChevron.classList.toggle('open', isOpen);
-  });
-}

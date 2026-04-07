@@ -5,7 +5,7 @@ const path = require('path');
 const app = express();
 const PORT = 5000;
 const MESSAGES_FILE = path.join(__dirname, 'messages.json');
-const ADMIN_PASSWORD = 'nexsolve@2026';
+const ADMIN_PASSWORD = 'nexsolve2026';
 
 app.use(express.json());
 app.use(express.static(__dirname));
@@ -38,7 +38,7 @@ app.post('/api/contact', (req, res) => {
 
 app.post('/api/admin/messages', (req, res) => {
   const { password } = req.body;
-  if (password !== ADMIN_PASSWORD) {
+  if ((password || '').trim() !== ADMIN_PASSWORD) {
     return res.status(401).json({ error: 'Incorrect password.' });
   }
   const messages = JSON.parse(fs.readFileSync(MESSAGES_FILE));
@@ -47,7 +47,7 @@ app.post('/api/admin/messages', (req, res) => {
 
 app.delete('/api/admin/messages/:id', (req, res) => {
   const { password } = req.body;
-  if (password !== ADMIN_PASSWORD) {
+  if ((password || '').trim() !== ADMIN_PASSWORD) {
     return res.status(401).json({ error: 'Incorrect password.' });
   }
   let messages = JSON.parse(fs.readFileSync(MESSAGES_FILE));

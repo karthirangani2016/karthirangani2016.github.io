@@ -848,6 +848,17 @@ body {
   color: var(--text-muted);
 }
 
+.version-tag {
+  background: rgba(33,150,243,0.1);
+  border: 1px solid var(--border-bright);
+  color: var(--blue-bright);
+  padding: 3px 10px;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
 
 /* ─── Animations ───────────────────────────────────────── */
 .fade-in {

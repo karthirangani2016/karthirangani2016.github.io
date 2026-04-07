@@ -5,7 +5,7 @@ const path = require('path');
 const app = express();
 const PORT = 5000;
 const MESSAGES_FILE = path.join(__dirname, 'messages.json');
-const ADMIN_PASSWORD = 'nexsolve2026';
+const ADMIN_PASSWORD = 'nexsolve';
 
 app.use(express.json());
 app.use(express.static(__dirname));

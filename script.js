@@ -108,19 +108,37 @@ document.addEventListener('DOMContentLoaded', () => {
 const contactForm = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
 
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   const btn = contactForm.querySelector('button[type="submit"]');
   btn.disabled = true;
   btn.innerHTML = '<span>Sending...</span><i class="fa-solid fa-spinner fa-spin"></i>';
 
-  setTimeout(() => {
-    formSuccess.classList.add('show');
-    contactForm.reset();
-    btn.disabled = false;
-    btn.innerHTML = '<span>Send Message</span><i class="fa-solid fa-paper-plane"></i>';
-    setTimeout(() => formSuccess.classList.remove('show'), 5000);
-  }, 1200);
+  const body = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    subject: document.getElementById('subject').value,
+    message: document.getElementById('message').value,
+  };
+
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+
+    if (res.ok) {
+      formSuccess.classList.add('show');
+      contactForm.reset();
+      setTimeout(() => formSuccess.classList.remove('show'), 5000);
+    }
+  } catch {
+    alert('Something went wrong. Please try again.');
+  }
+
+  btn.disabled = false;
+  btn.innerHTML = '<span>Send Message</span><i class="fa-solid fa-paper-plane"></i>';
 });
 
 // ─── Smooth scroll for anchor links ────────────────────

@@ -3,273 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEA | SYSTEM INTERFACE</title>
+    <title>SEA | LOGIN</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --primary-blue: #00aaff; --bg-dark: #0a0e1a; --bg-panel: #111622; --text: #c0c8e0; --text-dim: #506080; --accent: #00ff88; --danger: #ff3344; --border: #1a2540; }
-        body { background: var(--bg-dark); color: var(--text); font-family: 'Courier New', monospace; height: 100vh; display: flex; flex-direction: column; }
-        .main-container { display: flex; flex: 1; overflow: hidden; }
-
-        .sidebar { width: 240px; background: var(--bg-panel); border-right: 1px solid var(--border); display: flex; flex-direction: column; padding: 10px; gap: 8px; flex-shrink: 0; }
-        .sidebar button { background: var(--primary-blue); color: #000; border: none; padding: 8px; font-family: inherit; font-weight: bold; cursor: pointer; border-radius: 4px; font-size: 0.8rem; }
-        .sidebar button:hover { background: #00ccff; }
-        .sidebar input { background: #0a0e1a; border: 1px solid var(--border); color: var(--text); padding: 6px; font-family: inherit; font-size: 0.75rem; border-radius: 3px; }
-        #chat-list { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 2px; }
-        .chat-item { padding: 6px 8px; cursor: pointer; border-radius: 3px; font-size: 0.75rem; color: var(--text-dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .chat-item:hover { background: #1a2540; color: var(--text); }
-        .chat-item.active { background: #1a3050; color: var(--primary-blue); }
-
-        main { flex: 1; display: flex; flex-direction: column; }
-
-        header { display: flex; align-items: center; justify-content: space-between; padding: 10px 20px; border-bottom: 1px solid var(--border); background: var(--bg-panel); }
-        .logo { font-size: 1.4rem; font-weight: bold; color: var(--primary-blue); letter-spacing: 3px; }
-        .logo span { color: var(--accent); }
-        .status-container { display: flex; align-items: center; gap: 8px; font-size: 0.75rem; }
-        .status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
-        .status-dot.busy { background: #ffaa00; animation: pulse 0.8s infinite; }
-        .status-dot.error { background: var(--danger); }
-        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-
-        .workspace { flex: 1; display: flex; overflow: hidden; }
-
-        #chat-window { flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; }
-        .message { max-width: 80%; padding: 10px 14px; border-radius: 6px; font-size: 0.85rem; line-height: 1.5; white-space: pre-wrap; }
-        .sea-message { background: #0d1f3d; border-left: 3px solid var(--primary-blue); align-self: flex-start; }
-        .user-message { background: #1a2a1a; border-left: 3px solid var(--accent); align-self: flex-end; }
-
-        .tactical-panel { width: 200px; background: var(--bg-panel); border-left: 1px solid var(--border); padding: 15px; font-size: 0.7rem; display: flex; flex-direction: column; gap: 10px; flex-shrink: 0; }
-        .panel-header { color: var(--primary-blue); font-weight: bold; letter-spacing: 1px; border-bottom: 1px solid var(--border); padding-bottom: 4px; }
-        .stat-group { display: flex; justify-content: space-between; }
-        .stat-label { color: var(--text-dim); }
-        .stat-value { color: var(--accent); }
-        .stat-bar { height: 4px; background: #0a0e1a; border-radius: 2px; overflow: hidden; margin-top: 2px; }
-        .bar-fill { height: 100%; background: var(--primary-blue); border-radius: 2px; }
-        #mini-log { color: var(--text-dim); font-size: 0.65rem; line-height: 1.6; }
-
-        .input-area { display: flex; padding: 12px 20px; border-top: 1px solid var(--border); background: var(--bg-panel); gap: 10px; }
-        .input-area input { flex: 1; background: #0a0e1a; border: 1px solid var(--border); color: var(--text); padding: 10px 14px; font-family: inherit; font-size: 0.85rem; border-radius: 4px; outline: none; }
-        .input-area input:focus { border-color: var(--primary-blue); }
-        .input-area button { background: var(--primary-blue); color: #000; border: none; padding: 10px 20px; font-family: inherit; font-weight: bold; cursor: pointer; border-radius: 4px; }
-        .input-area button:hover { background: #00ccff; }
-
-        .config-bar { display: flex; align-items: center; gap: 8px; padding: 6px 20px; background: #080c16; border-top: 1px solid var(--border); font-size: 0.65rem; color: var(--text-dim); }
-        .config-bar input { background: #0a0e1a; border: 1px solid var(--border); color: var(--text); padding: 4px 8px; font-family: inherit; font-size: 0.65rem; border-radius: 3px; flex: 1; max-width: 400px; }
-
-        @media (max-width: 700px) {
-            .sidebar { width: 160px; }
-            .tactical-panel { display: none; }
-        }
+        :root { --primary: #00aaff; --bg: #0a0e1a; --panel: #111622; --text: #c0c8e0; --dim: #506080; --accent: #00ff88; --border: #1a2540; }
+        body { background: var(--bg); color: var(--text); font-family: 'Courier New', monospace; height: 100vh; display: flex; align-items: center; justify-content: center; }
+        .login-box { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 40px; width: 360px; }
+        .login-box h1 { color: var(--primary); font-size: 1.4rem; text-align: center; margin-bottom: 4px; letter-spacing: 3px; }
+        .login-box .sub { color: var(--dim); text-align: center; font-size: 0.75rem; margin-bottom: 24px; letter-spacing: 1px; }
+        .login-box input { width: 100%; padding: 10px 12px; margin-bottom: 12px; background: #0a0e1a; border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 0.85rem; border-radius: 4px; outline: none; }
+        .login-box input:focus { border-color: var(--primary); }
+        .login-box button { width: 100%; padding: 10px; margin-bottom: 8px; background: var(--primary); color: #000; border: none; font-family: inherit; font-weight: bold; font-size: 0.85rem; border-radius: 4px; cursor: pointer; }
+        .login-box button:hover { background: #00ccff; }
+        .login-box .toggle { text-align: center; font-size: 0.75rem; color: var(--dim); cursor: pointer; }
+        .login-box .toggle:hover { color: var(--primary); }
+        .login-box .error { color: #ff4444; font-size: 0.75rem; text-align: center; margin-bottom: 8px; display: none; }
+        .login-box .loading { text-align: center; color: var(--dim); font-size: 0.75rem; display: none; }
+        .hidden { display: none !important; }
     </style>
 </head>
 <body>
-    <div class="main-container">
-        <aside class="sidebar">
-            <button id="new-chat-btn">+ NEW CHAT</button>
-            <input type="text" id="chat-search" placeholder="Search chats..." autocomplete="off">
-            <div id="chat-list"></div>
-        </aside>
+    <div class="login-box" id="loginBox">
+        <h1>SEA//</h1>
+        <div class="sub">SYSTEM ACCESS</div>
+        <div class="error" id="authError"></div>
+        <div class="loading" id="authLoading">Authenticating...</div>
+        <input type="text" id="authUser" placeholder="Username" autocomplete="username">
+        <input type="password" id="authPass" placeholder="Password" autocomplete="current-password">
+        <button id="authBtn">LOGIN</button>
+        <div class="toggle" id="authToggle">No account? Register</div>
+    </div>
 
-        <main>
-            <header>
+    <div id="chatApp" class="hidden">
+        <style>
+            .chat-wrap { display: flex; flex-direction: column; height: 100vh; width: 100vw; }
+            .chat-header { display: flex; align-items: center; justify-content: space-between; padding: 10px 20px; border-bottom: 1px solid var(--border); background: var(--panel); }
+            .chat-header .logo { font-size: 1.2rem; font-weight: bold; color: var(--primary); letter-spacing: 3px; }
+            .chat-header .logo span { color: var(--accent); }
+            .chat-header .user-info { display: flex; align-items: center; gap: 12px; font-size: 0.75rem; }
+            .chat-header .user-info .logout-btn { background: none; border: 1px solid #ff4444; color: #ff4444; padding: 4px 10px; font-family: inherit; font-size: 0.7rem; border-radius: 3px; cursor: pointer; }
+            .chat-header .user-info .logout-btn:hover { background: #ff4444; color: #000; }
+            .chat-main { display: flex; flex: 1; overflow: hidden; }
+            .chat-sidebar { width: 220px; background: var(--panel); border-right: 1px solid var(--border); display: flex; flex-direction: column; padding: 10px; gap: 8px; flex-shrink: 0; }
+            .chat-sidebar button { background: var(--primary); color: #000; border: none; padding: 8px; font-family: inherit; font-weight: bold; cursor: pointer; border-radius: 4px; font-size: 0.75rem; }
+            .chat-sidebar button:hover { background: #00ccff; }
+            .chat-sidebar input { background: #0a0e1a; border: 1px solid var(--border); color: var(--text); padding: 6px; font-family: inherit; font-size: 0.7rem; border-radius: 3px; }
+            #chatList { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 2px; }
+            .chat-item { padding: 6px 8px; cursor: pointer; border-radius: 3px; font-size: 0.7rem; color: var(--dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+            .chat-item:hover { background: #1a2540; color: var(--text); }
+            .chat-item.active { background: #1a3050; color: var(--primary); }
+            .chat-area { flex: 1; display: flex; flex-direction: column; }
+            .chat-messages { flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; }
+            .msg { max-width: 80%; padding: 10px 14px; border-radius: 6px; font-size: 0.85rem; line-height: 1.5; white-space: pre-wrap; }
+            .msg.sea { background: #0d1f3d; border-left: 3px solid var(--primary); align-self: flex-start; }
+            .msg.user { background: #1a2a1a; border-left: 3px solid var(--accent); align-self: flex-end; }
+            .chat-input { display: flex; padding: 12px 20px; border-top: 1px solid var(--border); background: var(--panel); gap: 10px; }
+            .chat-input input { flex: 1; background: #0a0e1a; border: 1px solid var(--border); color: var(--text); padding: 10px 14px; font-family: inherit; font-size: 0.85rem; border-radius: 4px; outline: none; }
+            .chat-input input:focus { border-color: var(--primary); }
+            .chat-input button { background: var(--primary); color: #000; border: none; padding: 10px 20px; font-family: inherit; font-weight: bold; cursor: pointer; border-radius: 4px; }
+            .chat-input button:hover { background: #00ccff; }
+        </style>
+
+        <div class="chat-wrap">
+            <div class="chat-header">
                 <div class="logo">SEA<span>//</span></div>
-                <div class="status-container">
-                    <div id="status-dot" class="status-dot"></div>
-                    <div id="status-text">SYSTEM: ONLINE</div>
+                <div class="user-info">
+                    <span id="displayUser"></span>
+                    <button class="logout-btn" id="logoutBtn">LOGOUT</button>
                 </div>
-            </header>
-
-            <div class="workspace">
-                <div id="chat-window">
-                    <div class="message sea-message">SEA online. How can I assist you, Sir?</div>
+            </div>
+            <div class="chat-main">
+                <div class="chat-sidebar">
+                    <button id="newChatBtn">+ NEW CHAT</button>
+                    <input type="text" id="chatSearch" placeholder="Search..." autocomplete="off">
+                    <div id="chatList"></div>
                 </div>
-
-                <aside class="tactical-panel">
-                    <div class="panel-header">TACTICAL DASHBOARD</div>
-                    <div class="stat-group">
-                        <div class="stat-label">STATUS:</div>
-                        <div class="stat-value" id="tact-status">ONLINE</div>
+                <div class="chat-area">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="msg sea">SEA online. How can I assist you, Sir?</div>
                     </div>
-                    <div class="stat-group">
-                        <div class="stat-label">CHATS:</div>
-                        <div class="stat-value" id="chat-count">0</div>
+                    <div class="chat-input">
+                        <input type="text" id="msgInput" placeholder="Enter command..." autocomplete="off">
+                        <button id="sendBtn">Transmit</button>
                     </div>
-                    <div class="panel-header">SYSTEM LOGS</div>
-                    <div id="mini-log">
-                        [INIT] SEA core synchronized.<br>
-                        [READY] Awaiting orders.
-                    </div>
-                </aside>
+                </div>
             </div>
-
-            <div class="input-area">
-                <input type="text" id="user-input" placeholder="Enter command..." autocomplete="off">
-                <button id="send-btn">Transmit</button>
-            </div>
-
-            <div class="config-bar">
-                API: <input type="text" id="api-url" value="https://rlakshmamma11ha.pythonanywhere.com">
-                <button id="save-api-btn" style="background:var(--border);color:var(--text-dim);border:none;padding:3px 8px;font-family:inherit;cursor:pointer;border-radius:3px;font-size:0.65rem;">Set</button>
-            </div>
-        </main>
+        </div>
     </div>
 
     <script>
-        let API_BASE = localStorage.getItem('sea_api_url') || 'https://rlakshmamma11ha.pythonanywhere.com';
-        let apiInput = document.getElementById('api-url');
-        if (API_BASE) apiInput.value = API_BASE;
-
-        document.getElementById('save-api-btn').onclick = () => {
-            API_BASE = apiInput.value.replace(/\/+$/, '');
-            localStorage.setItem('sea_api_url', API_BASE);
-            setStatus('online');
-            addLog('[CONFIG] API set to ' + API_BASE);
-        };
-
-        const chatWindow = document.getElementById('chat-window');
-        const userInput = document.getElementById('user-input');
-        const sendBtn = document.getElementById('send-btn');
-        const statusDot = document.getElementById('status-dot');
-        const statusText = document.getElementById('status-text');
-        const chatList = document.getElementById('chat-list');
-        const newChatBtn = document.getElementById('new-chat-btn');
-        const chatSearch = document.getElementById('chat-search');
-        const chatCount = document.getElementById('chat-count');
-
+        const API = 'https://rlakshmamma11ha.pythonanywhere.com';
+        let token = localStorage.getItem('sea_token');
+        let username = localStorage.getItem('sea_user');
         let currentChatId = null;
         let allChats = [];
-        let currentTyping = null;
 
-        function setStatus(s) {
-            statusDot.className = 'status-dot';
-            if (s === 'busy') { statusDot.classList.add('busy'); statusText.innerText = 'SYSTEM: PROCESSING...'; }
-            else if (s === 'error') { statusDot.classList.add('error'); statusText.innerText = 'SYSTEM: ERROR'; }
-            else { statusText.innerText = 'SYSTEM: ONLINE'; }
+        const loginBox = document.getElementById('loginBox');
+        const chatApp = document.getElementById('chatApp');
+        const authUser = document.getElementById('authUser');
+        const authPass = document.getElementById('authPass');
+        const authBtn = document.getElementById('authBtn');
+        const authToggle = document.getElementById('authToggle');
+        const authError = document.getElementById('authError');
+        const authLoading = document.getElementById('authLoading');
+        const displayUser = document.getElementById('displayUser');
+        const logoutBtn = document.getElementById('logoutBtn');
+        const chatMessages = document.getElementById('chatMessages');
+        const msgInput = document.getElementById('msgInput');
+        const sendBtn = document.getElementById('sendBtn');
+        const chatList = document.getElementById('chatList');
+        const newChatBtn = document.getElementById('newChatBtn');
+        const chatSearch = document.getElementById('chatSearch');
+
+        let isRegisterMode = false;
+
+        function showError(msg) {
+            authError.textContent = msg;
+            authError.style.display = 'block';
         }
 
-        function addLog(text) {
-            const log = document.getElementById('mini-log');
-            log.innerHTML = log.innerHTML + '<br>' + text;
-            if (log.innerHTML.split('<br>').length > 20) {
-                log.innerHTML = log.innerHTML.split('<br>').slice(-15).join('<br>');
-            }
+        function hideError() {
+            authError.style.display = 'none';
         }
 
-        function appendMessage(role, text) {
-            const msgDiv = document.createElement('div');
-            msgDiv.className = `message ${role}-message`;
-            msgDiv.innerText = text;
-            chatWindow.appendChild(msgDiv);
-            chatWindow.scrollTop = chatWindow.scrollHeight;
+        function setLoading(loading) {
+            authLoading.style.display = loading ? 'block' : 'none';
+            authBtn.disabled = loading;
         }
 
-        async function apiCall(path, options = {}) {
-            if (!API_BASE) {
-                appendMessage('sea', 'Set your API URL first in the bar below, Sir.');
-                return null;
-            }
-            const url = API_BASE + path;
+        async function authFetch(path, options = {}) {
+            const headers = { 'Content-Type': 'application/json' };
+            if (token) headers['Authorization'] = 'Bearer ' + token;
             try {
-                const res = await fetch(url, {
-                    headers: { 'Content-Type': 'application/json' },
-                    ...options
-                });
-                if (!res.ok) throw new Error(`HTTP ${res.status}`);
-                return await res.json();
+                const res = await fetch(API + path, { headers, ...options });
+                const data = await res.json();
+                return { ok: res.ok, status: res.status, data };
             } catch (e) {
-                console.error('API error:', e);
-                appendMessage('sea', `Connection error: ${e.message}. Check the API URL, Sir.`);
-                setStatus('error');
-                return null;
+                return { ok: false, status: 0, data: { error: e.message } };
             }
         }
+
+        async function doAuth(endpoint) {
+            const user = authUser.value.trim().toLowerCase();
+            const pass = authPass.value.trim();
+            if (!user || !pass) { showError('Fill in both fields.'); return; }
+            hideError();
+            setLoading(true);
+            const { ok, status, data } = await authFetch(endpoint, {
+                method: 'POST',
+                body: JSON.stringify({ username: user, password: pass })
+            });
+            setLoading(false);
+            if (ok && data.token) {
+                token = data.token;
+                username = data.username;
+                localStorage.setItem('sea_token', token);
+                localStorage.setItem('sea_user', username);
+                showChat();
+            } else {
+                showError(data.error || 'Something went wrong.');
+            }
+        }
+
+        authBtn.onclick = () => doAuth(isRegisterMode ? '/auth/register' : '/auth/login');
+        authUser.onkeydown = e => { if (e.key === 'Enter') authPass.focus(); };
+        authPass.onkeydown = e => { if (e.key === 'Enter') authBtn.click(); };
+
+        authToggle.onclick = () => {
+            isRegisterMode = !isRegisterMode;
+            authBtn.textContent = isRegisterMode ? 'REGISTER' : 'LOGIN';
+            authToggle.textContent = isRegisterMode ? 'Already have an account? Login' : "No account? Register";
+            hideError();
+        };
+
+        async function verifyToken() {
+            const { ok } = await authFetch('/auth/verify');
+            if (ok) showChat();
+            else { token = null; username = null; localStorage.removeItem('sea_token'); localStorage.removeItem('sea_user'); showLogin(); }
+        }
+
+        function showLogin() { loginBox.classList.remove('hidden'); chatApp.classList.add('hidden'); authUser.focus(); }
+        function showChat() { loginBox.classList.add('hidden'); chatApp.classList.remove('hidden'); displayUser.textContent = username; fetchChats(); msgInput.focus(); }
+
+        logoutBtn.onclick = () => {
+            token = null; username = null;
+            localStorage.removeItem('sea_token'); localStorage.removeItem('sea_user');
+            showLogin();
+        };
 
         async function fetchChats() {
-            const data = await apiCall('/chats');
-            if (data) {
-                allChats = data;
-                renderChatList(allChats);
-                chatCount.innerText = allChats.length;
-            }
+            const { ok, data } = await authFetch('/chats');
+            if (ok) { allChats = data; renderChats(); }
         }
 
-        function renderChatList(chats) {
+        function renderChats() {
             chatList.innerHTML = '';
-            chats.forEach(chat => {
-                const item = document.createElement('div');
-                item.className = `chat-item ${chat.id === currentChatId ? 'active' : ''}`;
-                item.innerText = chat.title;
-                item.onclick = () => loadChat(chat.id);
-                chatList.appendChild(item);
+            allChats.forEach(c => {
+                const el = document.createElement('div');
+                el.className = 'chat-item' + (c.id === currentChatId ? ' active' : '');
+                el.textContent = c.title;
+                el.onclick = () => loadChat(c.id);
+                chatList.appendChild(el);
             });
         }
 
-        async function createNewChat() {
-            const data = await apiCall('/chats/new', { method: 'POST' });
-            if (data) {
+        async function newChat() {
+            const { ok, data } = await authFetch('/chats/new', { method: 'POST' });
+            if (ok) {
                 currentChatId = data.id;
-                chatWindow.innerHTML = '<div class="message sea-message">New session initialized. SEA standing by, Sir.</div>';
+                chatMessages.innerHTML = '<div class="msg sea">New session initialized. SEA standing by, Sir.</div>';
                 fetchChats();
-                userInput.focus();
             }
         }
 
-        async function loadChat(chatId) {
-            const data = await apiCall(`/chats/${chatId}`);
-            if (data) {
-                currentChatId = chatId;
-                chatWindow.innerHTML = '';
+        async function loadChat(id) {
+            currentChatId = id;
+            const { ok, data } = await authFetch('/chats/' + id);
+            if (ok) {
+                chatMessages.innerHTML = '';
                 if (data.messages.length === 0) {
-                    appendMessage('sea', 'Session active. Standing by, Sir.');
+                    chatMessages.innerHTML = '<div class="msg sea">Session active. Standing by, Sir.</div>';
                 } else {
-                    data.messages.forEach(msg => appendMessage(msg.role, msg.text));
+                    data.messages.forEach(m => {
+                        const el = document.createElement('div');
+                        el.className = 'msg ' + m.role;
+                        el.textContent = m.text;
+                        chatMessages.appendChild(el);
+                    });
                 }
-                renderChatList(allChats);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+                renderChats();
             }
         }
 
         async function sendMessage() {
-            const message = userInput.value.trim();
-            if (!message) return;
-
-            if (!currentChatId) await createNewChat();
-            if (!currentChatId) return;
-
-            appendMessage('user', message);
-            userInput.value = '';
-            setStatus('busy');
-
-            const data = await apiCall('/ask', {
+            const msg = msgInput.value.trim();
+            if (!msg || !currentChatId) return;
+            msgInput.value = '';
+            const el = document.createElement('div');
+            el.className = 'msg user'; el.textContent = msg;
+            chatMessages.appendChild(el);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            const { ok, data } = await authFetch('/ask', {
                 method: 'POST',
-                body: JSON.stringify({ message, chat_id: currentChatId })
+                body: JSON.stringify({ message: msg, chat_id: currentChatId })
             });
-
-            if (data && data.reply) {
-                appendMessage('sea', data.reply);
-                addLog('[MSG] Response received');
+            if (ok && data.reply) {
+                const r = document.createElement('div');
+                r.className = 'msg sea'; r.textContent = data.reply;
+                chatMessages.appendChild(r);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
                 fetchChats();
-                setTimeout(() => setStatus('online'), 500);
-            } else {
-                setStatus('error');
             }
         }
 
-        chatSearch.addEventListener('input', (e) => {
+        newChatBtn.onclick = newChat;
+        sendBtn.onclick = sendMessage;
+        msgInput.onkeydown = e => { if (e.key === 'Enter') sendMessage(); };
+        chatSearch.oninput = e => {
             const term = e.target.value.toLowerCase();
-            const filtered = allChats.filter(c => c.title.toLowerCase().includes(term));
-            renderChatList(filtered);
-        });
-
-        newChatBtn.addEventListener('click', createNewChat);
-        sendBtn.addEventListener('click', sendMessage);
-        userInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') sendMessage();
-        });
-
-        window.onload = () => {
-            fetchChats();
-            addLog('[INIT] Connected to ' + API_BASE);
-            userInput.focus();
+            renderChats(allChats.filter(c => c.title.toLowerCase().includes(term)));
         };
+
+        if (token && username) verifyToken();
+        else showLogin();
     </script>
 </body>
 </html>

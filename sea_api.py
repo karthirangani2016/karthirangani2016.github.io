@@ -3,6 +3,7 @@ import sys
 import json
 import uuid
 import random
+import hashlib
 import joblib
 import numpy as np
 from datetime import datetime
@@ -10,10 +11,12 @@ from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sklearn.neural_network import MLPClassifier
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from functools import wraps
 
 BRAIN_FILE = "sea_brain.pkl"
 KNOWLEDGE_DIR = "knowledge"
 CHATS_DIR = "chats"
+USERS_FILE = "users.json"
 
 if not os.path.exists(CHATS_DIR):
     os.makedirs(CHATS_DIR)
@@ -35,33 +38,182 @@ SEA_PREFIXES = [
 def make_conversational(text):
     return random.choice(SEA_PREFIXES) + text
 
-def get_chat_path(chat_id):
-    return os.path.join(CHATS_DIR, f"{chat_id}.json")
+def load_users():
+    if not os.path.exists(USERS_FILE):
+        return {}
+    with open(USERS_FILE, "r") as f:
+        return json.load(f)
 
-def save_chat(chat_id, data):
-    path = get_chat_path(chat_id)
+def save_users(users):
+    with open(USERS_FILE, "w") as f:
+        json.dump(users, f, indent=2)
+
+def hash_password(password):
+    salt = "sea_salt_2026"
+    return hashlib.sha256((password + salt).encode()).hexdigest()
+
+def create_user(username, password):
+    users = load_users()
+    if username in users:
+        return None
+    token = str(uuid.uuid4())
+    users[username] = {
+        "password": hash_password(password),
+        "token": token,
+        "created": datetime.now().isoformat()
+    }
+    save_users(users)
+    return token
+
+def login_user(username, password):
+    users = load_users()
+    if username not in users:
+        return None
+    if users[username]["password"] != hash_password(password):
+        return None
+    token = str(uuid.uuid4())
+    users[username]["token"] = token
+    save_users(users)
+    return token
+
+def get_user_by_token(token):
+    users = load_users()
+    for username, data in users.items():
+        if data["token"] == token:
+            return username
+    return None
+
+def get_user_chats_dir(username):
+    path = os.path.join(CHATS_DIR, username)
+    if not os.path.exists(path):
+        os.makedirs(path)
+    return path
+
+def get_chat_path(username, chat_id):
+    return os.path.join(get_user_chats_dir(username), f"{chat_id}.json")
+
+def save_chat(username, chat_id, data):
+    path = get_chat_path(username, chat_id)
     with open(path, "w") as f:
         json.dump(data, f)
 
-def load_chat(chat_id):
-    path = get_chat_path(chat_id)
+def load_chat(username, chat_id):
+    path = get_chat_path(username, chat_id)
     if os.path.exists(path):
         with open(path, "r") as f:
             return json.load(f)
     return {"id": chat_id, "title": "New Session", "messages": []}
 
-def get_all_chats():
+def get_all_chats(username):
     chats = []
-    if not os.path.exists(CHATS_DIR):
+    dir_path = get_user_chats_dir(username)
+    if not os.path.exists(dir_path):
         return chats
-    for f in os.listdir(CHATS_DIR):
+    for f in os.listdir(dir_path):
         if f.endswith(".json"):
-            path = os.path.join(CHATS_DIR, f)
+            path = os.path.join(dir_path, f)
             with open(path, "r") as fh:
                 data = json.load(fh)
                 chats.append({"id": data["id"], "title": data["title"]})
     chats.sort(key=lambda x: x["id"])
     return chats
+
+def require_auth(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        auth = request.headers.get("Authorization", "")
+        token = auth.replace("Bearer ", "") if auth.startswith("Bearer ") else auth
+        username = get_user_by_token(token)
+        if not username:
+            return jsonify({"error": "Unauthorized"}), 401
+        return f(username, *args, **kwargs)
+    return decorated
+
+# =========================
+# AUTH ROUTES
+# =========================
+
+@app.route('/auth/register', methods=['POST'])
+def register():
+    data = request.get_json()
+    username = data.get("username", "").strip().lower()
+    password = data.get("password", "").strip()
+    if not username or not password:
+        return jsonify({"error": "Username and password required"}), 400
+    if len(username) < 3 or len(password) < 3:
+        return jsonify({"error": "Username and password must be at least 3 characters"}), 400
+    token = create_user(username, password)
+    if not token:
+        return jsonify({"error": "Username already exists"}), 409
+    return jsonify({"token": token, "username": username}), 201
+
+@app.route('/auth/login', methods=['POST'])
+def login():
+    data = request.get_json()
+    username = data.get("username", "").strip().lower()
+    password = data.get("password", "").strip()
+    if not username or not password:
+        return jsonify({"error": "Username and password required"}), 400
+    token = login_user(username, password)
+    if not token:
+        return jsonify({"error": "Invalid username or password"}), 401
+    return jsonify({"token": token, "username": username})
+
+@app.route('/auth/verify', methods=['GET'])
+@require_auth
+def verify(username):
+    return jsonify({"valid": True, "username": username})
+
+# =========================
+# CHAT ROUTES (AUTH'D)
+# =========================
+
+@app.route('/')
+def index():
+    return jsonify({"status": "SEA ONLINE", "message": "API is running."})
+
+@app.route('/chats', methods=['GET'])
+@require_auth
+def list_chats(username):
+    return jsonify(get_all_chats(username))
+
+@app.route('/chats/<chat_id>', methods=['GET'])
+@require_auth
+def get_chat_history(username, chat_id):
+    return jsonify(load_chat(username, chat_id))
+
+@app.route('/chats/new', methods=['POST'])
+@require_auth
+def new_chat(username):
+    chat_id = str(uuid.uuid4())
+    data = {"id": chat_id, "title": "New Session", "messages": []}
+    save_chat(username, chat_id, data)
+    return jsonify(data), 201
+
+@app.route('/ask', methods=['POST'])
+@require_auth
+def ask(username):
+    data = request.get_json()
+    message = data.get('message', '')
+    chat_id = data.get('chat_id', None)
+
+    chat_data = load_chat(username, chat_id) if chat_id else None
+    reply, result_data = process_interaction(message, brain, chat_data)
+
+    if chat_data:
+        chat_data['messages'].append({"role": "user", "text": message})
+        chat_data['messages'].append({"role": "sea", "text": reply})
+        if len(chat_data['messages']) < 6:
+            chat_data['title'] = message[:40]
+        if result_data:
+            chat_data.update(result_data)
+        save_chat(username, chat_id, chat_data)
+
+    return jsonify({"reply": reply})
+
+# =========================
+# KNOWLEDGE / BRAIN
+# =========================
 
 def load_data():
     questions = []
@@ -109,33 +261,22 @@ class NeuralBrain:
                 return "Awaiting approval, Sir.", chat_data, None
 
         input_lower = user_input.lower()
-
         intent_keywords = {
-            'create': 'autonomous_architect',
-            'make': 'autonomous_architect',
-            'build': 'autonomous_architect',
-            'generate': 'autonomous_architect',
-            'develop': 'autonomous_architect',
-            'status': 'system_status',
-            'report': 'system_status',
-            'scan': 'network_scan',
-            'agent': 'agent_mode',
-            'code': 'agent_mode',
-            'project': 'agent_mode',
+            'create': 'autonomous_architect', 'make': 'autonomous_architect',
+            'build': 'autonomous_architect', 'generate': 'autonomous_architect',
+            'develop': 'autonomous_architect', 'status': 'system_status',
+            'report': 'system_status', 'scan': 'network_scan',
+            'agent': 'agent_mode', 'code': 'agent_mode', 'project': 'agent_mode',
         }
-
         detected_intent = 'reasoning'
         for word, intent in intent_keywords.items():
             if word in input_lower:
                 detected_intent = intent
                 break
-
         if detected_intent == 'network_scan':
             return "Network scan unavailable in cloud deployment.", {}, None
-
         best_score = 0
         best_answer = "I don't have enough data to answer that, Sir. Try teaching me with: #teach question :: answer"
-
         for question, answer in self.knowledge_base:
             q_words = set(question.lower().split())
             i_words = set(input_lower.split())
@@ -145,10 +286,8 @@ class NeuralBrain:
                 if score > best_score:
                     best_score = score
                     best_answer = answer
-
         if best_score < 0.15 and detected_intent != 'reasoning':
             return self._handle_intent(detected_intent, user_input), {}, None
-
         return make_conversational(best_answer), {}, None
 
     def _handle_intent(self, intent, user_input):
@@ -187,73 +326,10 @@ def build_brain():
 def process_interaction(message, brain, chat_data=None):
     is_agent = message.strip().startswith("#agent")
     clean_message = message.replace("#agent", "", 1).strip() if is_agent else message.strip()
-
-    exec_reply = execute_strategic_action(clean_message)
-    if exec_reply:
-        return exec_reply, False
-
     reply, result_data, auto_payload = brain.think(clean_message, chat_data)
     if auto_payload:
-        action_result, _ = execute_strategic_action(auto_payload)
-        reply = f"{reply}\n\n[AUTONOMOUS ACTION]: {auto_payload}\n{action_result}"
+        reply = f"{reply}\n\n[AUTONOMOUS ACTION]: {auto_payload}"
     return reply, result_data
-
-def execute_strategic_action(action):
-    return None
-
-def get_reply(user_input, brain, chat_data=None):
-    return brain.think(user_input, chat_data)
-
-@app.route('/')
-def index():
-    return jsonify({"status": "SEA ONLINE", "message": "API is running. Use /ask endpoint."})
-
-@app.route('/chats', methods=['GET'])
-def list_chats():
-    return jsonify(get_all_chats())
-
-@app.route('/chats/<chat_id>', methods=['GET'])
-def get_chat_history(chat_id):
-    return jsonify(load_chat(chat_id))
-
-@app.route('/chats/new', methods=['POST'])
-def new_chat():
-    chat_id = str(uuid.uuid4())
-    data = {"id": chat_id, "title": "New Session", "messages": []}
-    save_chat(chat_id, data)
-    return jsonify(data), 201
-
-@app.route('/ask', methods=['POST'])
-def ask():
-    data = request.get_json()
-    message = data.get('message', '')
-    chat_id = data.get('chat_id', None)
-
-    chat_data = load_chat(chat_id) if chat_id else None
-
-    reply, result_data = process_interaction(message, brain, chat_data)
-
-    if chat_data:
-        chat_data['messages'].append({"role": "user", "text": message})
-        chat_data['messages'].append({"role": "sea", "text": reply})
-        if len(chat_data['messages']) < 6:
-            chat_data['title'] = message[:40]
-        if result_data:
-            chat_data.update(result_data)
-        save_chat(chat_id, chat_data)
-
-    return jsonify({"reply": reply})
-
-@app.route('/teach', methods=['POST'])
-def teach():
-    data = request.get_json()
-    question = data.get('question', '')
-    answer = data.get('answer', '')
-    if question and answer:
-        with open(os.path.join(KNOWLEDGE_DIR, "custom_taught.txt"), "a") as f:
-            f.write(f"{question}\n{answer}\n")
-        return jsonify({"status": "learned", "question": question, "answer": answer})
-    return jsonify({"error": "Need both question and answer"}), 400
 
 brain = build_brain()
 

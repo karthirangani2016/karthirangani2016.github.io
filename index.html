@@ -3,315 +3,214 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NexSolve Tech – Innovative Tech Solutions</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>JARVIS4 | AI Interface</title>
+  <link rel="stylesheet" href="static/style.css" />
 </head>
 <body>
+  <div class="main-container">
+    <aside class="sidebar">
+      <button id="new-chat-btn">+ NEW CHAT</button>
+      <div class="search-container">
+        <input type="text" id="chat-search" placeholder="Search chats..." autocomplete="off" />
+      </div>
+      <div id="chat-list"></div>
+    </aside>
 
-  <!-- Navigation -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#home" class="nav-logo">
-        <img src="logo.png" alt="NexSolve Tech Logo" class="logo-img" />
-        <span class="logo-text">Nex<span>Solve</span></span>
-      </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#services" class="nav-link">Services</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <a href="#contact" class="btn btn-primary nav-cta">Get Started</a>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+    <main>
+      <header>
+        <div class="logo">SEA</div>
+        <div class="status-container">
+          <div id="status-dot" class="status-dot"></div>
+          <div id="status-text">SYSTEM: ONLINE</div>
+        </div>
+      </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="hero-bg">
-      <div class="grid-overlay"></div>
-    </div>
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        Innovative Tech Solutions
+      <div class="workspace">
+        <div id="chat-window"></div>
+        <aside class="tactical-panel">
+          <div class="panel-header">TACTICAL DASHBOARD</div>
+          <div class="stat-group">
+            <div class="stat-label">TARGET IP:</div>
+            <div class="stat-value" id="target-ip">10.11.48.180</div>
+          </div>
+          <div class="stat-group">
+            <div class="stat-label">NETWORK STRESS:</div>
+            <div class="stat-bar"><div class="bar-fill" id="stress-bar" style="width: 12%"></div></div>
+          </div>
+          <div class="panel-header">SYSTEM LOGS</div>
+          <div id="mini-log">[INIT] Static AI core loaded.<br>[READY] JARVIS4 active.</div>
+        </aside>
       </div>
-      <h1 class="hero-title">
-        We Build <span class="gradient-text">Next-Gen</span><br />
-        Digital Solutions
-      </h1>
-      <p class="hero-subtitle">
-        NexSolve Tech builds professional, high-quality websites for businesses and provides reliable support to fix any issues — so you can focus on what matters most.
-      </p>
-      <div class="hero-actions">
-        <a href="#services" class="btn btn-primary">Explore Services</a>
-        <a href="#portfolio" class="btn btn-outline">View Our Work</a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="hex-ring hex-ring-1"></div>
-      <div class="hex-ring hex-ring-2"></div>
-      <div class="hex-ring hex-ring-3"></div>
-      <div class="hex-center">
-        <img src="logo.png" alt="NexSolve" class="hero-logo-img" />
-      </div>
-    </div>
-  </section>
 
-  <!-- Services Section -->
-  <section class="services" id="services">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">What We Do</span>
-        <h2 class="section-title">Our <span class="gradient-text">Services</span></h2>
-        <p class="section-subtitle">We specialise in two things — building websites that make an impact, and fixing problems so your site always runs smoothly.</p>
+      <div class="input-area">
+        <input type="text" id="user-input" placeholder="Enter command..." autocomplete="off" />
+        <button id="send-btn">Transmit</button>
       </div>
-      <div class="services-grid services-grid--two">
-        <div class="service-card service-card--large">
-          <div class="service-icon">
-            <i class="fa-solid fa-globe"></i>
-          </div>
-          <h3>Website Building</h3>
-          <p>We design and develop professional, fast, and fully responsive websites tailored to your brand. From simple landing pages to complete business websites — we handle everything from layout and design to going live.</p>
-          <ul class="service-list">
-            <li><i class="fa-solid fa-check"></i> Custom design matched to your brand</li>
-            <li><i class="fa-solid fa-check"></i> Mobile-friendly & fast-loading</li>
-            <li><i class="fa-solid fa-check"></i> SEO-ready structure</li>
-            <li><i class="fa-solid fa-check"></i> Contact forms & interactive features</li>
-          </ul>
-          <a href="#contact" class="service-link">Get Your Website <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="service-card service-card--large">
-          <div class="service-icon">
-            <i class="fa-solid fa-screwdriver-wrench"></i>
-          </div>
-          <h3>Issue Fixing & Support</h3>
-          <p>Got a website that's broken, slow, or not working the way it should? We diagnose and fix issues quickly, ensuring your site is back up and running without hassle.</p>
-          <ul class="service-list">
-            <li><i class="fa-solid fa-check"></i> Bug fixes & error resolution</li>
-            <li><i class="fa-solid fa-check"></i> Performance & speed improvements</li>
-            <li><i class="fa-solid fa-check"></i> Layout & display fixes</li>
-            <li><i class="fa-solid fa-check"></i> Ongoing maintenance & updates</li>
-          </ul>
-          <a href="#contact" class="service-link">Fix My Website <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </main>
+  </div>
 
-  <!-- About Section -->
-  <section class="about" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-visual">
-          <div class="about-img-wrapper">
-            <div class="about-glow"></div>
-            <img src="logo.png" alt="NexSolve Tech" class="about-logo" />
-          </div>
-          <div class="tech-tags">
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">AWS</span>
-            <span class="tech-tag">TensorFlow</span>
-            <span class="tech-tag">Kubernetes</span>
-            <span class="tech-tag">Flutter</span>
-            <span class="tech-tag">Docker</span>
-          </div>
-        </div>
-        <div class="about-content">
-          <span class="section-tag">Who We Are</span>
-          <h2 class="section-title">Driven by <span class="gradient-text">Innovation</span></h2>
-          <p class="about-text">
-            NexSolve Tech is a forward-thinking technology company dedicated to building transformative digital solutions. We combine deep technical expertise with a passion for innovation to help businesses of all sizes thrive in the digital age.
-          </p>
-          <p class="about-text">
-            Our team of seasoned engineers, designers, and strategists work hand-in-hand with clients to deliver solutions that are not just functional — but exceptional. We believe every problem has an elegant solution, and we won't stop until we find it.
-          </p>
-          <div class="about-features">
-            <div class="about-feature">
-              <i class="fa-solid fa-circle-check"></i>
-              <span>Agile development methodology</span>
-            </div>
-            <div class="about-feature">
-              <i class="fa-solid fa-circle-check"></i>
-              <span>24/7 support and maintenance</span>
-            </div>
-            <div class="about-feature">
-              <i class="fa-solid fa-circle-check"></i>
-              <span>On-time, on-budget delivery</span>
-            </div>
-            <div class="about-feature">
-              <i class="fa-solid fa-circle-check"></i>
-              <span>Transparent communication</span>
-            </div>
-          </div>
-          <a href="#contact" class="btn btn-primary">Work With Us</a>
-        </div>
-      </div>
+  <div id="device-modal" class="modal">
+    <div class="modal-content">
+      <div class="panel-header">NETWORK SCAN</div>
+      <p style="font-size: 0.8rem; margin: 10px 0; color: var(--primary-blue);">SELECT TARGET DEVICE, SIR:</p>
+      <div id="device-list" class="device-list"></div>
     </div>
-  </section>
+  </div>
 
-  <!-- Portfolio Section -->
-  <section class="portfolio" id="portfolio">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Our Work</span>
-        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
-        <p class="section-subtitle">A selection of projects that showcase our expertise and commitment to quality.</p>
-      </div>
-      <div class="portfolio-grid">
-        <div class="portfolio-card">
-          <div class="portfolio-img" style="background: linear-gradient(135deg, #0f3460, #16213e);">
-            <i class="fa-solid fa-cart-shopping portfolio-icon"></i>
-          </div>
-          <div class="portfolio-info">
-            <span class="portfolio-tag">E-Commerce</span>
-            <h3>ShopNex Platform</h3>
-            <p>A full-stack e-commerce solution with AI-powered product recommendations and real-time inventory management.</p>
-            <div class="portfolio-tech">
-              <span>React</span><span>Node.js</span><span>MongoDB</span>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio-card">
-          <div class="portfolio-img" style="background: linear-gradient(135deg, #0d1b4b, #1a1a2e);">
-            <i class="fa-solid fa-hospital portfolio-icon"></i>
-          </div>
-          <div class="portfolio-info">
-            <span class="portfolio-tag">Healthcare</span>
-            <h3>MediTrack System</h3>
-            <p>Patient management system with telemedicine features, secure data handling, and predictive health analytics.</p>
-            <div class="portfolio-tech">
-              <span>Python</span><span>Django</span><span>AWS</span>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio-card">
-          <div class="portfolio-img" style="background: linear-gradient(135deg, #001d3d, #003566);">
-            <i class="fa-solid fa-chart-pie portfolio-icon"></i>
-          </div>
-          <div class="portfolio-info">
-            <span class="portfolio-tag">FinTech</span>
-            <h3>FinEdge Analytics</h3>
-            <p>Real-time financial analytics dashboard with ML-driven fraud detection and automated reporting.</p>
-            <div class="portfolio-tech">
-              <span>Vue.js</span><span>FastAPI</span><span>PostgreSQL</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="globe-container"><div class="globe"></div></div>
 
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Get In Touch</span>
-        <h2 class="section-title">Let's Build Something <span class="gradient-text">Great</span></h2>
-        <p class="section-subtitle">Ready to transform your business? Drop us a message and we'll get back to you within 24 hours.</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <div class="contact-item">
-            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-            <div>
-              <h4>Email Us</h4>
-              <p>karthirangani2016@gmail.com</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
-            <div>
-              <h4>Call Us</h4>
-              <p>+91 9989232225</p>
-            </div>
-          </div>
-          <div class="social-links">
-            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#" class="social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          </div>
-        </div>
-        <form class="contact-form" id="contactForm">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" placeholder="John Doe" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="john@example.com" required />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="How can we help?" required />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full">
-            <span>Send Message</span>
-            <i class="fa-solid fa-paper-plane"></i>
-          </button>
-          <div class="form-success" id="formSuccess">
-            <i class="fa-solid fa-circle-check"></i>
-            Message sent successfully! We'll be in touch soon.
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
+  <script>
+    const STORAGE_KEY = 'jarvis4_chats';
+    const chatWindow = document.getElementById('chat-window');
+    const userInput = document.getElementById('user-input');
+    const sendBtn = document.getElementById('send-btn');
+    const statusDot = document.getElementById('status-dot');
+    const statusText = document.getElementById('status-text');
+    const chatList = document.getElementById('chat-list');
+    const newChatBtn = document.getElementById('new-chat-btn');
+    const chatSearch = document.getElementById('chat-search');
+    const deviceModal = document.getElementById('device-modal');
+    const deviceList = document.getElementById('device-list');
+    const targetIp = document.getElementById('target-ip');
+    const stressBar = document.getElementById('stress-bar');
+    const miniLog = document.getElementById('mini-log');
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="logo.png" alt="NexSolve Tech" class="footer-logo" />
-          <p>Building the future, one solution at a time. NexSolve Tech — where innovation meets execution.</p>
-        </div>
-        <div class="footer-links">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Careers</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#services">Website Building</a></li>
-            <li><a href="#services">Issue Fixing & Support</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Cookie Policy</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 NexSolve Tech. All rights reserved.</p>
-        <p class="version-tag">v1.8</p>
-      </div>
-    </div>
-  </footer>
+    const devices = [
+      { ip: '10.11.48.180', name: 'A06' },
+      { ip: '10.11.48.181', name: 'BETA-3' },
+      { ip: '10.11.48.182', name: 'NODE-7' }
+    ];
 
-  <script src="script.js"></script>
+    let currentChatId = null;
+    let allChats = {};
+
+    function setStatus(text, state = 'online') {
+      statusText.textContent = `SYSTEM: ${text}`;
+      statusDot.className = `status-dot ${state}`;
+    }
+
+    function addLog(message) {
+      miniLog.innerHTML += `${message}<br>`;
+      miniLog.scrollTop = miniLog.scrollHeight;
+    }
+
+    function loadChats() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      allChats = saved ? JSON.parse(saved) : {};
+      if (!Object.keys(allChats).length) {
+        const welcomeId = createChat('Main Hub');
+        currentChatId = welcomeId;
+      }
+      renderChatList();
+      renderCurrentChat();
+    }
+
+    function saveChats() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(allChats));
+    }
+
+    function createChat(name = `Chat ${Object.keys(allChats).length + 1}`) {
+      const id = `chat-${Date.now()}`;
+      allChats[id] = { id, name, messages: [{ role: 'system', text: 'JARVIS4 ready for commands.' }] };
+      saveChats();
+      return id;
+    }
+
+    function renderChatList() {
+      chatList.innerHTML = '';
+      const query = chatSearch.value.toLowerCase();
+      Object.values(allChats).forEach(chat => {
+        if (!chat.name.toLowerCase().includes(query)) return;
+        const item = document.createElement('div');
+        item.className = 'chat-item' + (chat.id === currentChatId ? ' active' : '');
+        item.textContent = chat.name;
+        item.onclick = () => { currentChatId = chat.id; renderCurrentChat(); renderChatList(); };
+        chatList.appendChild(item);
+      });
+    }
+
+    function renderCurrentChat() {
+      if (!currentChatId || !allChats[currentChatId]) {
+        currentChatId = Object.keys(allChats)[0];
+      }
+      const chat = allChats[currentChatId];
+      chatWindow.innerHTML = '';
+      chat.messages.forEach(message => {
+        const msg = document.createElement('div');
+        msg.className = `message ${message.role === 'user' ? 'user-message' : 'assistant-message'}`;
+        msg.innerHTML = `<strong>${message.role === 'user' ? 'USER' : 'JARVIS4'}:</strong> ${message.text}`;
+        chatWindow.appendChild(msg);
+      });
+      chatWindow.scrollTop = chatWindow.scrollHeight;
+    }
+
+    function getJarvisResponse(prompt) {
+      const normalized = prompt.trim().toLowerCase();
+      if (!normalized) return 'Please enter a command, sir.';
+      if (normalized.includes('scan')) {
+        openDeviceModal();
+        return 'Scanning network for active targets...';
+      }
+      if (normalized.includes('status')) {
+        return 'JARVIS4 systems nominal. All subsystems green.';
+      }
+      if (normalized.includes('attack') || normalized.includes('target')) {
+        const device = devices[Math.floor(Math.random() * devices.length)];
+        targetIp.textContent = device.ip;
+        stressBar.style.width = `${40 + Math.floor(Math.random() * 40)}%`;
+        return `Target locked: ${device.name} (${device.ip}). Preparing tactical payload.`;
+      }
+      return 'Command acknowledged. Executing adaptive simulation routine.';
+    }
+
+    function openDeviceModal() {
+      deviceModal.style.display = 'flex';
+      deviceList.innerHTML = '';
+      devices.forEach(device => {
+        const button = document.createElement('button');
+        button.textContent = `${device.name} — ${device.ip}`;
+        button.onclick = () => {
+          targetIp.textContent = device.ip;
+          deviceModal.style.display = 'none';
+          addLog(`[TARGET] Device ${device.name} selected.`);
+        };
+        deviceList.appendChild(button);
+      });
+    }
+
+    function closeDeviceModal() {
+      deviceModal.style.display = 'none';
+    }
+
+    function sendMessage() {
+      const text = userInput.value.trim();
+      if (!text) return;
+      const chat = allChats[currentChatId];
+      chat.messages.push({ role: 'user', text });
+      chat.messages.push({ role: 'assistant', text: getJarvisResponse(text) });
+      saveChats();
+      renderCurrentChat();
+      userInput.value = '';
+      addLog(`[CMD] ${text}`);
+    }
+
+    sendBtn.addEventListener('click', sendMessage);
+    userInput.addEventListener('keydown', event => {
+      if (event.key === 'Enter') sendMessage();
+    });
+    newChatBtn.addEventListener('click', () => {
+      currentChatId = createChat(`Session ${Object.keys(allChats).length + 1}`);
+      renderChatList();
+      renderCurrentChat();
+      addLog('[CHAT] New session created.');
+    });
+    chatSearch.addEventListener('input', renderChatList);
+
+    window.addEventListener('click', event => {
+      if (event.target === deviceModal) closeDeviceModal();
+    });
+
+    loadChats();
+  </script>
 </body>
 </html>

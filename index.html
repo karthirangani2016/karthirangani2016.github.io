@@ -3,119 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JARVIS4 — Karthikeya's Pi Battlestation</title>
+    <title>SEA | SYSTEM INTERFACE</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            background: #0a0a1a;
-            color: #c0c0e0;
-            font-family: 'Courier New', monospace;
-            padding: 2rem;
-            max-width: 900px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-        h1 {
-            color: #00ff88;
-            font-size: 1.8rem;
-            border-bottom: 1px solid #00ff88;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-        h1 span { color: #ff4444; }
-        .subtitle {
-            color: #8888aa;
-            margin-bottom: 2rem;
-            font-size: 0.9rem;
-        }
-        .section {
-            margin-bottom: 2rem;
-        }
-        .section h2 {
-            color: #ffaa00;
-            font-size: 1.1rem;
-            margin-bottom: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        .file-list {
-            list-style: none;
-        }
-        .file-list li {
-            padding: 0.3rem 0;
-            border-bottom: 1px solid #1a1a3a;
-        }
-        .file-list a {
-            color: #00aaff;
-            text-decoration: none;
-        }
-        .file-list a:hover {
-            color: #00ddff;
-            text-decoration: underline;
-        }
-        .file-list .desc {
-            color: #666688;
-            font-size: 0.8rem;
-        }
-        .status {
-            position: fixed;
-            bottom: 1rem;
-            right: 1rem;
-            color: #333355;
-            font-size: 0.7rem;
+        :root { --primary-blue: #00aaff; --bg-dark: #0a0e1a; --bg-panel: #111622; --text: #c0c8e0; --text-dim: #506080; --accent: #00ff88; --danger: #ff3344; --border: #1a2540; }
+        body { background: var(--bg-dark); color: var(--text); font-family: 'Courier New', monospace; height: 100vh; display: flex; flex-direction: column; }
+        .main-container { display: flex; flex: 1; overflow: hidden; }
+
+        .sidebar { width: 240px; background: var(--bg-panel); border-right: 1px solid var(--border); display: flex; flex-direction: column; padding: 10px; gap: 8px; flex-shrink: 0; }
+        .sidebar button { background: var(--primary-blue); color: #000; border: none; padding: 8px; font-family: inherit; font-weight: bold; cursor: pointer; border-radius: 4px; font-size: 0.8rem; }
+        .sidebar button:hover { background: #00ccff; }
+        .sidebar input { background: #0a0e1a; border: 1px solid var(--border); color: var(--text); padding: 6px; font-family: inherit; font-size: 0.75rem; border-radius: 3px; }
+        #chat-list { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 2px; }
+        .chat-item { padding: 6px 8px; cursor: pointer; border-radius: 3px; font-size: 0.75rem; color: var(--text-dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .chat-item:hover { background: #1a2540; color: var(--text); }
+        .chat-item.active { background: #1a3050; color: var(--primary-blue); }
+
+        main { flex: 1; display: flex; flex-direction: column; }
+
+        header { display: flex; align-items: center; justify-content: space-between; padding: 10px 20px; border-bottom: 1px solid var(--border); background: var(--bg-panel); }
+        .logo { font-size: 1.4rem; font-weight: bold; color: var(--primary-blue); letter-spacing: 3px; }
+        .logo span { color: var(--accent); }
+        .status-container { display: flex; align-items: center; gap: 8px; font-size: 0.75rem; }
+        .status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+        .status-dot.busy { background: #ffaa00; animation: pulse 0.8s infinite; }
+        .status-dot.error { background: var(--danger); }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+        .workspace { flex: 1; display: flex; overflow: hidden; }
+
+        #chat-window { flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; }
+        .message { max-width: 80%; padding: 10px 14px; border-radius: 6px; font-size: 0.85rem; line-height: 1.5; white-space: pre-wrap; }
+        .sea-message { background: #0d1f3d; border-left: 3px solid var(--primary-blue); align-self: flex-start; }
+        .user-message { background: #1a2a1a; border-left: 3px solid var(--accent); align-self: flex-end; }
+
+        .tactical-panel { width: 200px; background: var(--bg-panel); border-left: 1px solid var(--border); padding: 15px; font-size: 0.7rem; display: flex; flex-direction: column; gap: 10px; flex-shrink: 0; }
+        .panel-header { color: var(--primary-blue); font-weight: bold; letter-spacing: 1px; border-bottom: 1px solid var(--border); padding-bottom: 4px; }
+        .stat-group { display: flex; justify-content: space-between; }
+        .stat-label { color: var(--text-dim); }
+        .stat-value { color: var(--accent); }
+        .stat-bar { height: 4px; background: #0a0e1a; border-radius: 2px; overflow: hidden; margin-top: 2px; }
+        .bar-fill { height: 100%; background: var(--primary-blue); border-radius: 2px; }
+        #mini-log { color: var(--text-dim); font-size: 0.65rem; line-height: 1.6; }
+
+        .input-area { display: flex; padding: 12px 20px; border-top: 1px solid var(--border); background: var(--bg-panel); gap: 10px; }
+        .input-area input { flex: 1; background: #0a0e1a; border: 1px solid var(--border); color: var(--text); padding: 10px 14px; font-family: inherit; font-size: 0.85rem; border-radius: 4px; outline: none; }
+        .input-area input:focus { border-color: var(--primary-blue); }
+        .input-area button { background: var(--primary-blue); color: #000; border: none; padding: 10px 20px; font-family: inherit; font-weight: bold; cursor: pointer; border-radius: 4px; }
+        .input-area button:hover { background: #00ccff; }
+
+        .config-bar { display: flex; align-items: center; gap: 8px; padding: 6px 20px; background: #080c16; border-top: 1px solid var(--border); font-size: 0.65rem; color: var(--text-dim); }
+        .config-bar input { background: #0a0e1a; border: 1px solid var(--border); color: var(--text); padding: 4px 8px; font-family: inherit; font-size: 0.65rem; border-radius: 3px; flex: 1; max-width: 400px; }
+
+        @media (max-width: 700px) {
+            .sidebar { width: 160px; }
+            .tactical-panel { display: none; }
         }
     </style>
 </head>
 <body>
-    <h1>JARVIS4 <span>//</span> PI BATTLESTATION</h1>
-    <div class="subtitle">~ Karthikeya's Raspberry Pi 3B+ Project Repository ~</div>
+    <div class="main-container">
+        <aside class="sidebar">
+            <button id="new-chat-btn">+ NEW CHAT</button>
+            <input type="text" id="chat-search" placeholder="Search chats..." autocomplete="off">
+            <div id="chat-list"></div>
+        </aside>
 
-    <div class="section">
-        <h2>Python Files</h2>
-        <ul class="file-list">
-            <li><a href="echo_frequencies_movie.py">echo_frequencies_movie.py</a> <span class="desc">— THE ECHO FREQUENCIES movie (turtle + pyttsx3)</span></li>
-            <li><a href="chat.py">chat.py</a> <span class="desc">— SEA AI chat interface</span></li>
-            <li><a href="voice.py">voice.py</a> <span class="desc">— Voice module</span></li>
-            <li><a href="camera.py">camera.py</a> <span class="desc">— Camera module</span></li>
-            <li><a href="harvester.py">harvester.py</a> <span class="desc">— Data harvester</span></li>
-        </ul>
+        <main>
+            <header>
+                <div class="logo">SEA<span>//</span></div>
+                <div class="status-container">
+                    <div id="status-dot" class="status-dot"></div>
+                    <div id="status-text">SYSTEM: ONLINE</div>
+                </div>
+            </header>
+
+            <div class="workspace">
+                <div id="chat-window">
+                    <div class="message sea-message">SEA online. How can I assist you, Sir?</div>
+                </div>
+
+                <aside class="tactical-panel">
+                    <div class="panel-header">TACTICAL DASHBOARD</div>
+                    <div class="stat-group">
+                        <div class="stat-label">STATUS:</div>
+                        <div class="stat-value" id="tact-status">ONLINE</div>
+                    </div>
+                    <div class="stat-group">
+                        <div class="stat-label">CHATS:</div>
+                        <div class="stat-value" id="chat-count">0</div>
+                    </div>
+                    <div class="panel-header">SYSTEM LOGS</div>
+                    <div id="mini-log">
+                        [INIT] SEA core synchronized.<br>
+                        [READY] Awaiting orders.
+                    </div>
+                </aside>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Enter command..." autocomplete="off">
+                <button id="send-btn">Transmit</button>
+            </div>
+
+            <div class="config-bar">
+                API: <input type="text" id="api-url" value="https://yourusername.pythonanywhere.com">
+                <button id="save-api-btn" style="background:var(--border);color:var(--text-dim);border:none;padding:3px 8px;font-family:inherit;cursor:pointer;border-radius:3px;font-size:0.65rem;">Set</button>
+            </div>
+        </main>
     </div>
 
-    <div class="section">
-        <h2>Knowledge Base</h2>
-        <ul class="file-list">
-            <li><a href="theory.txt">theory.txt</a> <span class="desc">— Morris-Thorne wormholes, exotic matter, unified polarity</span></li>
-            <li><a href="knowledge/physics.txt">physics.txt</a></li>
-            <li><a href="knowledge/astrophysics_and_quantum.txt">astrophysics_and_quantum.txt</a></li>
-            <li><a href="knowledge/cybersecurity.txt">cybersecurity.txt</a></li>
-            <li><a href="knowledge/hacking.txt">hacking.txt</a></li>
-            <li><a href="knowledge/robotics.txt">robotics.txt</a></li>
-            <li><a href="knowledge/programming.txt">programming.txt</a></li>
-            <li><a href="knowledge/biology.txt">biology.txt</a></li>
-            <li><a href="knowledge/chemistry.txt">chemistry.txt</a></li>
-            <li><a href="knowledge/history.txt">history.txt</a></li>
-            <li><a href="knowledge/geography.txt">geography.txt</a></li>
-            <li><a href="knowledge/multiverse_and_scifi.txt">multiverse_and_scifi.txt</a></li>
-            <li><a href="knowledge/time_travel.txt">time_travel.txt</a></li>
-            <li><a href="knowledge/">[browse all]</a></li>
-        </ul>
-    </div>
+    <script>
+        let API_BASE = localStorage.getItem('sea_api_url') || '';
+        let apiInput = document.getElementById('api-url');
+        if (API_BASE) apiInput.value = API_BASE;
 
-    <div class="section">
-        <h2>Chat Archive</h2>
-        <ul class="file-list">
-            <li><a href="chats/">chats/</a></li>
-        </ul>
-    </div>
+        document.getElementById('save-api-btn').onclick = () => {
+            API_BASE = apiInput.value.replace(/\/+$/, '');
+            localStorage.setItem('sea_api_url', API_BASE);
+            setStatus('online');
+            addLog('[CONFIG] API set to ' + API_BASE);
+        };
 
-    <div class="section">
-        <h2>Web UI</h2>
-        <ul class="file-list">
-            <li><a href="templates/index.html">SEA Interface (Flask template)</a></li>
-            <li><a href="static/style.css">CSS (if served via Flask)</a></li>
-        </ul>
-    </div>
+        const chatWindow = document.getElementById('chat-window');
+        const userInput = document.getElementById('user-input');
+        const sendBtn = document.getElementById('send-btn');
+        const statusDot = document.getElementById('status-dot');
+        const statusText = document.getElementById('status-text');
+        const chatList = document.getElementById('chat-list');
+        const newChatBtn = document.getElementById('new-chat-btn');
+        const chatSearch = document.getElementById('chat-search');
+        const chatCount = document.getElementById('chat-count');
 
-    <div class="status">Raspberry Pi 3B+ | Debian 12 aarch64 | 1GB RAM | 195GiB free</div>
+        let currentChatId = null;
+        let allChats = [];
+        let currentTyping = null;
+
+        function setStatus(s) {
+            statusDot.className = 'status-dot';
+            if (s === 'busy') { statusDot.classList.add('busy'); statusText.innerText = 'SYSTEM: PROCESSING...'; }
+            else if (s === 'error') { statusDot.classList.add('error'); statusText.innerText = 'SYSTEM: ERROR'; }
+            else { statusText.innerText = 'SYSTEM: ONLINE'; }
+        }
+
+        function addLog(text) {
+            const log = document.getElementById('mini-log');
+            log.innerHTML = log.innerHTML + '<br>' + text;
+            if (log.innerHTML.split('<br>').length > 20) {
+                log.innerHTML = log.innerHTML.split('<br>').slice(-15).join('<br>');
+            }
+        }
+
+        function appendMessage(role, text) {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `message ${role}-message`;
+            msgDiv.innerText = text;
+            chatWindow.appendChild(msgDiv);
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+        }
+
+        async function apiCall(path, options = {}) {
+            if (!API_BASE) {
+                appendMessage('sea', 'Set your API URL first in the bar below, Sir.');
+                return null;
+            }
+            const url = API_BASE + path;
+            try {
+                const res = await fetch(url, {
+                    headers: { 'Content-Type': 'application/json' },
+                    ...options
+                });
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                return await res.json();
+            } catch (e) {
+                console.error('API error:', e);
+                appendMessage('sea', `Connection error: ${e.message}. Check the API URL, Sir.`);
+                setStatus('error');
+                return null;
+            }
+        }
+
+        async function fetchChats() {
+            const data = await apiCall('/chats');
+            if (data) {
+                allChats = data;
+                renderChatList(allChats);
+                chatCount.innerText = allChats.length;
+            }
+        }
+
+        function renderChatList(chats) {
+            chatList.innerHTML = '';
+            chats.forEach(chat => {
+                const item = document.createElement('div');
+                item.className = `chat-item ${chat.id === currentChatId ? 'active' : ''}`;
+                item.innerText = chat.title;
+                item.onclick = () => loadChat(chat.id);
+                chatList.appendChild(item);
+            });
+        }
+
+        async function createNewChat() {
+            const data = await apiCall('/chats/new', { method: 'POST' });
+            if (data) {
+                currentChatId = data.id;
+                chatWindow.innerHTML = '<div class="message sea-message">New session initialized. SEA standing by, Sir.</div>';
+                fetchChats();
+                userInput.focus();
+            }
+        }
+
+        async function loadChat(chatId) {
+            const data = await apiCall(`/chats/${chatId}`);
+            if (data) {
+                currentChatId = chatId;
+                chatWindow.innerHTML = '';
+                if (data.messages.length === 0) {
+                    appendMessage('sea', 'Session active. Standing by, Sir.');
+                } else {
+                    data.messages.forEach(msg => appendMessage(msg.role, msg.text));
+                }
+                renderChatList(allChats);
+            }
+        }
+
+        async function sendMessage() {
+            const message = userInput.value.trim();
+            if (!message) return;
+
+            if (!currentChatId) await createNewChat();
+            if (!currentChatId) return;
+
+            appendMessage('user', message);
+            userInput.value = '';
+            setStatus('busy');
+
+            const data = await apiCall('/ask', {
+                method: 'POST',
+                body: JSON.stringify({ message, chat_id: currentChatId })
+            });
+
+            if (data && data.reply) {
+                appendMessage('sea', data.reply);
+                addLog('[MSG] Response received');
+                fetchChats();
+                setTimeout(() => setStatus('online'), 500);
+            } else {
+                setStatus('error');
+            }
+        }
+
+        chatSearch.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            const filtered = allChats.filter(c => c.title.toLowerCase().includes(term));
+            renderChatList(filtered);
+        });
+
+        newChatBtn.addEventListener('click', createNewChat);
+        sendBtn.addEventListener('click', sendMessage);
+        userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendMessage();
+        });
+
+        window.onload = () => {
+            if (API_BASE) {
+                fetchChats();
+                addLog('[INIT] Connected to ' + API_BASE);
+            } else {
+                appendMessage('sea', 'Set your API URL in the bar below and click Set, Sir.');
+            }
+            userInput.focus();
+        };
+    </script>
 </body>
 </html>

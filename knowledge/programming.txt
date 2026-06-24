@@ -1,0 +1,28 @@
+What is TypeScript and how does it differ from JavaScript?
+TypeScript is a superset of JavaScript that adds static typing. This allows for early error detection and better tooling, making large-scale application development more manageable.
+How do 'Goroutines' work in Go?
+Goroutines are lightweight threads managed by the Go runtime. They allow for highly efficient concurrent execution of functions with very little memory overhead compared to traditional OS threads.
+What is a 'Gem' in Ruby?
+A Gem is a package of Ruby code or a library that can be easily installed and used in Ruby projects. Rubygems is the package manager that handles these libraries.
+What is the purpose of 'Swift' in mobile development?
+Swift is Apple's modern programming language for iOS, macOS, watchOS, and tvOS. It is designed to be fast, safe, and interactive, replacing Objective-C for most Apple ecosystem development.
+How does 'PHP' interact with a database?
+PHP typically interacts with databases like MySQL using extensions like PDO (PHP Data Objects) or MySQLi. It executes SQL queries and processes the results to generate dynamic web content.
+What is 'Asynchronous Await' in TypeScript/JavaScript?
+'async/await' is syntactic sugar for working with Promises. It allows asynchronous code to be written in a style that looks synchronous, making it easier to read and maintain.
+What is 'React' and why is it used?
+React is a JavaScript library for building user interfaces, specifically for single-page applications. It uses a component-based architecture and a "Virtual DOM" to efficiently update the UI.
+What is 'Node.js'?
+Node.js is a cross-platform, open-source JavaScript runtime environment that can run on Windows, Linux, Unix, macOS, and more. It allows developers to use JavaScript to write command line tools and for server-side scripting.
+How do 'Hooks' work in React?
+Hooks are functions that let you "hook into" React state and lifecycle features from function components. The most common ones are useState and useEffect.
+What is a 'Middleware' in Express.js?
+Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle.
+What is 'Django' and what language is it based on?
+Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. It follows the "Don't Repeat Yourself" (DRY) principle.
+How do you handle 'State Management' in Redux?
+Redux uses a single centralized store to manage the state of an entire application. State is updated by dispatching 'actions' which are handled by 'reducers' to return a new state.
+What is 'SASS/SCSS'?
+SASS (Syntactically Awesome Style Sheets) is a preprocessor scripting language that is interpreted or compiled into CSS. It adds features like variables, nested rules, and mixins to standard CSS.
+What is 'C#' and what is it primarily used for?
+C# is a modern, object-oriented programming language developed by Microsoft. It is primarily used for building Windows desktop applications and games using the Unity game engine.

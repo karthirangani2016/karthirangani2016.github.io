@@ -1,0 +1,20 @@
+What is the Redmi/Xiaomi 'Mi Account' lock?
+Mi Account lock is a security feature similar to FRP but tied to Xiaomi's own cloud servers. It prevents unauthorized access after a factory reset. Bypassing it usually involves exploiting the 'Find Device' service or using specialized 'EDL Mode' tools.
+What is 'EDL Mode' (Emergency Download Mode)?
+EDL Mode is a low-level state on Qualcomm-based devices (common in Redmi, OnePlus, and Oppo) that allows for direct flashing of partitions. It often requires specific 'Firehose' loaders and can be used to bypass security locks or repair bricked devices.
+How does 'Bootloader Unlocking' differ across brands?
+Xiaomi requires a waiting period (often 168 hours) and an authorized Mi Account. OnePlus is generally more open, allowing unlocking via simple fastboot commands. Samsung uses the Knox e-fuse to permanently mark unlocked devices.
+What is the 'Secure Enclave' in Apple devices?
+The Secure Enclave is a dedicated hardware-based security processor included in Apple devices. It is isolated from the main processor to provide an extra layer of security for sensitive data like Touch ID, Face ID, and Apple Pay.
+What is 'Oppo/Vivo/Realme' security architecture?
+These brands (under BBK Electronics) often use a similar security framework that relies heavily on 'OFS' (Oppo File System) and proprietary encryption. Exploiting them often requires finding vulnerabilities in their 'System Upgrade' apps.
+What is the 'OnePlus' MSM Tool?
+The MSM Tool is a factory-level flashing utility used to restore OnePlus devices. It uses EDL mode to communicate with the hardware and can be used to completely rewrite the device's storage, bypassing all software locks.
+What is 'Fastboot' and 'Bootloader' mode?
+Fastboot is a diagnostic protocol and tool for Android devices. It allows for direct communication with the bootloader before the OS starts, enabling partition flashing and kernel debugging.
+How does 'iOS' security differ from 'Android'?
+iOS is a 'Closed Source' ecosystem with strict 'App Sandboxing' and mandatory 'Code Signing.' This makes it more resistant to traditional malware but limits the user's control over the hardware compared to the 'Open Source' nature of Android.
+What is 'Google FRP' across different brands?
+While the core logic of FRP is the same, each brand (Redmi, Samsung, OnePlus) implements the 'Setup Wizard' differently. Exploitation involves finding brand-specific bypasses in these setup menus.
+What is 'MediaTek' vs 'Qualcomm' exploitation?
+MediaTek chipsets are often exploited via 'SP Flash Tool' and 'DA' (Download Agent) vulnerabilities. Qualcomm chipsets rely on 'EDL Mode' and 'Firehose' loaders. JARVIS now understands the difference between these silicon-level attack vectors.

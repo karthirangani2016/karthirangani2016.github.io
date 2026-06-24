@@ -1,0 +1,28 @@
+What is Haskell and what is its primary paradigm?
+Haskell is a purely functional programming language. It is known for its strong static typing, lazy evaluation, and mathematical foundation, where functions have no side effects.
+How does 'Assembly Language' relate to machine code?
+Assembly language is a low-level programming language that is almost a direct representation of machine code (binary). it uses human-readable mnemonics (like MOV, ADD, JMP) to represent CPU instructions.
+What is 'Lua' primarily used for?
+Lua is a lightweight, high-level scripting language designed for embedded use in applications. It is widely used in gaming, most notably for scripting in Roblox and World of Warcraft.
+What is a 'Bash' script?
+Bash (Bourne Again SHell) is a command language and shell for the Unix operating system. Bash scripts are used to automate repetitive tasks, manage system configurations, and link multiple CLI tools together.
+What is 'Kotlin' and why did it replace Java for Android?
+Kotlin is a modern, statically typed language that is fully interoperable with Java. it was designed to be more concise and safer (preventing NullPointerExceptions), leading Google to make it the preferred language for Android development.
+What is 'Dart' and 'Flutter'?
+Dart is a client-optimized programming language developed by Google. Flutter is the UI toolkit that uses Dart to build natively compiled applications for mobile, web, and desktop from a single codebase.
+How does 'Rust' manage memory without a Garbage Collector?
+Rust uses a unique 'Ownership' model with 'Borrowing' and 'Lifetimes'. The compiler tracks when memory is no longer needed and automatically inserts the code to free it, ensuring safety without the performance hit of a garbage collector.
+What is 'Perl' and what was its original purpose?
+Perl is a highly capable, feature-rich programming language with over 30 years of development. it was originally developed for text manipulation but is now used for system administration, web development, and network programming.
+What is 'Fortran'?
+Fortran (Formula Translation) is one of the oldest high-level languages, developed in the 1950s. it is still widely used today for high-performance computing, numerical analysis, and scientific simulations.
+What is 'COBOL'?
+COBOL (Common Business-Oriented Language) was designed for business use in the late 1950s. it is still used extensively in legacy mainframe systems for banking, insurance, and government operations.
+What is 'Scala'?
+Scala (Scalable Language) combines object-oriented and functional programming into one high-level language. it runs on the Java Virtual Machine (JVM) and is a staple in Big Data processing (e.g., Apache Spark).
+What is 'R' used for?
+R is a programming language and free software environment for statistical computing and graphics. it is the primary language used by data scientists and statisticians for data analysis and visualization.
+How do you use 'Pointers' in C++ vs 'References' in Java?
+In C++, a pointer is a variable that holds a memory address and can be reassigned or nulled. In Java, a reference is an implicit pointer to an object; you cannot manipulate the memory address directly, and it is managed by the Garbage Collector.
+What is a 'Regular Expression' (Regex)?
+Regular Expressions are a sequence of characters that define a search pattern. They are used by almost every programming language for string matching, validation, and parsing.

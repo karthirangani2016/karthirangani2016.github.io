@@ -1,0 +1,10 @@
+__pycache__/
+*.swp
+*.pyc
+movie_frames/
+venv/
+.env
+*.bak
+voice_debug.log
+boot_log.txt
+sea_brain.pkl

@@ -1,0 +1,188 @@
+What is the abbrevation of UNESCO?
+The United Nations Educational Scientific and Cultural Organization.
+What is Generative AI (Gen AI)?
+Generative AI: A rapidly growing area where AI creates new content, such as images or text, based on learned patterns.
+What is AI Art?
+Art Creation: AI can generate original artwork, as seen with the painting "Portrait of Edmond Belamy," which sold for $432,500.
+What is AI Adoption?
+AI Adoption: Over 70% of organizations are using some form of AI technology, with a significant increase in generative AI applications in marketing and sales.
+What is the difference between a Flask Blueprint and a regular application object?
+A Blueprint is a modular way to organize a Flask application into smaller, reusable components that are registered to the main app later.
+Which ancient civilization is credited with the invention of the wheel?
+The Sumerians of Mesopotamia are generally credited with the invention of the wheel around 3500 BCE.
+What is the function of mitochondria within a biological cell?
+Mitochondria are the primary organelles responsible for generating chemical energy in the form of Adenosine Triphosphate (ATP) through cellular respiration.
+What is the largest organ in the human body?
+The skin is the largest organ, acting as a protective barrier against pathogens and regulating internal body temperature.
+What is the specific role of hemoglobin in human blood?
+Hemoglobin is a protein in red blood cells that facilitates the transport of oxygen from the lungs to body tissues and returns carbon dioxide to the lungs.
+How does the human brain store long-term memories?
+Long-term memories are stored through the process of long-term potentiation, which strengthens the synaptic connections between neurons in the brain.
+What is a "superorganism" in the field of biology?
+A superorganism is a social unit, such as an ant colony or beehive, where individual members function together as a single integrated entity.
+What is the primary purpose of the lymphatic system?
+The lymphatic system maintains fluid balance in the body and produces white blood cells that are essential for the immune response.
+How do vaccines provide immunity against diseases?
+Vaccines stimulate the immune system to recognize and remember specific pathogens by introducing a harmless version or piece of the virus or bacteria.
+What is DNA?
+Deoxyribonucleic acid (DNA) is the double-helix molecule that contains the genetic instructions for the development and functioning of all living organisms.
+What is the fastest muscle in the human body?
+The extraocular muscles, which control the movement of the eyes, are the fastest and most active muscles in the body.
+What is the anatomical difference between an artery and a vein?
+Arteries carry oxygenated blood away from the heart to the body, while veins carry deoxygenated blood back toward the heart.
+What is CRISPR technology?
+CRISPR is a specialized gene-editing tool that allows scientists to precisely alter DNA sequences and modify gene function within an organism.
+What defines a "Noble Gas" in the periodic table?
+Noble gases are a group of elements that are highly stable and generally non-reactive because their outermost electron shells are completely filled.
+What is the purpose of the Periodic Table?
+The Periodic Table organizes all known chemical elements based on their atomic number, electron configuration, and recurring chemical properties.
+Which vertebrate has the longest known lifespan?
+The Greenland shark is the longest-living vertebrate, with individuals estimated to live for at least 250 to 400 years.
+How many hearts does an octopus possess?
+An octopus has three hearts: two pump blood to the gills, while the third circulates it to the rest of the body.
+What causes the distinct pink coloration in flamingos?
+Flamingos obtain their pink color from carotenoid pigments found in the aqueous bacteria and crustaceans they consume.
+Do cattle exhibit complex social behaviors such as friendship?
+Studies indicate that cows are highly social and form preferred associations, often experiencing increased heart rates when separated from their companions.
+Where is the heart of a shrimp located?
+The heart of a shrimp is located within its cephalothorax, which is commonly referred to as the head region.
+What is the function of the Golgi apparatus?
+It is responsible for modifying, sorting, and packaging proteins for secretion or delivery to other organelles.
+What is natural selection?
+The process whereby organisms better adapted to their environment tend to survive and produce more offspring.
+What is a genotype?
+The part of the genetic makeup of a cell, and therefore of any individual, which determines one of its characteristics.
+What is a phenotype?
+The set of observable characteristics of an individual resulting from the interaction of its genotype with the environment.
+What is homeostasis?
+The state of steady internal, physical, and chemical conditions maintained by living systems.
+What is the role of ribosomes?
+They are the cellular structures where protein synthesis occurs by translating messenger RNA into polypeptide chains.
+What is an ecosystem?
+A biological community of interacting organisms and their physical environment.
+What is biodiversity?
+The variety of plant and animal life in the world or in a particular habitat, a high level of which is usually considered to be important and desirable.
+What is photosynthesis?
+The process by which green plants and some other organisms use sunlight to synthesize foods from carbon dioxide and water.
+What is a mutation?
+A permanent alteration in the DNA sequence that makes up a gene, such that the sequence differs from what is found in most people.
+What is the central dogma of molecular biology?
+The theory that genetic information flows only in one direction, from DNA, to RNA, to protein, or RNA directly to protein.
+What is an allele?
+One of two or more alternative forms of a gene that arise by mutation and are found at the same place on a chromosome.
+What is trophic level?
+The position that an organism occupies in a food chain - what it eats, and what eats it.
+What is symbiotic relationship?
+A close and long-term biological interaction between two different biological organisms.
+What is the function of the endocrine system?
+It is a messenger system comprising feedback loops of the hormones released by internal glands of an organism directly into the circulatory system.
+What is ATP?
+Adenosine triphosphate, the principal molecule for storing and transferring energy in cells.
+What is the purpose of Meiosis?
+A type of cell division that reduces the number of chromosomes in the parent cell by half and produces four gamete cells.
+What is the purpose of Mitosis?
+A part of the cell cycle in which replicated chromosomes are separated into two new nuclei, resulting in genetically identical cells.
+What are stem cells?
+Undifferentiated biological cells that can differentiate into specialized cells and can divide to produce more stem cells.
+What is the greenhouse effect in biology?
+The process by which radiation from a planet's atmosphere warms the planet's surface to a temperature above what it would be without its atmosphere.
+What is the "Central Dogma" of molecular biology?
+The Central Dogma describes the flow of genetic information within a biological system: DNA is transcribed into RNA, and RNA is translated into protein.
+How does CRISPR-Cas9 perform targeted gene editing?
+CRISPR-Cas9 uses a guide RNA (gRNA) to identify a specific DNA sequence and the Cas9 enzyme to induce a double-strand break, which is then repaired by the cell's natural mechanisms.
+Explain the role of neurotransmitters in synaptic transmission.
+Neurotransmitters are chemical messengers released from the presynaptic neuron that cross the synaptic cleft and bind to receptors on the postsynaptic neuron, propagating the signal.
+What is "Natural Selection" according to Darwinian theory?
+Natural selection is the process where organisms better adapted to their environment tend to survive and produce more offspring, leading to gradual changes in the population's traits.
+Describe the function of mitochondria in eukaryotic cells.
+Mitochondria are the "powerhouses" of the cell, generating adenosine triphosphate (ATP) through oxidative phosphorylation and the citric acid cycle.
+What is the "Synaptic Plasticity" hypothesis in neuroscience?
+Synaptic plasticity is the ability of synapses to strengthen or weaken over time in response to increases or decreases in their activity, forming the cellular basis of learning and memory.
+Explain "Allopatric Speciation".
+Allopatric speciation occurs when biological populations of the same species become isolated from each other to an extent that prevents or interferes with gene flow, eventually leading to new species.
+What is the significance of the "Homeobox" (Hox) genes?
+Hox genes are a group of related genes that specify regions of the body plan of an embryo along the head-tail axis of animals, ensuring organs develop in the correct locations.
+Define "Epigenetics" and its impact on gene expression.
+Epigenetics is the study of heritable changes in gene function that do not involve changes to the underlying DNA sequence, such as DNA methylation and histone modification.
+What is the role of "Action Potentials" in neuronal communication?
+An action potential is a rapid, temporary change in the electrical membrane potential of a neuron that travels along the axon, allowing for long-distance signaling.
+Explain the "Endosymbiotic Theory".
+This theory proposes that eukaryotic organelles like mitochondria and chloroplasts originated as free-living prokaryotic cells that were engulfed by a host cell and formed a symbiotic relationship.
+What is "Genetic Drift" and how does it differ from natural selection?
+Genetic drift is the change in the frequency of an existing gene variant in a population due to random sampling of organisms; unlike natural selection, it is not driven by fitness.
+How does DNA replication maintain high fidelity?
+High fidelity is maintained by the proofreading activity of DNA polymerases (3' to 5' exonuclease activity) and various DNA repair pathways like mismatch repair.
+What is the function of the "Blood-Brain Barrier" (BBB)?
+The BBB is a highly selective semipermeable border that prevents solutes in the circulating blood from non-selectively crossing into the extracellular fluid of the central nervous system.
+Define "Punctuated Equilibrium" in evolutionary biology.
+Punctuated equilibrium suggests that most species will exhibit little evolutionary change for most of their geological history, with rapid bursts of speciation occurring between long periods of stasis.
+What is "RNA Interference" (RNAi)?
+RNAi is a biological process in which RNA molecules inhibit gene expression or translation by neutralizing targeted mRNA molecules.
+Describe the role of "Glial Cells" in the nervous system.
+Glial cells provide support and protection for neurons; types include astrocytes (nutrient supply), oligodendrocytes (myelination), and microglia (immune defense).
+What is "Horizontal Gene Transfer" (HGT)?
+HGT is the movement of genetic material between unicellular and/or multicellular organisms other than by the transmission of DNA from parent to offspring.
+Explain the structure and function of the "Ribosome".
+The ribosome is a complex macromolecular machine, composed of rRNA and proteins, that serves as the site of biological protein synthesis (translation).
+What is "Long-Term Potentiation" (LTP)?
+LTP is a persistent strengthening of synapses based on recent patterns of activity, considered one of the major cellular mechanisms that underlies learning and memory.
+Define "Kin Selection" and the concept of "Inclusive Fitness".
+Kin selection is the evolutionary strategy that favors the reproductive success of an organism's relatives, even at a cost to the organism's own survival and reproduction.
+What is the "Telomere" and what happens when it shortens?
+A telomere is a region of repetitive nucleotide sequences at each end of a chromosome, which protects the end of the chromosome from deterioration; its shortening is linked to cellular aging.
+Describe the process of "Apoptosis".
+Apoptosis is a form of programmed cell death that occurs in multicellular organisms, involving a series of biochemical events that lead to characteristic cell changes and death.
+What is the "Prefrontal Cortex" responsible for?
+The prefrontal cortex is involved in complex cognitive behavior, personality expression, decision making, and moderating social behavior.
+Explain "Adaptive Radiation".
+Adaptive radiation is a process in which organisms diversify rapidly from an ancestral species into a multitude of new forms, particularly when a change in the environment makes new resources available.
+What are "Transcription Factors"?
+Transcription factors are proteins that bind to specific DNA sequences, thereby controlling the rate of transcription of genetic information from DNA to messenger RNA.
+What is the "Myelin Sheath" and why is it important?
+The myelin sheath is an insulating layer that forms around nerves; it allows electrical impulses to transmit quickly and efficiently along the nerve cells.
+Define "Convergent Evolution".
+Convergent evolution is the independent evolution of similar features in species of different lineages, creating analogous structures that have similar form or function but were not present in the last common ancestor.
+What is "Metabolism" and how is it categorized?
+Metabolism is the set of life-sustaining chemical transformations within the cells of organisms, categorized into catabolism (breaking down molecules) and anabolism (building up molecules).
+Describe "Neurogenesis" in the adult brain.
+Neurogenesis is the process by which new neurons are formed in the brain, occurring primarily in the subventricular zone and the dentate gyrus of the hippocampus in adults.
+What is the "Genetic Code" and is it universal?
+The genetic code is the set of rules used by living cells to translate information encoded within genetic material into proteins; it is nearly universal across all known life forms.
+Explain "Sexual Selection".
+Sexual selection is a mode of natural selection where members of one biological sex choose mates of the other sex to mate with and compete with members of the same sex for access to members of the opposite sex.
+What is the role of "ATP Synthase"?
+ATP synthase is an enzyme that creates the energy storage molecule adenosine triphosphate (ATP) by using a proton gradient across a membrane.
+What is "Excitotoxicity" in neuroscience?
+Excitotoxicity is the pathological process by which nerve cells are damaged and killed by the excessive stimulation of receptors for the excitatory neurotransmitter glutamate.
+Define "Phylogenetics".
+Phylogenetics is the study of the evolutionary history and relationships among individuals or groups of organisms (e.g., species, or populations).
+What are "Stem Cells" and what is "Pluripotency"?
+Stem cells are undifferentiated cells that can differentiate into specialized cells; pluripotency is the ability of a stem cell to give rise to all cell types of the body.
+Describe "Synesthesia".
+Synesthesia is a perceptual phenomenon in which stimulation of one sensory or cognitive pathway leads to involuntary experiences in a second sensory or cognitive pathway.
+What is "Genetic Bottleneck"?
+A genetic bottleneck is a sharp reduction in the size of a population due to environmental events or human activities, which reduces the genetic diversity of the population.
+Explain the function of "Introns" and "Exons".
+Exons are the parts of a gene that code for a protein, while introns are non-coding sections of an RNA transcript, or the DNA encoding it, that are spliced out before the RNA is translated into a protein.
+What is "Neuroethology"?
+Neuroethology is the evolutionary and comparative approach to the study of animal behavior and its underlying mechanistic control by the nervous system.
+Define "Hardy-Weinberg Equilibrium".
+It is a principle stating that the genetic variation in a population will remain constant from one generation to the next in the absence of disturbing factors (like mutation or migration).
+What is "Polymerase Chain Reaction" (PCR)?
+PCR is a method used to make many copies of a specific DNA segment, allowing scientists to take a very small sample of DNA and amplify it to a large enough amount to study in detail.
+Describe the "Default Mode Network" (DMN) in the brain.
+The DMN is a network of interacting brain regions that is active when a person is not focused on the outside world and the brain is at wakeful rest.
+What is "Coevolution"?
+Coevolution occurs when two or more species reciprocally affect each other's evolution, often seen in predator-prey, host-parasite, or mutualistic relationships.
+What is the function of "Chaperone Proteins"?
+Chaperone proteins assist the covalent folding or unfolding and the assembly or disassembly of other macromolecular structures, preventing protein aggregation.
+Explain "Long-Term Depression" (LTD).
+LTD is an activity-dependent reduction in the efficacy of neuronal synapses lasting hours or longer following a long patterned stimulus.
+What is "Vestigiality" in biology?
+Vestigiality refers to genetically determined structures or attributes that have apparently lost most or all of their ancestral function in a given species.
+Describe "Molecular Mimicry".
+Molecular mimicry is the theoretical possibility that sequence similarities between foreign and self-peptides are sufficient to result in the cross-activation of autoreactive T or B cells.
+What is the "Dopaminergic System"?
+The dopaminergic system is a set of projection neurons in the brain that synthesize and release the neurotransmitter dopamine, involved in reward, motivation, and motor control.
+Define "Horizontal Pleiotropy".
+Horizontal pleiotropy occurs when one gene or variant influences multiple independent phenotypic traits through different biological pathways.

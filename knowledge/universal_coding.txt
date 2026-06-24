@@ -1,0 +1,28 @@
+What are variables in Python?
+Variables in Python are reserved memory locations to store values. They are created when you assign a value to them (e.g., x = 5) and do not require explicit declaration of data types.
+How do 'if' statements work in Python?
+Python 'if' statements use indentation to define blocks of code that execute only if a specified condition is true. They can include 'elif' and 'else' for multiple conditions.
+What is the structure of an HTML document?
+An HTML document begins with <!DOCTYPE html> followed by <html>, <head> (for metadata), and <body> (for visible content) tags.
+How do you style elements in CSS?
+CSS (Cascading Style Sheets) styles elements using selectors (like .class or #id) and properties (like color: blue; or font-size: 16px;).
+What is a function in JavaScript?
+A function in JavaScript is a block of code designed to perform a particular task. It is executed when "something" invokes it (calls it). Example: function myFunction() { ... }.
+How does a 'for' loop work in Java?
+A Java 'for' loop provides a compact way to iterate over a range of values. It consists of initialization, a boolean expression, and an update statement: for(int i=0; i<10; i++) { ... }.
+What is 'Object-Oriented Programming' (OOP)?
+OOP is a programming paradigm based on the concept of "objects," which can contain data and code. Core principles include Inheritance, Encapsulation, Polymorphism, and Abstraction.
+What is the 'DOM' in JavaScript?
+The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content.
+What is a 'Class' in Java?
+A class in Java is a blueprint from which individual objects are created. it defines the data (fields) and behaviors (methods) that the objects will have.
+What is 'Indentation' in Python?
+Unlike many other languages, Python uses indentation (whitespace) to indicate blocks of code, making the code more readable but also making the structure strictly dependent on spacing.
+How do you use 'id' vs 'class' in CSS?
+'id' (#) is used to select a single unique element on a page, while 'class' (.) is used to select multiple elements with the same style.
+What is 'Asynchronous' programming in JavaScript?
+Asynchronous programming allows tasks to run in the background without blocking the main execution thread. This is commonly done using 'Promises' and 'async/await'.
+What is 'SQL' and why is it used?
+SQL (Structured Query Language) is the standard language for dealing with Relational Databases. It is used to query, insert, update, and delete data from database tables.
+How do 'Arrays' work in C++?
+An array in C++ is a collection of elements of the same type stored in contiguous memory locations. They have a fixed size that must be known at compile-time.

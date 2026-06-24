@@ -1,0 +1,20 @@
+What is Time Travel?
+Time travel is the concept of movement between certain points in time, analogous to movement between different points in space by an object or a person, typically with the use of a hypothetical device known as a time machine.
+Is time travel scientifically possible?
+According to Einstein's theory of Special Relativity, time dilation allows for travel into the future by moving at speeds close to the speed of light. Travel into the past is much more complex and theoretically requires 'wormholes' or 'closed timelike curves' (CTCs).
+What is the 'Grandfather Paradox'?
+The Grandfather Paradox is a potential problem with past-time travel. It suggests that if you went back in time and prevented your grandfather from meeting your grandmother, you would never be born—creating a contradiction where you could not have gone back in time in the first place.
+What is the 'Bootstrap Paradox'?
+A Bootstrap Paradox is a type of paradox in which an object, person, or piece of information sent back in time results in an infinite loop where the object has no discernible origin. It exists because it was sent back, and it was sent back because it exists.
+What is 'Time Dilation'?
+Time Dilation is a difference in the elapsed time measured by two observers, either due to a velocity difference relative to each other or by being differently situated relative to a gravitational field. For example, time moves slower for astronauts on the ISS than for people on Earth.
+What are 'Closed Timelike Curves' (CTCs)?
+In mathematical physics, a closed timelike curve is a worldline in a Lorentzian manifold, of a material particle in spacetime that is "closed," returning to its starting point. It is a theoretical path through space-time that would allow for travel into the past.
+What is a 'Temporal Loop'?
+A temporal loop, or time loop, is a plot device in which characters re-experience a span of time which is repeated, sometimes more than once, with some hope of breaking out of the cycle of repetition.
+What is 'Butterfly Effect' in time travel?
+The Butterfly Effect is the idea that small changes in the past can result in large, unpredictable differences in the future. In time travel stories, stepping on a single butterfly millions of years ago could change the entire course of human history.
+Who is the 'Doctor' from Doctor Who?
+The Doctor is a Time Lord from the planet Gallifrey who travels through space and time in a machine called the TARDIS (Time and Relative Dimension in Space). The Doctor uses time travel to protect the universe from various threats.
+What is the 'Novikov Self-Consistency Principle'?
+The Novikov principle suggests that if an event exists that would cause a paradox or any change to the past whatsoever, then the probability of that event is zero. It implies that time travel to the past is possible, but you cannot change history.

@@ -1,0 +1,154 @@
+What is the chemical symbol for gold?
+The chemical symbol for gold is Au.
+In a relational database, what does ACID compliance stand for?
+ACID stands for Atomicity, Consistency, Isolation, and Durability, ensuring that database transactions are processed reliably.
+What defines a "Goldilocks Zone" around a star?
+Also known as the habitable zone, it is the range of distances from a star where the temperature is suitable for liquid water to exist on a planet's surface.
+What was the primary catalyst for the French Revolution?
+The revolution was driven by extreme social inequality, economic hardship, and the influence of Enlightenment ideals challenging the absolute monarchy.
+What is the difference between a chemical element and a compound?
+An element consists of only one type of atom, whereas a compound is formed when two or more different elements are chemically bonded together.
+What is the role of a catalyst in a chemical reaction?
+A catalyst increases the rate of a chemical reaction by lowering the activation energy required, without being consumed in the process itself.
+What does the pH scale measure?
+The pH scale measures the acidity or alkalinity of a liquid, ranging from 0 (highly acidic) to 14 (highly alkaline), with 7 being neutral.
+What is an ionic bond?
+A type of chemical bonding that involves the electrostatic attraction between oppositely charged ions, or between two atoms with sharply different electronegativities.
+What is a covalent bond?
+A chemical bond that involves the sharing of electron pairs between atoms.
+What is electronegativity?
+A measure of the tendency of an atom to attract a bonding pair of electrons.
+What is a mole in chemistry?
+The SI unit of amount of substance, containing exactly 6.02214076 x 10^23 elementary entities.
+What is Avogadro's law?
+An experimental gas law relating the volume of a gas to the amount of substance of gas present.
+What is the difference between an exothermic and endothermic reaction?
+Exothermic reactions release energy into the surroundings, while endothermic reactions absorb energy from the surroundings.
+What is an organic compound?
+Generally any chemical compound that contains carbon-hydrogen bonds.
+What is a polymer?
+A substance or material consisting of very large molecules, or macromolecules, composed of many repeating subunits.
+What is the law of conservation of mass?
+A law stating that mass in an isolated system is neither created nor destroyed by chemical reactions or physical transformations.
+What is a buffer solution?
+An aqueous solution consisting of a mixture of a weak acid and its conjugate base, or vice versa, that changes its pH very little when a small amount of strong acid or base is added to it.
+What is oxidation?
+The loss of electrons during a reaction by a molecule, atom or ion.
+What is reduction?
+The gain of electrons during a reaction by a molecule, atom or ion.
+What is a hydrocarbon?
+An organic compound consisting entirely of hydrogen and carbon.
+What is a functional group?
+A specific group of atoms within a molecule that is responsible for a characteristic chemical reaction of that molecule.
+What is the ideal gas law?
+The equation of state of a hypothetical ideal gas, P V = n R T.
+What is titration?
+A common laboratory method of quantitative chemical analysis that is used to determine the unknown concentration of an identified analyte.
+What is the activation energy?
+The minimum amount of energy that must be provided to compounds to result in a chemical reaction.
+What is a solvent?
+A substance that dissolves a solute, resulting in a solution.
+What is a solute?
+A substance dissolved in another substance, known as a solvent.
+What is the molar mass?
+The mass of a given substance divided by the amount of substance, usually expressed in g/mol.
+What is "Materials Science" and how does it integrate chemistry?
+Materials science is an interdisciplinary field involving the properties of matter and its applications to various areas of science and engineering, using chemistry to design and discover new solids.
+Describe the structure and properties of "Graphene".
+Graphene is a single layer of carbon atoms arranged in a two-dimensional honeycomb lattice; it is incredibly strong, lightweight, and an excellent conductor of heat and electricity.
+What is "Biochemistry" and what are its primary focus areas?
+Biochemistry is the study of chemical processes within and relating to living organisms, focusing on how biological molecules (like proteins and nucleic acids) give rise to the processes that occur within living cells.
+Explain the process of "Addition Polymerization".
+Addition polymerization is a reaction where monomer units are attached one at a time in a chain-like fashion to form a polymer, without the loss of any small molecules.
+What is the "Glass Transition Temperature" (Tg)?
+Tg is the temperature range where an amorphous material (like a polymer) changes from a hard, rigid, "glassy" state to a more pliable, "rubbery" state.
+How do "Superconductors" work at a chemical level?
+Superconductors are materials that conduct electricity without resistance when cooled below a certain temperature, often involving the formation of Cooper pairs of electrons mediated by lattice vibrations (phonons).
+Define "Enzyme Kinetics" and the Michaelis-Menten equation.
+Enzyme kinetics is the study of the chemical reactions that are catalyzed by enzymes; the Michaelis-Menten equation describes the rate of enzymatic reactions by relating reaction rate to substrate concentration.
+What is "Stereochemistry" and why is it important in pharmacology?
+Stereochemistry involves the study of the spatial arrangement of atoms in molecules; it is crucial in pharmacology because different enantiomers of a drug can have vastly different biological effects.
+Explain "Condensation Polymerization".
+Condensation polymerization involves the reaction of monomers with the elimination of a small molecule, such as water or methanol, to form a polymer chain.
+What are "Metal-Organic Frameworks" (MOFs)?
+MOFs are compounds consisting of metal ions or clusters coordinated to organic ligands to form one-, two-, or three-dimensional structures that are often highly porous.
+Describe the role of "Allotropy" in elements like Carbon.
+Allotropy is the property of some chemical elements to exist in two or more different forms in the same physical state; carbon allotropes include diamond, graphite, and fullerenes.
+What is "Metabolic Biochemistry"?
+It is the branch of biochemistry that studies the chemical reactions involved in metabolism, focusing on how cells obtain energy and synthesize complex molecules.
+Define "Tacticity" in polymers.
+Tacticity refers to the stereochemical arrangement of units in the main chain of a polymer; it can be isotactic, syndiotactic, or atactic, which affects the polymer's crystallinity and properties.
+What is the "Band Theory" of solids?
+Band theory explains the electrical conductivity of materials by describing the energy levels that electrons can occupy and the "bands" of allowed and forbidden energy.
+Explain "Protein Folding" and the role of disulfide bonds.
+Protein folding is the process by which a protein structure assumes its functional shape or conformation; disulfide bonds (covalent bonds between sulfur atoms) stabilize the folded structure.
+What are "Liquid Crystals" and how are they used?
+Liquid crystals are matter in a state which has properties between those of conventional liquids and those of solid crystals; they are widely used in display technologies (LCDs).
+Describe the "Sol-Gel" process in materials chemistry.
+The sol-gel process is a method for producing solid materials from small molecules, involving the transition of a system from a colloidal liquid (sol) into a solid network (gel).
+What is "Cross-linking" in polymers and how does it affect properties?
+Cross-linking is the formation of chemical bonds between polymer chains, which increases the material's strength, stiffness, and thermal stability.
+Explain "Chemiluminescence".
+Chemiluminescence is the emission of light as the result of a chemical reaction, where an excited state intermediate returns to the ground state by emitting a photon.
+What is "Supramolecular Chemistry"?
+Supramolecular chemistry is the domain of chemistry beyond that of molecules and focuses on the chemical systems made up of a discrete number of assembled molecular subunits or components.
+Define "Nanochemistry".
+Nanochemistry is the combination of chemistry and nanoscience, dealing with the synthesis and properties of materials with nanometer-scale dimensions.
+What is the "Hydrophobic Effect" in biochemistry?
+The hydrophobic effect is the observed tendency of nonpolar substances to aggregate in an aqueous solution and exclude water molecules, a driving force in protein folding and membrane formation.
+Explain "Copolymerization".
+Copolymerization is the process where two or more different types of monomers are polymerized together to create a polymer with a combination of properties from each monomer.
+What are "Semiconductors" and how does "Doping" work?
+Semiconductors have electrical conductivity between conductors and insulators; doping is the intentional introduction of impurities into an intrinsic semiconductor to modulate its electrical properties.
+Describe the function of "Coenzymes".
+Coenzymes are organic non-protein molecules that bind with an enzyme to catalyze a reaction; they often act as intermediate carriers of electrons, specific atoms, or functional groups.
+What is "Polymer Degradation"?
+Polymer degradation is a change in the properties—tensile strength, color, shape, etc.—of a polymer or polymer-based product under the influence of one or more environmental factors.
+Explain "Electrophoresis" in biochemistry.
+Electrophoresis is a laboratory technique used to separate DNA, RNA, or protein molecules based on their size and electrical charge by applying an electric field.
+What is the "Ziegler-Natta Catalyst"?
+A Ziegler-Natta catalyst is a class of catalysts used in the synthesis of polymers of 1-alkenes, allowing for high control over the stereoregularity of the polymer.
+Define "Isomorphism" in crystallography.
+Isomorphism is the phenomenon where different chemical compounds have the same crystal structure and similar lattice dimensions.
+What is the "Isoelectric Point" (pI)?
+The isoelectric point is the pH at which a molecule (such as a protein) carries no net electrical charge.
+Describe the properties of "Shape-Memory Polymers".
+Shape-memory polymers are smart materials that have the ability to return from a deformed state to their original (permanent) shape when induced by an external stimulus like heat.
+Explain "Nuclear Magnetic Resonance" (NMR) spectroscopy.
+NMR is a research technique that exploits the magnetic properties of certain atomic nuclei to determine the physical and chemical properties of atoms or the molecules in which they are contained.
+What is "Bioconjugation"?
+Bioconjugation is a chemical strategy to form a stable covalent link between two molecules, at least one of which is a biomolecule (e.g., a protein and a synthetic polymer).
+What are "Dendrimers"?
+Dendrimers are repetitively branched molecules, often symmetric around the core, and often adopting a spherical three-dimensional morphology.
+Describe "X-ray Crystallography".
+X-ray crystallography is a tool used for determining the atomic and molecular structure of a crystal, in which the crystalline atoms cause a beam of incident X-rays to diffract into many specific directions.
+What is "Polymer Rheology"?
+Polymer rheology is the study of the flow and deformation of polymers under the influence of an applied force, critical for understanding processing techniques like injection molding.
+Explain "Competitive Inhibition" in enzymes.
+Competitive inhibition occurs when a molecule similar to the substrate binds to the enzyme's active site, preventing the actual substrate from binding and slowing the reaction rate.
+What is "Green Chemistry"?
+Green chemistry is the design of chemical products and processes that reduce or eliminate the use or generation of hazardous substances.
+Define "Molarity" and "Molality".
+Molarity is the number of moles of solute per liter of solution, while molality is the number of moles of solute per kilogram of solvent.
+Describe "Molecular Docking".
+Molecular docking is a key tool in structural biology and computer-aided drug design, used to predict the predominant binding mode(s) of a ligand with a protein of known three-dimensional structure.
+What is the "Glassy State" of matter?
+The glassy state is a non-equilibrium, amorphous state of matter that lacks long-range translational symmetry but has the mechanical rigidity of a solid.
+Explain "Surface Tension" from a molecular perspective.
+Surface tension is the tendency of liquid surfaces to shrink into the minimum surface area possible, caused by the cohesive forces between liquid molecules being stronger than their interaction with the air.
+What is "Bioenergetics"?
+Bioenergetics is the field of biochemistry that concerns energy flow through living systems, focusing on how cells transform energy (e.g., through cellular respiration).
+Define "Thermoplastics" vs "Thermosets".
+Thermoplastics can be melted and reshaped repeatedly when heated, while thermosets undergo a chemical change during curing and cannot be remelted once set.
+What is the "Bragg's Law"?
+Bragg's Law relates the spacing of atomic planes in a crystal to the angles at which X-rays are most intensely reflected.
+Describe the "Buffer Capacity".
+Buffer capacity is a quantitative measure of the resistance of a buffer solution to change in pH on the addition of an acid or a base.
+What is "Organometallic Chemistry"?
+Organometallic chemistry is the study of chemical compounds containing at least one chemical bond between a carbon atom of an organic molecule and a metal.
+Explain "Vapor Pressure".
+Vapor pressure is the pressure exerted by a vapor in thermodynamic equilibrium with its condensed phases (solid or liquid) at a given temperature in a closed system.
+What is "Chirality" in chemistry?
+A molecule is chiral if it is not superimposable on its mirror image; chirality is fundamental in biochemistry, as most biological molecules are chiral.
+Describe "Flame Atomic Absorption Spectroscopy" (FAAS).
+FAAS is an analytical technique used for the qualitative and quantitative determination of a wide range of chemical elements based on the absorption of optical radiation by free atoms in the gaseous state.

@@ -1,0 +1,24 @@
+What is the Samsung Knox Security Suite?
+Samsung Knox is a multi-layered security platform integrated into Samsung devices. It includes hardware-backed security (Knox Vault, e-fuses), a Trusted Execution Environment (TEE), and real-time kernel protection (RKP).
+What is the Knox e-fuse?
+The Knox e-fuse is a physical component on the motherboard. When the device's bootloader is unlocked or an unauthorized kernel is flashed, the fuse "trips" (is blown). This permanently disables features like Samsung Pay and Secure Folder and signals that the device's integrity has been compromised.
+What is the 'Trusted Execution Environment' (TEE)?
+The TEE is a secure area of the main processor that runs in a "Secure World" (TrustZone) independent of the Android OS. It handles sensitive tasks like fingerprint authentication, cryptographic keys, and Knox integrity checks.
+What is Odin/Download Mode?
+Download Mode (or Odin Mode) is a low-level state used to flash official firmware, recovery images, or kernels to Samsung devices. Exploiting this mode often involves finding vulnerabilities in the bootloader's verification process.
+What is 'Factory Reset Protection' (FRP)?
+FRP is a security feature that prevents unauthorized access after a factory reset. It requires the original Google Account credentials to unlock the device. Bypassing FRP usually involves exploiting flaws in the 'Initial Setup' wizard or SystemUI.
+How does 'Direct Boot' exploitation work?
+Direct Boot allows certain apps to run before the user provides their credentials. An exploitation strategy involves identifying a service that starts in this window and forcing it into a crash loop to expose the system or trigger an unauthorized ADB connection.
+What is 'TIMA' (TrustZone-based Integrity Measurement Architecture)?
+TIMA is a Knox component that monitors the Android kernel. It uses the TEE to check for unauthorized changes to the kernel's code and data, triggering a "security alert" or reboot if a compromise is detected.
+What is 'Wireless ADB' (ADB over WiFi)?
+Wireless ADB allows for debugging and command injection over a network. On modern Samsung devices, this usually requires a Pairing Code or manual authorization, but vulnerabilities in the 'Pairing' service can sometimes be exploited during a SystemUI flicker.
+What is 'SystemUI Flicker' exploitation?
+This involves stressing the device's CPU/RAM (using tools like total_eclipse.py) until the SystemUI service crashes. During the momentary crash, the notification shade or settings may become accessible, or the system may temporarily drop its guard for ADB connections.
+What is the 'Samsung A06' hardware profile?
+The Samsung A06 is a modern A-series device. It features a MediaTek or Exynos chipset depending on the region and runs the latest version of One UI. Exploiting it requires navigating the most recent versions of Knox and Android security patches.
+How do you force a Kernel Panic?
+A kernel panic is a safety measure taken by the OS upon detecting a fatal error. In an exploitation context, forcing a panic (via memory exhaustion or illegal instructions) can sometimes be used to dump the contents of the RAM to look for cryptographic keys.
+What is 'S-Boot'?
+S-Boot is Samsung's proprietary bootloader. It is responsible for the 'Chain of Trust' from the moment the device is powered on. Vulnerabilities in S-Boot can allow for the execution of unsigned code before Knox is even initialized.

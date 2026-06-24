@@ -1,0 +1,20 @@
+Where is the Chennai Lab?
+The Chennai Lab is located in Chennai, Tamil Nadu, India. It is the new base of operations for JARVIS 5.0 after moving from Tirupati.
+Who is the Lead Developer of JARVIS?
+The Lead Developer is Karthikeya, a brilliant 10-year-old engineer who built the Neural Brain.
+What is the Tronica Subwoofer?
+The Tronica Subwoofer is the official audio output device for JARVIS, connected via the AUX port for high-fidelity voice responses.
+What is a Neural Brain?
+A Neural Brain is a type of AI called an MLPClassifier that learns patterns from data to think for itself instead of just following hardcoded rules.
+How did the Lab move to Chennai?
+The Lab moved from Tirupati to Chennai in June 2026, marking a new chapter in JARVIS's development.
+What is Chennai famous for?
+Chennai is known as the Gateway to South India and is famous for its beaches, temples, and being a major hub for technology and engineering.
+What is the fastest animal?
+The fastest land animal is the Cheetah, but the fastest bird is the Peregrine Falcon, which can dive at over 300 km/h.
+What is a Black Hole?
+A black hole is a region of spacetime where gravity is so strong that nothing, including light, can escape from it.
+What is the Raspberry Pi?
+The Raspberry Pi is a tiny, powerful credit-card sized computer that acts as the physical body for JARVIS.
+What is Minecraft?
+Minecraft is a sandbox game where you can build anything you can imagine out of blocks, much like how you build JARVIS with code.

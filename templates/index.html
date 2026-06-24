@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEA | SYSTEM INTERFACE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="main-container">
+        <aside class="sidebar">
+            <button id="new-chat-btn">+ NEW CHAT</button>
+            <div class="search-container">
+                <input type="text" id="chat-search" placeholder="Search chats..." autocomplete="off">
+            </div>
+            <div id="chat-list">
+                <!-- Chat items will appear here -->
+            </div>
+        </aside>
+
+        <main>
+            <header>
+                <div class="logo">SEA</div>
+                <div class="status-container">
+                    <div id="status-dot" class="status-dot"></div>
+                    <div id="status-text">SYSTEM: ONLINE</div>
+                </div>
+            </header>
+
+            <div class="workspace">
+                <div id="chat-window">
+                    <div class="message sea-message">SEA online. How can I assist you, Sir?</div>
+                </div>
+
+                <aside class="tactical-panel">
+                    <div class="panel-header">TACTICAL DASHBOARD</div>
+                    <div class="stat-group">
+                        <div class="stat-label">TARGET IP:</div>
+                        <div class="stat-value" id="target-ip">10.11.48.180</div>
+                    </div>
+                    <div class="stat-group">
+                        <div class="stat-label">NETWORK STRESS:</div>
+                        <div class="stat-bar"><div class="bar-fill" id="stress-bar" style="width: 12%"></div></div>
+                    </div>
+                    <div class="panel-header">SYSTEM LOGS</div>
+                    <div id="mini-log">
+                        [INIT] Neural Web synchronized.<br>
+                        [INIT] Model 1 active.<br>
+                        [READY] Awaiting orders.
+                    </div>
+                </aside>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Enter command..." autocomplete="off">
+                <button id="send-btn">Transmit</button>
+            </div>
+        </main>
+    </div>
+
+    <div id="device-modal" class="modal">
+        <div class="modal-content">
+            <div class="panel-header">INITIALIZING NETWORK SCAN</div>
+            <p style="font-size: 0.8rem; margin: 10px 0; color: var(--primary-blue);">SELECT TARGET DEVICE TO MONITOR, SIR:</p>
+            <div id="device-list" class="device-list">
+                <div class="device-item">Scanning for beacons...</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="globe-container">
+        <div class="globe"></div>
+    </div>
+
+    <script>
+        const chatWindow = document.getElementById('chat-window');
+        const userInput = document.getElementById('user-input');
+        const sendBtn = document.getElementById('send-btn');
+        const statusDot = document.getElementById('status-dot');
+        const statusText = document.getElementById('status-text');
+        const chatList = document.getElementById('chat-list');
+        const newChatBtn = document.getElementById('new-chat-btn');
+        const chatSearch = document.getElementById('chat-search');
+
+        let currentChatId = null;
+        let allChats = [];
+        let targetDevice = "10.11.48.180";
+
+        // INITIAL NETWORK SCAN
+        async function scanNetwork() {
+            try {
+                const response = await fetch('/scan_network', { method: 'POST' });
+                const devices = await response.json();
+                const list = document.getElementById('device-list');
+                list.innerHTML = '';
+                
+                devices.forEach(dev => {
+                    const div = document.createElement('div');
+                    div.className = 'device-item';
+                    div.innerText = `${dev.name} [${dev.ip}]`;
+                    div.onclick = () => selectDevice(dev.ip, dev.name);
+                    list.appendChild(div);
+                });
+            } catch (error) {
+                console.error('Scan failed:', error);
+                const list = document.getElementById('device-list');
+                list.innerHTML = '<div class="device-item" onclick="selectDevice(\'10.11.48.180\', \'A06 Beacon\')">A06 Beacon (Fallback) [10.11.48.180]</div>';
+            }
+        }
+
+        function selectDevice(ip, name) {
+            targetDevice = ip;
+            document.getElementById('target-ip').innerText = ip;
+            document.getElementById('device-modal').style.display = 'none';
+            appendMessage('sea', `Target locked: ${name} (${ip}). Standing by for your commands, Sir.`);
+        }
+
+        function setStatus(status) {
+            statusDot.classList.remove('busy', 'error');
+            if (status === 'analyzing') {
+                statusDot.classList.add('busy');
+                statusText.innerText = 'SYSTEM: ANALYZING...';
+            } else if (status === 'speaking') {
+                statusDot.classList.add('busy');
+                statusText.innerText = 'SYSTEM: COMMUNICATING...';
+            } else if (status === 'error') {
+                statusDot.classList.add('error');
+                statusText.innerText = 'SYSTEM: ERROR';
+            } else {
+                statusText.innerText = 'SYSTEM: ONLINE';
+            }
+        }
+
+        function appendMessage(role, text) {
+            const msgDiv = document.createElement('div');
+            let finalRole = role;
+            
+            // Apply agent styling if the response is from Agent Mode
+            if (role === 'sea' && (text.includes('Agent Mode Active') || text.includes('Strategic analysis'))) {
+                finalRole = 'agent';
+            }
+
+            msgDiv.className = `message ${finalRole}-message`;
+            msgDiv.innerText = text;
+            chatWindow.appendChild(msgDiv);
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+        }
+
+        async function fetchChats() {
+            try {
+                const response = await fetch('/chats');
+                allChats = await response.json();
+                renderChatList(allChats);
+            } catch (error) {
+                console.error('Error fetching chats:', error);
+            }
+        }
+
+        function renderChatList(chats) {
+            chatList.innerHTML = '';
+            chats.forEach(chat => {
+                const chatItem = document.createElement('div');
+                chatItem.className = `chat-item ${chat.id === currentChatId ? 'active' : ''}`;
+                chatItem.innerText = chat.title;
+                chatItem.onclick = () => loadChat(chat.id);
+                chatList.appendChild(chatItem);
+            });
+        }
+
+        async function createNewChat() {
+            try {
+                const response = await fetch('/chats/new', { method: 'POST' });
+                const chat = await response.json();
+                currentChatId = chat.id;
+                chatWindow.innerHTML = '<div class="message sea-message">New session initialized. SEA standing by, Sir.</div>';
+                fetchChats();
+            } catch (error) {
+                console.error('Error creating chat:', error);
+            }
+        }
+
+        async function loadChat(chatId) {
+            currentChatId = chatId;
+            try {
+                const response = await fetch(`/chats/${chatId}`);
+                const data = await response.json();
+                
+                chatWindow.innerHTML = '';
+                if (data.messages.length === 0) {
+                    appendMessage('sea', 'Session active. Standing by, Sir.');
+                } else {
+                    data.messages.forEach(msg => appendMessage(msg.role, msg.text));
+                }
+                renderChatList(allChats);
+            } catch (error) {
+                console.error('Error loading chat:', error);
+            }
+        }
+
+        async function sendMessage() {
+            const message = userInput.value.trim();
+            if (!message) return;
+
+            // If no chat is active, create one first
+            if (!currentChatId) {
+                await createNewChat();
+            }
+
+            appendMessage('user', message);
+            userInput.value = '';
+            
+            setStatus('analyzing');
+
+            try {
+                const response = await fetch('/ask', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        message: message,
+                        chat_id: currentChatId
+                    })
+                });
+
+                const data = await response.json();
+                
+                if (data.reply) {
+                    setStatus('speaking');
+                    appendMessage('sea', data.reply);
+                    fetchChats(); // Refresh list for auto-title
+                    setTimeout(() => setStatus('online'), 2000);
+                } else {
+                    setStatus('error');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                setStatus('error');
+            }
+        }
+
+        chatSearch.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            const filtered = allChats.filter(c => c.title.toLowerCase().includes(term));
+            renderChatList(filtered);
+        });
+
+        newChatBtn.addEventListener('click', createNewChat);
+        sendBtn.addEventListener('click', sendMessage);
+        userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendMessage();
+        });
+
+        // Initial Load
+        window.onload = () => {
+            scanNetwork();
+            fetchChats();
+            userInput.focus();
+        };
+    </script>
+</body>
+</html>

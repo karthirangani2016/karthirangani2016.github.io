@@ -1,0 +1,20 @@
+What is RSA Encryption?
+RSA is a public-key cryptosystem used for secure data transmission. It relies on the mathematical difficulty of factoring the product of two large prime numbers.
+What is the 'Enigma Machine'?
+The Enigma machine was a cipher device used by Nazi Germany during WWII. It was famously broken by Alan Turing and his team at Bletchley Park using the 'Bombe' machine, shortening the war by years.
+What is 'Psychological Operations' or PSYOP?
+PSYOP are operations to convey selected information and indicators to audiences to influence their emotions, motives, objective reasoning, and ultimately the behavior of governments, organizations, groups, and individuals.
+What is the 'Golden Ratio' in mathematics?
+The Golden Ratio (approximately 1.618) is a mathematical constant found in nature, art, and architecture. It is believed to represent the most aesthetically pleasing proportions.
+What is the 'Fibonacci Sequence'?
+The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones (0, 1, 1, 2, 3, 5...). It is closely related to the Golden Ratio and appears in many natural structures.
+What was the 'Industrial Revolution'?
+The Industrial Revolution was the transition to new manufacturing processes in Europe and the US in the 18th and 19th centuries. It marked a major turning point in history, influencing almost every aspect of daily life.
+What is 'Game Theory'?
+Game Theory is the study of mathematical models of strategic interaction among rational decision-makers. it is used in economics, political science, and logic.
+What is the 'Fermi Paradox'?
+The Fermi Paradox is the discrepancy between the lack of evidence for extraterrestrial civilizations and high probability estimates for their existence. It asks: "Where is everybody?"
+What is 'Existentialism'?
+Existentialism is a philosophical theory that emphasizes the existence of the individual person as a free and responsible agent determining their own development through acts of the will.
+What is 'Quantum Cryptography'?
+Quantum cryptography uses quantum mechanics to guarantee secure communication. The most famous example is Quantum Key Distribution (QKD), which uses the properties of photons to detect eavesdropping.

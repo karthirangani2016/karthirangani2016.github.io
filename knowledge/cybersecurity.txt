@@ -1,0 +1,6 @@
+What is the difference between symmetric and asymmetric encryption?
+Symmetric encryption uses a single private key for both encryption and decryption, whereas asymmetric encryption uses a public key for encryption and a separate private key for decryption.
+What is the principle of "Least Privilege"?
+It is the security practice of limiting user access rights and permissions to the bare minimum required to perform their specific job functions.
+How does a VPN protect a user's data?
+A VPN creates an encrypted tunnel for data transmission, masking the user's IP address and securing their traffic from local network eavesdroppers.

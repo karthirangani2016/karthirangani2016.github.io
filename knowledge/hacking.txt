@@ -1,0 +1,168 @@
+What is Linux?
+Linux is a OS, Mainly used by Penetration testers and ethical hackers and coders.
+What is Kali Linux?
+Kali Linux is a Debian Based OS designed specifically for hacking. It comes with hundreds of built in tools.
+What is password cracking?
+Password cracking involves stealing a hash and decoding it. The password is encoded and the result is a hash when you decode it you get the password. The tools used for this are Hashcat and John The Ripper. All of these tools are prebuilt in Kali Linux. Never steal a password without the permission of the person you are hacking.
+What is Wi-Fi hacking?
+Wifi hacking is something that steals the hash a encrypted version of the original password, now here the handshake is captured. A handshake is something that happens when someone connects to the wifi network which is the target. Then the hash the password entered in the password field by the person who connected will be written in hash and given to the router. But sometimes it will take  too long and nobody connects. Then the hacker will launch a Deauth attack. A Deauth attack diconnects everyone from the network. So then a person will connect back and when they enter the password done the hacker gets the hash and they crack it. The most common tool used to do this is Wifite. But the device of the hacker must have monitor mode. Now usually this is illegal so we must never attempt this attack without permission. Now some latest new routers detect and alarm you if a Deauth attack ever happens.
+How to turn a android tv stick from china into a mega pc?
+First install f droid apk and bvnc apk. From F-Droid install Termux. 2. Follow official kali nethunter rootless guide and select minimal.3rd install kali-desktop-xfce and tightvncserver. 3rd edit the xstartup and optimise it. Start the VNC with the command tightvncserver . 4rth step open settings of android tv and enable devoloper model scroll down and if you see child process restriction turn it off if you dont well then open bvnc and enter localhost:5901 thats it you get kali linux now update and upgrade bam wait a few minutes and i it crashes or dsent load open termux if you ee signal 9 completed  then yeah your android tv is not capable of it well you will have to use only terminal then.
+What is Bug Bounty?
+Bug bounty is a place where people pay you to hack their systems. These programs are 18+. These are platforms such as HackTheBox and google ctf and of course if google offers something microsoft also offers it.
+What is the primary purpose of Nmap in network security?
+Nmap is a network discovery and security auditing tool used to identify active hosts, open ports, and services running on a target network.
+How does the Metasploit Framework assist ethical hackers?
+Metasploit provides a comprehensive platform for developing, testing, and executing exploit code against remote target systems during penetration tests.
+What is a SQL Injection (SQLi) vulnerability?
+SQLi occurs when an attacker inserts malicious SQL code into an input field, allowing them to manipulate or gain unauthorized access to the backend database.
+Why is Wireshark used in cybersecurity analysis?
+Wireshark is a network protocol analyzer that allows security professionals to capture and interactively browse the traffic running on a computer network.
+What defines a "Zero-Day" exploit?
+A Zero-Day exploit targets a software vulnerability that is unknown to the vendor and for which no patch or security fix currently exists.
+How does a Distributed Denial of Service (DDoS) attack differ from a standard DoS?
+A DDoS attack utilizes a network of compromised systems (a botnet) to overwhelm a target, making it significantly harder to mitigate than a single source DoS.
+What is Cross-Site Scripting (XSS)?
+XSS is a vulnerability where an attacker injects malicious scripts into web pages viewed by other users, potentially stealing session cookies or sensitive data.
+What is the purpose of a Honeypot in network defense?
+A Honeypot is a decoy system designed to lure attackers, allowing security teams to observe their methods and detect intrusions without risking production assets.
+What is Buffer Overflow?
+An anomaly where a program, while writing data to a buffer, overruns the buffer's boundary and overwrites adjacent memory locations.
+What is Reverse Engineering?
+The process of analyzing a software system to identify its components and their interrelationships, often to find vulnerabilities.
+What is Privilege Escalation?
+The act of exploiting a bug, design flaw, or configuration oversight in an operating system or software application to gain elevated access to resources.
+What is a Rootkit?
+A collection of computer software, typically malicious, designed to enable access to a computer or an area of its software that is not otherwise allowed.
+What is SQL Blind Injection?
+A type of SQL Injection attack that asks the database true or false questions and determines the answer based on the application's response.
+What is a Cross-Site Request Forgery (CSRF)?
+An attack that forces an authenticated user to execute unwanted actions on a web application in which they're currently authenticated.
+What is Steganography?
+The practice of concealing a file, message, image, or video within another file, message, image, or video.
+What is Port Scanning?
+An application used to scan a server or host for open ports to identify running services and potential entry points.
+What is a Web Shell?
+A shell-like interface that enables remote administration of a web server, often uploaded by attackers to maintain persistence.
+What is Directory Traversal?
+An HTTP attack which allows attackers to access restricted directories and execute commands outside of the web server's root directory.
+What is Social Engineering?
+The psychological manipulation of people into performing actions or divulging confidential information.
+What is a Brute Force attack?
+A trial-and-error method used to obtain information such as a user password or personal identification number (PIN).
+What is a Replay Attack?
+A form of network attack in which a valid data transmission is maliciously or fraudulently repeated or delayed.
+What is an Evil Twin attack?
+A fraudulent Wi-Fi access point that appears to be a legitimate one, but is set up to eavesdrop on wireless communications.
+What is DNS Spoofing?
+A form of computer security hacking in which corrupt Domain Name System data is introduced into a DNS resolver's cache, causing the name server to return an incorrect IP address.
+What is Packet Sniffing?
+The process of capturing and analyzing data packets as they travel across a network.
+What is Remote Code Execution (RCE)?
+The ability of an attacker to execute arbitrary code on a target machine or in a target process.
+What is a Logic Bomb?
+A piece of code intentionally inserted into a software system that will set off a malicious function when specified conditions are met.
+What is Fileless Malware?
+A type of malicious software that does not rely on files to infect a computer, instead using legitimate programs to infect a computer.
+What is Penetration Testing?
+An authorized simulated cyberattack on a computer system, performed to evaluate the security of the system.
+What is a stack-based buffer overflow?
+A stack-based buffer overflow occurs when a program writes more data to a buffer located on the stack than the buffer is allocated to hold, potentially overwriting return addresses to hijack control flow.
+How does Address Space Layout Randomization (ASLR) defend against exploits?
+ASLR randomly arranges the address space positions of key data areas of a process, such as the base of the executable and the positions of the stack, heap, and libraries, making memory corruption exploits harder to predict.
+What is the "Return-Oriented Programming" (ROP) technique?
+ROP is an exploit technique that allows an attacker to execute code in the presence of security defenses like executable space protection by chaining together small snippets of existing code (gadgets) ending in a "return" instruction.
+Explain the difference between static and dynamic reverse engineering.
+Static analysis involves examining the code or binary without executing it (e.g., using disassemblers), while dynamic analysis involves observing the program's behavior during execution (e.g., using debuggers and sandboxes).
+What are the security implications of "Insecure Direct Object References" (IDOR)?
+IDOR occurs when an application provides direct access to objects based on user-supplied input, allowing attackers to bypass authorization and access sensitive data by manipulating identifiers like database keys.
+How does "Server-Side Request Forgery" (SSRF) work?
+SSRF is a vulnerability where an attacker can induce a server to make HTTP requests to an arbitrary domain of the attacker's choosing, often used to target internal systems behind a firewall.
+What is a "Heap Spray" attack?
+A heap spray is a technique used in exploits to facilitate arbitrary code execution by placing a large amount of shellcode at predictable locations in the heap memory of a target process.
+Explain the "Evil Twin" attack in wireless security.
+An Evil Twin attack involves setting up a fraudulent Wi-Fi access point that appears to be a legitimate one to eavesdrop on wireless communications or steal credentials from connecting users.
+What is "Fuzzing" in the context of vulnerability research?
+Fuzzing is an automated software testing technique that involves providing invalid, unexpected, or random data as inputs to a computer program to find security vulnerabilities and stability issues.
+How does "Certificate Pinning" enhance mobile app security?
+Certificate pinning tells the application to trust only a specific certificate or public key, preventing Man-in-the-Middle (MitM) attacks even if a Certificate Authority is compromised.
+What is the purpose of a "No-Execute" (NX) bit?
+The NX bit is a hardware feature that marks certain areas of memory as non-executable, preventing the execution of shellcode stored in data buffers like the stack or heap.
+Explain "DLL Hijacking" and how it is exploited.
+DLL hijacking occurs when an application loads a malicious DLL from an unexpected path instead of the legitimate one, often by exploiting the search order used by the operating system to find libraries.
+What is "SQL Injection" and how can parameterized queries prevent it?
+SQLi is a vulnerability where an attacker can interfere with the queries an application makes to its database; parameterized queries prevent it by separating the SQL code from the data, ensuring user input is treated as literal data only.
+Describe the "KRACK" (Key Reinstallation Attack) on WPA2.
+KRACK is a protocol-level vulnerability in WPA2 that allows an attacker to reset the key stream used in the four-way handshake, enabling the decryption and injection of wireless traffic.
+What is "Cloud Metadata Service" exploitation?
+Attackers target the metadata services of cloud instances (e.g., IMDSv1) to retrieve sensitive information like IAM role credentials, often via SSRF vulnerabilities.
+Define "Cross-Site Scripting" (XSS) and distinguish between Stored and Reflected XSS.
+XSS involves injecting malicious scripts into web pages; Stored XSS saves the script on the server (e.g., in a database), while Reflected XSS involves the script being "reflected" off the web server in a response.
+What is "Binary Diffing" in reverse engineering?
+Binary diffing is the process of comparing two executable files to identify differences, often used to find security fixes in patches and "reverse" the underlying vulnerability.
+Explain the "WPS Pixie-Dust" attack.
+The Pixie-Dust attack exploits a lack of entropy in the generation of "nonces" during the Wi-Fi Protected Setup (WPS) exchange, allowing an attacker to crack the WPS PIN in seconds.
+What is a "Side-Channel Attack"?
+A side-channel attack is based on information gained from the physical implementation of a computer system, such as timing information, power consumption, or electromagnetic leaks, rather than weaknesses in the algorithms themselves.
+How does "Sandboxing" improve security?
+Sandboxing isolates a program's execution from the rest of the system, restricting its access to files, network resources, and other processes to minimize the impact of a potential compromise.
+What is "Format String" vulnerability?
+It occurs when an application passes user-supplied input as a format string argument to functions like printf(), allowing an attacker to read from or write to the stack.
+Describe "Privilege Escalation" in a local system context.
+Privilege escalation is the act of exploiting a bug or configuration oversight to gain elevated access to resources that are normally protected from an application or user.
+What is the "Golden Ticket" attack in Active Directory?
+A Golden Ticket attack involves forging a Kerberos Ticket Granting Ticket (TGT) using the NTLM hash of the KRBTGT service account, granting the attacker persistent, near-infinite access to the domain.
+Explain "Cross-Site Request Forgery" (CSRF).
+CSRF is an attack that forces an authenticated user to execute unwanted actions on a web application in which they are currently authenticated, typically by tricking them into clicking a malicious link.
+What are "Deauthentication Frames" used for in Wi-Fi hacking?
+Deauthentication frames are used to forcibly disconnect clients from an access point, often to capture handshakes (for cracking) or to drive users toward an Evil Twin.
+What is "Symbolic Execution" in vulnerability research?
+Symbolic execution is a means of analyzing a program to determine what inputs cause each part of a program to execute, using symbolic values instead of concrete data to find bug-inducing paths.
+How does "Docker Socket" exposure lead to container escape?
+Exposing the Docker socket (/var/run/docker.sock) inside a container allows the container to communicate with the host's Docker daemon, enabling an attacker to start new containers with host-level privileges.
+What is "Path Traversal" (Directory Traversal)?
+Path traversal is a vulnerability that allows an attacker to read arbitrary files on the server that is running an application, typically by using "../" sequences to move up the directory tree.
+Define "Broken Access Control" as per OWASP Top 10.
+Broken access control occurs when restrictions on what authenticated users are allowed to do are not properly enforced, allowing users to act outside of their intended permissions.
+What is the "SambaCry" vulnerability?
+SambaCry (CVE-2017-7494) is a remote code execution vulnerability in Samba that allows a malicious client to upload a shared library to a writable share and cause the server to execute it.
+Explain "Blind SQL Injection".
+Blind SQLi occurs when an application is vulnerable to SQLi but its HTTP responses do not contain the results of the relevant SQL query or any database errors, requiring inference via boolean logic or timing.
+What is "Clickjacking" and how do X-Frame-Options help?
+Clickjacking tricks a user into clicking something different from what they perceive; X-Frame-Options headers prevent the site from being rendered in an iframe, stopping the UI redressing.
+What is "Remote Code Execution" (RCE)?
+RCE is the ability of an attacker to execute arbitrary commands or code on a target machine or in a target process, often the ultimate goal of an exploit.
+Describe "War Driving".
+War driving is the act of searching for Wi-Fi wireless networks by a person in a moving vehicle, using a laptop or smartphone to map the locations and security status of networks.
+What is "API Token Leakage" and where does it commonly occur?
+API token leakage involves exposing sensitive credentials in public repositories (e.g., GitHub), client-side code, or insecure logging.
+Explain "Use-After-Free" (UAF) vulnerability.
+UAF occurs when a program continues to use a pointer after it has been freed, allowing an attacker to potentially control the data that occupies the freed memory and hijack control flow.
+What is "Bypassing WAF" (Web Application Firewall)?
+Bypassing a WAF involves using encoding (e.g., URL, Hex, Unicode), payload splitting, or exploiting protocol inconsistencies to smuggle malicious requests past the firewall.
+Describe the "Log4Shell" vulnerability (CVE-2021-44228).
+Log4Shell is a critical RCE vulnerability in Apache Log4j 2 that allows attackers to execute arbitrary code by sending a crafted string that triggers a JNDI lookup to a malicious server.
+What is "DNS Rebinding"?
+DNS rebinding is an attack that allows a malicious website to circumvent the Same-Origin Policy (SOP) by manipulating the DNS resolution of its domain to point to an internal IP address.
+Explain "Kernel-mode" vs "User-mode" rootkits.
+User-mode rootkits hook APIs in the application layer, while kernel-mode rootkits reside in the OS kernel, allowing them to hide more effectively by intercepting system calls at a lower level.
+What is "OSINT" (Open Source Intelligence)?
+OSINT is the collection and analysis of data gathered from open sources (e.g., social media, public records, technical registrations) to identify targets and vulnerabilities.
+What is "Padding Oracle" attack?
+A padding oracle attack is an attack which uses the padding responses of a cipher to decrypt the ciphertext without knowing the key, commonly targeting CBC mode in block ciphers.
+Describe "Bluejacking" vs "Bluesnarfing".
+Bluejacking involves sending unsolicited messages to Bluetooth-enabled devices, while Bluesnarfing is the unauthorized access of information from a wireless device through a Bluetooth connection.
+What is "Container Image Scanning"?
+Container image scanning is the process of analyzing the contents and the build process of a container image to detect known vulnerabilities in software packages and libraries.
+Explain "Insecure Deserialization".
+Insecure deserialization occurs when untrusted data is used to abuse the logic of an application, leading to RCE, replay attacks, or privilege escalation by tampering with serialized objects.
+What is "Subdomain Takeover"?
+A subdomain takeover occurs when a DNS entry (like a CNAME) points to a service that has been decommissioned but the DNS record remains, allowing an attacker to claim the name on the service provider.
+Define "Shellcode".
+Shellcode is a small piece of code used as the payload in the exploitation of a software vulnerability, traditionally designed to start a command shell.
+What is "Post-Exploitation"?
+Post-exploitation refers to the phase of a security audit or attack after a target system has been compromised, focusing on maintaining access, escalating privileges, and exfiltrating data.
+Explain the "Dirty COW" exploit (CVE-2016-5195).
+Dirty COW is a privilege escalation vulnerability in the Linux kernel that exploits a race condition in the implementation of the copy-on-write (COW) mechanism in the memory management subsystem.
+What is "Beaconing" in Malware C2?
+Beaconing is the process where a compromised system periodically contacts a Command and Control (C2) server to check for instructions or to send exfiltrated data.

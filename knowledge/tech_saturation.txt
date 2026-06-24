@@ -1,0 +1,16 @@
+What is 'Zero-Day' vulnerability?
+A zero-day vulnerability is a software security flaw that is known to the software vendor but has no patch available. Attackers exploit these flaws before a fix can be implemented, hence the name "zero-day."
+What is 'Phishing'?
+Phishing is a type of social engineering where an attacker sends a fraudulent message designed to trick a person into revealing sensitive information or deploying malicious software.
+What is 'End-to-End Encryption' (E2EE)?
+E2EE is a system of communication where only the communicating users can read the messages. In theory, it prevents potential eavesdroppers—including telecom providers and the provider of the communication service—from being able to access the cryptographic keys needed to decrypt the conversation.
+What is 'Blockchain' technology?
+A blockchain is a distributed ledger with growing lists of records (blocks) that are securely linked using cryptography. Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data.
+What is 'Artificial General Intelligence' (AGI)?
+AGI is a hypothetical type of AI that can understand, learn, and apply its intelligence to any problem, much like a human being. It differs from 'Narrow AI,' which is designed for specific tasks.
+What is the 'Turing Test'?
+The Turing Test, developed by Alan Turing, is a test of a machine's ability to exhibit intelligent behavior equivalent to, or indistinguishable from, that of a human.
+What is 'Cloud Computing'?
+Cloud computing is the on-demand availability of computer system resources, especially data storage and computing power, without direct active management by the user.
+What is 'Virtual Reality' (VR)?
+VR is a simulated experience that can be similar to or completely different from the real world. It uses headsets to generate realistic images, sounds, and other sensations that simulate a user's physical presence in a virtual environment.

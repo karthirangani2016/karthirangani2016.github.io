@@ -1,0 +1,140 @@
+What is a PID controller?
+A control loop mechanism employing feedback that is widely used in industrial control systems and a variety of other applications requiring continuously modulated control.
+What is SLAM in robotics?
+Simultaneous Localization and Mapping, the computational problem of constructing or updating a map of an unknown environment while simultaneously keeping track of an agent's location within it.
+What is an Actuator?
+A component of a machine that is responsible for moving and controlling a mechanism or system, for example by opening a valve.
+What is an IMU?
+Inertial Measurement Unit, an electronic device that measures and reports a body's specific force, angular rate, and sometimes the orientation of the body.
+What is LIDAR?
+Light Detection and Ranging, a remote sensing method that uses light in the form of a pulsed laser to measure ranges (variable distances) to the Earth.
+What is Kinematics in robotics?
+The study of the motion of robotic systems without consideration of the forces and torques that cause the motion.
+What is Inverse Kinematics?
+The mathematical process of calculating the variable joint parameters needed to place the end of a kinematic chain, such as a robot manipulator, in a given position.
+What is a Degrees of Freedom (DoF)?
+The number of independent parameters that define the configuration of a mechanical system.
+What is a Microcontroller?
+A small computer on a single integrated circuit, often used in embedded systems and robotics to control devices.
+What is ROS?
+Robot Operating System, a flexible framework for writing robot software, providing a collection of tools, libraries, and conventions.
+What is an End Effector?
+The device at the end of a robotic arm, designed to interact with the environment, such as a gripper or a tool.
+What is Dead Reckoning?
+The process of calculating one's current position by using a previously determined position, and advancing that position based upon known or estimated speeds over elapsed time.
+What is a Servomotor?
+A rotary actuator or linear actuator that allows for precise control of angular or linear position, velocity and acceleration.
+What is Computer Vision?
+An interdisciplinary scientific field that deals with how computers can be made to gain high-level understanding from digital images or videos.
+What is Haptics?
+The science of applying touch sensation and control to interaction with computer applications.
+What is Swarm Robotics?
+An approach to the coordination of multiple robots as a system which consist of large numbers of mostly simple physical robots.
+What is Teleoperation?
+The operation of a system or machine from a distance, typically using a wireless connection.
+What is a Bipedal Robot?
+A robot that moves using two legs, mimicking human or animal locomotion.
+What is Odometry?
+The use of data from motion sensors to estimate change in position over time.
+What is a Cobot?
+A collaborative robot designed to interact with humans in a shared workspace.
+What is 'Forward Kinematics' in robotics?
+Forward kinematics is the use of kinematic equations to calculate the position of the end-effector from specified values for the joint parameters.
+How does 'Inverse Kinematics' (IK) differ from forward kinematics?
+Inverse kinematics is the mathematical process of determining the joint parameters needed to achieve a desired position and orientation of the robot's end-effector.
+What is the 'Jacobian Matrix' in robot control?
+The Jacobian matrix represents the relationship between joint velocities and the resulting end-effector velocities in Cartesian space; it is also used to map forces from the end-effector to joint torques.
+Explain the concept of 'SLAM' (Simultaneous Localization and Mapping).
+SLAM is the computational problem of constructing or updating a map of an unknown environment while simultaneously keeping track of an agent's location within it.
+What is 'ROS2' and how does it improve upon ROS1?
+ROS2 (Robot Operating System 2) is a set of software libraries and tools for building robot applications; it improves on ROS1 by using DDS (Data Distribution Service) for communication, providing better support for real-time systems and multi-robot setups.
+Define 'Swarm Robotics'.
+Swarm robotics is an approach to the coordination of multiple robots as a system which consists of large numbers of mostly simple physical robots, inspired by the collective behavior of social insects.
+How does 'Optical Flow' work in computer vision for robotics?
+Optical flow is the pattern of apparent motion of objects, surfaces, and edges in a visual scene caused by the relative motion between an observer and the scene, used for motion estimation and obstacle avoidance.
+What is the 'Denavit-Hartenberg' (D-H) convention?
+The D-H convention is a commonly used method for attaching reference frames to the links of a robotic manipulator, simplifying the kinematic analysis by using four parameters per link.
+Explain 'Visual Odometry' (VO).
+Visual odometry is the process of determining the position and orientation of a robot by analyzing the associated camera images, often used in environments where GPS is unavailable.
+What is a 'Kalman Filter' and why is it used in robotics?
+A Kalman filter is an algorithm that uses a series of measurements observed over time, containing statistical noise and other inaccuracies, to produce estimates of unknown variables that tend to be more accurate than those based on a single measurement alone.
+Describe 'Path Planning' vs 'Motion Planning'.
+Path planning is the process of finding a geometric path from a start to a goal, while motion planning also considers the robot's dynamics and constraints (e.g., velocity and acceleration limits) to find a feasible trajectory.
+What is the 'Middleware' layer in ROS2?
+The middleware layer in ROS2 is the RMW (ROS MiddleWare) interface, which abstracts the underlying DDS implementation, allowing ROS2 to work with different communication protocols.
+Explain 'Feature Extraction' in computer vision.
+Feature extraction is a process of dimensionality reduction where an initial set of raw data is reduced to more manageable groups (features) for processing, such as detecting edges, corners, or blobs in an image.
+What are 'Degree of Freedom' (DoF) in a robot?
+DoF refers to the number of independent parameters that define the robot's configuration; for a rigid body in 3D space, there are 6 DoF (3 translations and 3 rotations).
+Describe 'Bio-inspired Robotics'.
+Bio-inspired robotics is a field that seeks to apply principles from biological systems (e.g., movement of animals, sensing mechanisms) to the design and control of robots.
+What is 'Force Control' and when is it necessary?
+Force control allows a robot to interact with its environment by maintaining a specific contact force, which is necessary for tasks like sanding, polishing, or assembling fragile components.
+Explain 'LIDAR' technology in robotics.
+LIDAR (Light Detection and Ranging) is a remote sensing method that uses light in the form of a pulsed laser to measure ranges (variable distances) to the Earth, creating high-resolution 3D maps.
+What is the 'DDS' (Data Distribution Service) in ROS2?
+DDS is a networking middleware standard that provides low-latency data connectivity, extreme reliability, and a scalable architecture for real-time systems, used as the default communication backbone for ROS2.
+Define 'Stochastic Mapping' in SLAM.
+Stochastic mapping is an approach where the robot's state and the locations of landmarks in the map are estimated using probabilistic methods, accounting for sensor noise and uncertainty.
+What is 'Image Segmentation' and why is it useful?
+Image segmentation is the process of partitioning a digital image into multiple segments (sets of pixels) to simplify its representation into something that is more meaningful and easier to analyze, such as identifying individual objects.
+Describe the 'Communication Topology' in swarm robotics.
+Communication topology defines how individual robots in a swarm exchange information; it can be local (neighbor-to-neighbor), global, or hierarchical, depending on the swarm's scale and task.
+What is 'Dead Reckoning'?
+Dead reckoning is the process of calculating one's current position by using a previously determined position and advancing that position based upon known or estimated speeds over elapsed time and course.
+Explain 'Reinforcement Learning' (RL) in the context of robotics.
+RL is a type of machine learning where a robot learns to make decisions by performing actions and receiving rewards or penalties, often used for learning complex manipulation or locomotion tasks.
+What is a 'Transformation Matrix' in robotics?
+A transformation matrix (typically 4x4) is used to represent the rotation and translation of one coordinate frame relative to another, essential for kinematic calculations.
+Describe 'Point Cloud' data.
+A point cloud is a set of data points in space, usually produced by 3D scanners or LIDAR, representing the external surface of an object or environment.
+What is 'Workspace' vs 'Configuration Space' (C-space)?
+The workspace is the set of all points that the robot's end-effector can reach, while the C-space is the set of all possible configurations (joint positions) of the robot.
+Explain 'Trajectory Generation'.
+Trajectory generation is the process of creating a time-indexed sequence of states (positions, velocities, accelerations) that a robot should follow to move from its current state to a target state.
+What is 'Haptic Feedback' in robotics?
+Haptic feedback is the use of touch to communicate with the user, often by providing force or vibration sensations to simulate the physical properties of an object.
+Describe 'Epipolar Geometry' in computer vision.
+Epipolar geometry is the geometry of stereo vision; it describes the geometric constraints between two images of the same scene taken from different perspectives.
+What is the 'Rviz' tool in ROS/ROS2?
+Rviz is a 3D visualization tool for ROS that allows users to see the robot's sensor data, map, and internal state in a graphical interface.
+Explain 'Decentralized Control' in swarm robotics.
+Decentralized control means that there is no central controller or 'leader' robot; instead, the swarm's collective behavior emerges from the local interactions and simple rules followed by individual robots.
+What is 'Sensor Fusion'?
+Sensor fusion is the process of combining data from multiple sensors (e.g., IMU, GPS, LIDAR) to produce more accurate and reliable information than could be achieved by using the sensors individually.
+Describe 'Teleoperation'.
+Teleoperation is the operation of a system or machine at a distance, typically involving a human operator controlling a robot via a remote interface.
+What is 'Grasping' in robotics?
+Grasping is the act of a robot using an end-effector (like a gripper) to securely hold and manipulate an object, requiring consideration of contact points, friction, and stability.
+Explain 'Aruco Markers' and their use in robotics.
+Aruco markers are binary square fiducial markers used for camera pose estimation; they are easy to detect and can be used for robot localization and object tracking.
+What is 'Soft Robotics'?
+Soft robotics is a subfield of robotics that focuses on the design and construction of robots from highly compliant materials, similar to those found in living organisms.
+Describe the 'Action' interface in ROS2.
+An action in ROS2 is a communication pattern used for long-running tasks that consists of a goal, feedback, and a result; it allows the client to monitor the progress of the task and cancel it if necessary.
+What is 'Depth Estimation' in computer vision?
+Depth estimation is the process of determining the distance of objects in a scene from the camera, which can be done using stereo cameras, structured light, or time-of-flight sensors.
+Explain 'Obstacle Avoidance' algorithms.
+Obstacle avoidance algorithms (like Potential Fields or Vector Field Histogram) enable a robot to navigate through an environment without colliding with objects by calculating safe paths in real-time.
+What is 'Odometry Error' and how is it corrected?
+Odometry error is the accumulation of inaccuracies in position estimation due to wheel slip, sensor noise, or mechanical tolerances; it is usually corrected using external sensors like LIDAR or GPS via SLAM.
+Describe 'Swarm Intelligence'.
+Swarm intelligence is the collective behavior of decentralized, self-organized systems, natural or artificial, characterized by local interactions and emergent global patterns.
+What is 'Edge Computing' in robotics?
+Edge computing involves processing data closer to where it is generated (i.e., on the robot itself) rather than in a centralized cloud, reducing latency and bandwidth usage.
+Explain 'Stereo Vision'.
+Stereo vision is the process of extracting 3D information from two 2D images by finding correspondences between the images and using triangulation to calculate depth.
+What is 'Node' in ROS2?
+A node in ROS2 is a single-purpose executable that performs a specific task (e.g., controlling a motor, reading a sensor) and communicates with other nodes via topics, services, or actions.
+Describe 'Human-Robot Interaction' (HRI).
+HRI is an interdisciplinary field dedicated to understanding, designing, and evaluating robotic systems for use by or with humans.
+What is 'PID Control' and why is it common in robotics?
+PID (Proportional-Integral-Derivative) control is a feedback loop mechanism that calculates an error value as the difference between a desired setpoint and a measured process variable, applying a correction based on proportional, integral, and derivative terms.
+Explain 'Mobile Robot Kinematics'.
+Mobile robot kinematics is the study of the motion of robots that move on the ground, focusing on the relationship between wheel velocities and the robot's overall velocity and trajectory.
+What is 'Latency' in robot communication?
+Latency is the time delay between the initiation of a communication and the receipt of the information, which can significantly affect the stability and performance of real-time control loops.
+Describe 'Computer Vision' (CV) pipelines in robotics.
+A CV pipeline is a sequence of processing steps (e.g., image acquisition, filtering, feature detection, object recognition) used to transform raw image data into actionable information for a robot.
+What is 'Modular Robotics'?
+Modular robotics involves building robots from a set of standard components (modules) that can be rearranged to change the robot's morphology and functionality.

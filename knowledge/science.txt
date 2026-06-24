@@ -1,0 +1,130 @@
+How far is the Moon from Earth?
+The Moon is about 384,400 kilometers (238,855 miles) away from Earth.
+Who was the first human to walk on the moon?
+Neil Armstrong was the first person to walk on the lunar surface in 1969.
+What is the largest planet in our solar system?
+Jupiter is the largest planet in our solar system.
+What is the most popular programming language in 2024?
+Python remains one of the most popular and versatile programming languages due to its simplicity and powerful libraries for AI and Data Science.
+How does NASA's James Webb Space Telescope differ from the Hubble Space Telescope?
+James Webb primarily observes in the infrared spectrum and possesses a much larger primary mirror, allowing it to see through cosmic dust to observe the earliest stars.
+What is an exoplanet?
+An exoplanet is any planet located outside our solar system that orbits a star other than the Sun.
+What is the significance of the Cosmic Microwave Background (CMB) radiation?
+The CMB is the oldest light in the universe, providing a thermal "snapshot" of the cosmos approximately 380,000 years after the Big Bang.
+What is the Oort Cloud?
+The Oort Cloud is a theoretical spherical shell of icy objects at the outermost reaches of the solar system, believed to be the source of long-period comets.
+Why is Mars often referred to as the Red Planet?
+Mars appears red due to the prevalence of iron oxide, or rust, on its surface and within its thin atmosphere.
+What is the primary goal of NASA's Artemis missions?
+The Artemis program aims to return humans to the Moon, establish a sustainable lunar presence, and prepare for future human missions to Mars.
+How many moons does Jupiter have according to current astronomical records?
+As of current findings, Jupiter has 95 officially recognized moons, including the four large Galilean moons: Io, Europa, Ganymede, and Callisto.
+What is the Kuiper Belt?
+The Kuiper Belt is a region of the solar system beyond the orbit of Neptune that contains many small icy bodies and dwarf planets like Pluto.
+What characterized the Renaissance period in Europe?
+The Renaissance was a cultural "rebirth" marked by a renewed interest in classical philosophy, science, and the arts, transitioning Europe into modernity.
+What is the highest point on Earth relative to the planet's center?
+Due to the Earth's equatorial bulge, the summit of Mount Chimborazo in Ecuador is the point on Earth closest to the stars.
+Is it possible for diamonds to fall as precipitation on other planets?
+Extremely high atmospheric pressure on gas giants like Neptune and Uranus can compress carbon into diamonds, which then rain toward the core.
+What is the 'Scientific Method' and its key steps?
+The scientific method is a systematic way of learning about the world through observation and experimentation; steps include observation, hypothesis, prediction, testing, and analysis.
+Explain the 'Greenhouse Effect' in climate science.
+The greenhouse effect is the process by which radiation from a planet's atmosphere warms the planet's surface to a temperature above what it would be without its atmosphere, caused by gases like CO2 and methane.
+What is 'Plate Tectonics' and how does it explain geological activity?
+Plate tectonics is the theory that Earth's outer shell is divided into several plates that glide over the mantle, explaining the occurrence of earthquakes, volcanoes, and mountain building.
+Describe 'Radiometric Dating' in geology.
+Radiometric dating is a technique used to date materials such as rocks or carbon, in which trace radioactive impurities were selectively incorporated when they were formed, based on the decay rates of isotopes.
+What is 'Falsifiability' according to Karl Popper?
+Falsifiability is the principle that for a hypothesis to be considered scientific, it must be possible to conceive of an observation or an argument which could negate it.
+Explain the 'Albedo Effect' on global climate.
+The albedo effect is the measure of how much of the Sun's energy is reflected back into space; surfaces like ice have high albedo (cool the Earth), while dark surfaces have low albedo (warm the Earth).
+What is 'Lithification'?
+Lithification is the process in which sediments compact under pressure, expel connate fluids, and gradually become solid rock.
+Describe the 'Water Cycle' (Hydrologic Cycle).
+The water cycle describes the continuous movement of water on, above, and below the surface of the Earth, involving processes like evaporation, condensation, precipitation, and runoff.
+What is a 'Scientific Law' vs a 'Scientific Theory'?
+A law describes an observed phenomenon (the 'what'), while a theory provides a well-substantiated explanation for why that phenomenon occurs (the 'why').
+Explain 'Ocean Acidification'.
+Ocean acidification is the ongoing decrease in the pH of the Earth's oceans, caused by the uptake of carbon dioxide (CO2) from the atmosphere, which forms carbonic acid in seawater.
+What is 'Metamorphism' in geology?
+Metamorphism is the change of minerals or geologic texture in pre-existing rocks (protoliths) without the protolith melting into liquid magma, caused by heat, pressure, and chemically active fluids.
+Describe the 'Ozone Layer' and its function.
+The ozone layer is a region of Earth's stratosphere that absorbs most of the Sun's ultraviolet (UV) radiation, protecting life on Earth from harmful effects.
+What is 'Peer Review' in the scientific process?
+Peer review is the evaluation of work by one or more people with similar competences as the producers of the work, used to maintain standards of quality and provide credibility.
+Explain the concept of 'Carbon Sequestration'.
+Carbon sequestration is the process of capturing and storing atmospheric carbon dioxide, either naturally (e.g., in forests and oceans) or through artificial means.
+What is 'Stratigraphy'?
+Stratigraphy is a branch of geology concerned with the study of rock layers (strata) and layering (stratification), primarily used in the study of sedimentary and layered volcanic rocks.
+Describe the 'Precession of the Equinoxes'.
+Precession is the slow, conical motion of Earth's axis of rotation, caused by the gravitational pull of the Sun and Moon, which affects the timing of the seasons over long periods (Milankovitch cycles).
+What is 'Occam's Razor'?
+Occam's razor is the problem-solving principle that, when presented with competing hypotheses about the same prediction, one should select the one with the fewest assumptions.
+Explain 'Climate Forcing'.
+Climate forcing is any influence on the climate system that alters the Earth's energy balance (e.g., changes in solar radiation, volcanic eruptions, greenhouse gas concentrations).
+What is the 'Rock Cycle'?
+The rock cycle is a basic concept in geology that describes the transitions through geologic time among the three main rock types: sedimentary, metamorphic, and igneous.
+Describe 'Ice Core' sampling in climate science.
+Ice core sampling involves extracting long cylinders of ice from glaciers and ice sheets; the air bubbles trapped in the ice provide a record of past atmospheric composition and temperature.
+What is 'Continental Crust' vs 'Oceanic Crust'?
+Continental crust is thicker, older, and less dense (primarily granitic), while oceanic crust is thinner, younger, and denser (primarily basaltic).
+Explain 'Thermal Expansion' of the oceans.
+Thermal expansion is the increase in volume of ocean water as it warms, which is a major contributor to global sea-level rise.
+What is 'Seismology'?
+Seismology is the scientific study of earthquakes and the propagation of elastic waves through the Earth or through other planet-like bodies.
+Describe the 'Half-life' of a radioactive isotope.
+The half-life is the time required for a quantity to reduce to half of its initial value, used in radiometric dating to determine the age of ancient materials.
+What is a 'Paradigm Shift' in science?
+A paradigm shift is a fundamental change in the basic concepts and experimental practices of a scientific discipline, as described by Thomas Kuhn.
+Explain 'Feedback Loops' in the climate system.
+Feedback loops are processes that can either amplify (positive feedback) or dampen (negative feedback) the effects of climate change, such as the ice-albedo feedback.
+What is 'Magma' vs 'Lava'?
+Magma is molten rock found beneath the Earth's surface, while lava is magma that has reached the surface through a volcanic vent.
+Describe the 'Holocene' epoch.
+The Holocene is the current geological epoch, which began approximately 11,650 years ago after the last glacial period, characterized by a relatively stable climate.
+What is 'Double-Blind' study design?
+A double-blind study is an experimental procedure in which neither the participants nor the researchers know who is receiving a particular treatment, preventing bias.
+Explain 'Permafrost Thaw' and its climate impact.
+Thawing permafrost releases trapped methane and CO2 into the atmosphere, creating a positive feedback loop that accelerates global warming.
+What is 'Uniformitarianism' in geology?
+Uniformitarianism is the assumption that the same natural laws and processes that operate in our present-day scientific observations have always operated in the universe in the past.
+Describe the 'Deep Carbon Cycle'.
+The deep carbon cycle is the movement of carbon through the Earth's mantle and core, which is linked to the surface carbon cycle through subduction and volcanic activity.
+What is 'Deductive' vs 'Inductive' reasoning?
+Deductive reasoning moves from general premises to specific conclusions, while inductive reasoning moves from specific observations to broader generalizations.
+Explain 'Oceanic Upwelling'.
+Upwelling is an oceanographic phenomenon that involves wind-driven motion of dense, cooler, and usually nutrient-rich water from deep water towards the ocean surface.
+What is 'Mohs Scale' of mineral hardness?
+The Mohs scale is a qualitative ordinal scale characterizing the scratch resistance of various minerals through the ability of harder material to scratch softer material.
+Describe the 'Anthropocene' concept.
+The Anthropocene is a proposed geological epoch dating from the commencement of significant human impact on Earth's geology and ecosystems.
+What is 'Isostasy' in geology?
+Isostasy is the state of gravitational equilibrium between Earth's crust and mantle such that the crust 'floats' at an elevation that depends on its thickness and density.
+Explain 'Thermohaline Circulation' collapse risks.
+Scientists are concerned that an influx of freshwater from melting ice could disrupt the density gradients that drive ocean currents, potentially cooling the North Atlantic.
+What is 'Petrology'?
+Petrology is the branch of geology that studies rocks and the conditions under which they form.
+Describe the 'Milankovitch Cycles'.
+Milankovitch cycles describe the collective effects of changes in the Earth's movements on its climate over thousands of years, specifically eccentricity, axial tilt, and precession.
+What is 'Systematic Error' in science?
+Systematic error is an error that is not determined by chance but is introduced by an inaccuracy (as of observation or measurement) inherent in the system.
+Explain 'Mantle Convection'.
+Mantle convection is the slow creeping motion of Earth's solid silicate mantle caused by convection currents carrying heat from the interior to the planet's surface.
+What is 'Geomorphology'?
+Geomorphology is the scientific study of the origin and evolution of topographic and bathymetric features created by physical, chemical, or biological processes operating at or near the Earth's surface.
+Describe the 'Precambrian' Supereon.
+The Precambrian is the earliest part of Earth's history, set before the current Phanerozoic Eon; it accounts for about 88% of Earth's geologic time.
+What is 'Hypothesis' testing?
+Hypothesis testing is the use of statistics to determine the probability that a given hypothesis is true, often by comparing observed data against a null hypothesis.
+Explain 'Glacial Retreat'.
+Glacial retreat occurs when the rate of melting and sublimation at the snout of a glacier exceeds the rate of snow accumulation at the head, often a signal of warming temperatures.
+What is 'Palynology'?
+Palynology is the study of plant pollen, spores, and certain microscopic plankton organisms (collectively termed palynomorphs) in both living and fossil form.
+Describe 'Pyroclastic Flows'.
+A pyroclastic flow is a fast-moving current of hot gas and volcanic matter (collectively known as tephra) that flows along the ground away from a volcano at high speeds.
+What is 'Replication' in scientific research?
+Replication is the repetition of a research study, generally with different situations and different subjects, to determine if the basic findings of the original study can be applied to other participants and circumstances.
+Explain 'Eustatic' vs 'Isostatic' sea-level change.
+Eustatic change is a global change in sea level (e.g., from melting ice), while isostatic change is a local change caused by the land rising or sinking (e.g., post-glacial rebound).

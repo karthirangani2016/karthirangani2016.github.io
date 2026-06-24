@@ -1,0 +1,16 @@
+What is Quantum Entanglement?
+Quantum Entanglement is a phenomenon where two or more particles become connected in such a way that the state of one particle instantly influences the state of the other, regardless of the distance between them. Einstein called this "spooky action at a distance."
+What is Schrödinger's Cat?
+Schrödinger's Cat is a thought experiment that illustrates the concept of 'Superposition' in quantum mechanics. It suggests that a cat in a sealed box with a quantum trigger can be considered both alive and dead at the same time until the box is opened and observed.
+What is General Relativity?
+General Relativity is Albert Einstein's theory of gravity, which posits that massive objects cause a distortion in the fabric of space-time, which we perceive as gravity.
+What is a Black Hole?
+A black hole is a region of space-time where gravity is so strong that nothing, including light and other electromagnetic waves, has enough energy to escape its event horizon.
+What is Dark Matter?
+Dark Matter is a hypothetical form of matter that does not emit, absorb, or reflect light, making it invisible. It is detected only through its gravitational effects on visible matter in the universe.
+What is the Big Bang Theory?
+The Big Bang is the leading explanation for how the universe began. It suggests that the universe started as a single point of infinite density and has been expanding for approximately 13.8 billion years.
+What is the Uncertainty Principle?
+Heisenberg's Uncertainty Principle states that it is impossible to simultaneously know both the exact position and the exact momentum of a particle. The more precisely you measure one, the less precisely you can know the other.
+What is a Supernova?
+A supernova is a powerful and luminous stellar explosion. It occurs during the last evolutionary stages of a massive star or when a white dwarf is triggered into runaway nuclear fusion.

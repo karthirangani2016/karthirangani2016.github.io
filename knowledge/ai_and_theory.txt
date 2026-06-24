@@ -1,0 +1,16 @@
+What is a Transformer model in AI?
+Transformers are a type of neural network architecture that uses "Self-Attention" mechanisms to process entire sequences of data at once. This allowed for the development of Large Language Models (LLMs) like GPT and Claude.
+What is Reinforcement Learning?
+Reinforcement Learning (RL) is a type of machine learning where an "agent" learns to make decisions by performing actions in an environment to maximize a reward. It is commonly used in gaming AI and robotics.
+What is a Generative Adversarial Network or GAN?
+A GAN consists of two neural networks, a Generator and a Discriminator, that compete against each other. The generator creates fake data, and the discriminator tries to tell if it's real. This competition helps the generator create highly realistic images or sounds.
+What is Neural Architecture Search or NAS?
+NAS is a technique for automating the design of artificial neural networks. Instead of humans designing the layers, an algorithm searches for the most efficient structure for a specific task.
+What is Overfitting in Machine Learning?
+Overfitting occurs when a model learns the training data "too well," including its noise and outliers. This results in high accuracy on training data but poor performance on new, unseen data.
+What is a Loss Function?
+A loss function is a mathematical formula that measures how far off an AI's prediction is from the actual result. The goal of training is to minimize this "loss."
+What is Backpropagation?
+Backpropagation is the primary algorithm used to train neural networks. It calculates the gradient of the loss function with respect to each weight in the network by using the chain rule, allowing the model to "learn" from its errors.
+What is 'Singularity' in the context of AI?
+The technological singularity is a hypothetical future point in time at which technological growth becomes uncontrollable and irreversible, resulting in unfathomable changes to human civilization, often linked to the emergence of Artificial General Intelligence (AGI).

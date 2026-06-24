@@ -1,0 +1,16 @@
+What is the difference between C++ and Rust in terms of memory safety?
+C++ relies on manual memory management (pointers) or RAII (smart pointers), which can lead to buffer overflows or dangling pointers if not handled carefully. Rust uses a 'Borrow Checker' and 'Ownership' system to guarantee memory safety at compile-time without a garbage collector.
+What is a Python Decorator?
+A decorator in Python is a design pattern that allows a user to add new functionality to an existing object without modifying its structure. They are usually called before the definition of a function you want to decorate.
+How does Multi-threading differ from Multi-processing?
+Multi-threading shares the same memory space and is lighter on resources but can suffer from race conditions. Multi-processing creates separate memory spaces for each process, making it more stable and bypasses the Python Global Interpreter Lock (GIL).
+What is a Pointer in C?
+A pointer is a variable that stores the memory address of another variable. They are powerful tools for low-level memory manipulation but require strict management to avoid system crashes.
+What is the purpose of Docker in software development?
+Docker uses containerization to bundle an application and all its dependencies into a single package. This ensures that the application runs consistently regardless of the environment it is deployed in.
+What is Kubernetes?
+Kubernetes (K8s) is an open-source system for automating deployment, scaling, and management of containerized applications. It acts as an orchestrator for Docker containers across a cluster of machines.
+What is Git and why is it used?
+Git is a distributed version control system that tracks changes in source code during software development. It allows multiple developers to work on the same project simultaneously without overwriting each other's work.
+What is an API?
+An API (Application Programming Interface) is a set of rules and protocols that allows one software application to interact with another. It defines the methods and data formats that applications can use to communicate.

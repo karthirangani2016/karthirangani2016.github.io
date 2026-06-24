@@ -1,0 +1,162 @@
+What is the speed of light?
+The speed of light in a vacuum is approximately 299,792,458 meters per second.
+What is the event horizon of a black hole?
+The event horizon is the theoretical boundary around a black hole beyond which the gravitational pull is so strong that nothing, not even light, can escape.
+How do scientists detect gravitational waves?
+Instruments like LIGO use laser interferometry to measure the infinitesimal distortions in space-time caused by massive events like merging black holes.
+What happens during a supernova event?
+A supernova is the catastrophic explosion of a massive star at the end of its life, resulting in a sudden increase in brightness and the dispersal of heavy elements.
+What is the speed of light in a vacuum?
+The speed of light is a physical constant approximately equal to 299,792,458 meters per second, or roughly 186,282 miles per second.
+What does Einstein's famous equation E=mc² represent?
+The equation establishes the equivalence of energy (E) and mass (m), showing that they are interchangeable and related by the speed of light squared (c²).
+What is Heisenberg's Uncertainty Principle?
+It states that it is impossible to simultaneously measure both the exact position and the exact momentum of a subatomic particle with absolute precision.
+What is the First Law of Thermodynamics?
+Also known as the Law of Conservation of Energy, it states that energy cannot be created or destroyed, only transformed from one form to another.
+What is Quantum Entanglement?
+It is a phenomenon where two or more particles become linked such that the state of one instantly influences the state of the others, regardless of the distance between them.
+What is Newton's Third Law of Motion?
+The law states that for every action, there is an equal and opposite reaction occurring between two interacting objects.
+What is the difference between nuclear fission and nuclear fusion?
+Nuclear fission involves splitting a heavy nucleus into smaller parts, while nuclear fusion is the process of combining light nuclei to form a heavier one.
+What is Schrödinger's cat?
+A thought experiment illustrating quantum superposition, where a cat in a sealed box is considered both alive and dead until observed.
+What is the second law of thermodynamics?
+It states that the total entropy of an isolated system can never decrease over time; it can only remain constant or increase.
+What is time dilation?
+A difference in the elapsed time measured by two clocks, either due to a relative velocity between them or a difference in gravitational potential.
+What are quarks?
+Elementary particles and a fundamental constituent of matter that combine to form composite particles called hadrons, such as protons and neutrons.
+What is the Higgs boson?
+An elementary particle in the Standard Model of particle physics produced by the quantum excitation of the Higgs field, giving mass to other particles.
+What is dark energy?
+A hypothetical form of energy that exerts a negative, repulsive pressure, behaving like the opposite of gravity and causing the expansion of the universe to accelerate.
+What is the Planck constant?
+A physical constant that is the quantum of electromagnetic action, relating the energy carried by a photon to its frequency.
+What is superconductivity?
+A state of zero electrical resistance and expulsion of magnetic flux fields occurring in certain materials when cooled below a characteristic critical temperature.
+What is the doppler effect?
+The change in frequency of a wave in relation to an observer who is moving relative to the wave source.
+What is general relativity?
+Einstein's geometric theory of gravitation, which describes gravity as the curvature of spacetime caused by mass and energy.
+What is special relativity?
+The theory of the relationship between space and time, proposing that the laws of physics are invariant and the speed of light in a vacuum is constant for all observers.
+What is an isotope?
+Variants of a particular chemical element which differ in neutron number, and consequently in nucleon number.
+What is the weak nuclear force?
+One of the four fundamental forces of nature, responsible for radioactive decay and neutrino interactions.
+What is the strong nuclear force?
+The force that binds protons and neutrons together in atomic nuclei, overcoming the electromagnetic repulsion between protons.
+What is a photon?
+A type of elementary particle that is the quantum of the electromagnetic field, including electromagnetic radiation such as light and radio waves.
+What is absolute zero?
+The lowest limit of the thermodynamic temperature scale, a state at which the enthalpy and entropy of a cooled ideal gas reach their minimum value, taken as 0 Kelvin.
+What is the Stefan-Boltzmann law?
+It describes the power radiated from a black body in terms of its temperature.
+What is a wormhole?
+A speculative structure linking disparate points in spacetime, based on a special solution of the Einstein field equations.
+What is the cosmic inflation theory?
+A theory of exponential expansion of space in the very early universe.
+What is wave-particle duality?
+The concept in quantum mechanics that every particle or quantum entity may be described as either a particle or a wave.
+What is the significance of the Higgs field in particle physics?
+The Higgs field is a scalar field that permeates all of space, giving mass to elementary particles through their interactions with it, as mediated by the Higgs boson.
+How does string theory attempt to unify the four fundamental forces?
+String theory proposes that the fundamental constituents of the universe are one-dimensional "strings" whose vibrational modes correspond to different particles, including the graviton, potentially bridging general relativity and quantum mechanics.
+What is the difference between fermions and bosons?
+Fermions, like quarks and leptons, follow the Pauli Exclusion Principle and have half-integer spin, while bosons, such as photons and gluons, have integer spin and can occupy the same quantum state.
+Define the Third Law of Thermodynamics in terms of entropy.
+The Third Law states that as the temperature of a system approaches absolute zero, its entropy approaches a constant minimum, typically zero for a perfect crystalline substance.
+What is a Calabi-Yau manifold in the context of string theory?
+It is a complex manifold used to compactify the extra spatial dimensions required by string theory, with its geometry determining the physical properties of the resulting four-dimensional universe.
+How does the Standard Model describe the strong nuclear interaction?
+The strong interaction is described by Quantum Chromodynamics (QCD) as being mediated by gluons, which carry "color charge" and bind quarks together within hadrons.
+What is Hawking radiation?
+Hawking radiation is the theoretical thermal radiation emitted by black holes due to quantum effects near the event horizon, leading to black hole evaporation over extreme timescales.
+Explain the concept of Supersymmetry (SUSY).
+Supersymmetry is a hypothesized symmetry relating fermions and bosons, suggesting that every known particle has a "superpartner" with a spin differing by one-half.
+What are the fundamental postulates of statistical mechanics?
+Statistical mechanics relates the microscopic properties of atoms and molecules to the macroscopic properties of materials, assuming that all accessible microstates of an isolated system are equally probable.
+What is the significance of the fine-structure constant?
+The fine-structure constant (α) is a dimensionless physical constant characterizing the strength of the electromagnetic interaction between elementary charged particles.
+How do virtual particles differ from real particles?
+Virtual particles are transient fluctuations in a field that cannot be directly detected but mediate forces between real particles, constrained by the energy-time uncertainty principle.
+What is the holographic principle?
+The holographic principle suggests that the information contained within a volume of space can be represented as a theory on the boundary of that region.
+Describe the process of spontaneous symmetry breaking.
+Spontaneous symmetry breaking occurs when the underlying laws of a system are symmetric, but the system's ground state is not, leading to phenomena like the Higgs mechanism.
+What is the role of the Boltzmann constant in thermodynamics?
+The Boltzmann constant (k_B) relates the average kinetic energy of particles in a gas with the temperature of the gas, appearing in the definitions of entropy and the ideal gas law.
+What are neutrinos and why are they difficult to detect?
+Neutrinos are nearly massless, electrically neutral fermions that interact only via the weak force and gravity, allowing them to pass through ordinary matter with almost no interaction.
+Explain the concept of "branes" in M-theory.
+In M-theory, branes are multidimensional objects (0-branes to 9-branes) upon which strings can end or which can exist as dynamical entities in higher-dimensional space.
+What is the Carnot cycle and why is it important?
+The Carnot cycle is a theoretical thermodynamic cycle that provides the maximum possible efficiency for a heat engine operating between two temperatures.
+How does the concept of "color confinement" work in QCD?
+Color confinement states that color-charged particles, like quarks and gluons, cannot be isolated and must exist in color-neutral bound states called hadrons.
+What is the significance of the Planck length?
+The Planck length (≈1.616 × 10⁻³⁵ meters) is the scale at which classical descriptions of gravity and space-time break down and quantum gravitational effects become dominant.
+Explain the difference between an adiabatic and an isothermal process.
+An adiabatic process occurs without heat transfer to or from the system, while an isothermal process occurs at a constant temperature, typically involving heat exchange with a reservoir.
+What is the Quark-Gluon Plasma?
+A state of matter at extremely high temperature and density where quarks and gluons are no longer confined within hadrons and behave as a "perfect" nearly-frictionless fluid.
+What is the ADS/CFT correspondence?
+A conjectured relationship between a gravity theory in an Anti-de Sitter (AdS) space and a Conformal Field Theory (CFT) on its boundary, often used to study strongly coupled systems.
+How does the Joule-Thomson effect relate to real gases?
+The Joule-Thomson effect describes the temperature change of a real gas when it expands through a valve or porous plug while kept insulated, depending on the gas's inversion temperature.
+What is the role of the graviton in quantum gravity theories?
+The graviton is a hypothetical elementary particle that mediates the force of gravitation in the framework of quantum field theory, expected to be a massless spin-2 boson.
+Define the Gibbs free energy and its utility.
+Gibbs free energy (G = H - TS) is a thermodynamic potential that measures the maximum reversible work performable by a system at constant temperature and pressure; it determines reaction spontaneity.
+What is the difference between Type I and Type II string theory?
+Type I string theory includes both open and closed strings with supersymmetry, while Type II theories (IIA and IIB) involve only closed strings with different arrangements of supersymmetry.
+What are the four laws of black hole mechanics?
+They are analogous to the laws of thermodynamics, relating surface gravity to temperature and horizon area to entropy, culminating in the Hawking-Bekenstein entropy formula.
+Explain the concept of "dark matter" from a particle physics perspective.
+Dark matter is hypothesized as non-baryonic matter that does not interact with electromagnetic radiation, with candidates including Weakly Interacting Massive Particles (WIMPs) or axions.
+What is the importance of the renormalization group in field theory?
+The renormalization group is a mathematical apparatus that allows for the systematic investigation of the changes of a physical system as viewed at different scales.
+Define "enthalpy" and its significance in chemical thermodynamics.
+Enthalpy (H = U + PV) is the total heat content of a system, used to quantify heat exchange in constant-pressure processes like chemical reactions.
+What is the T-duality in string theory?
+T-duality is a symmetry in string theory that relates a theory compactified on a circle of radius R to a theory compactified on a circle of radius 1/R.
+How do "W" and "Z" bosons differ in their roles?
+W bosons (W+ and W-) mediate the exchange of electric charge in weak interactions (flavor change), while the Z boson mediates neutral current weak interactions.
+What is the cosmic microwave background (CMB) and what does it tell us?
+The CMB is the thermal radiation left over from the "recombination" era of the Big Bang, providing a snapshot of the early universe's density fluctuations.
+Describe the "Many-Worlds" interpretation of quantum mechanics.
+It suggests that all possible alternate histories and futures are real, each representing an actual "world" or universe in a vast multiverse.
+What is the significance of the Triple Point in thermodynamics?
+The triple point is the unique temperature and pressure at which the three phases (solid, liquid, gas) of a substance coexist in thermodynamic equilibrium.
+Explain the "Landscape" problem in string theory.
+The "Landscape" refers to the vast number of possible vacuum states (estimated at 10^500) in string theory, each potentially corresponding to a different set of physical laws.
+What is a lepton and what are its generations?
+Leptons are elementary particles with half-integer spin that do not undergo strong interactions; they exist in three generations: (electron, e-neutrino), (muon, mu-neutrino), and (tau, tau-neutrino).
+How does the "Unruh effect" relate acceleration to temperature?
+The Unruh effect predicts that an accelerating observer will perceive a thermal bath of particles, where the temperature is proportional to the acceleration.
+What is the difference between a microcanonical and a canonical ensemble?
+A microcanonical ensemble represents an isolated system with fixed energy, while a canonical ensemble represents a system in thermal equilibrium with a heat bath at a fixed temperature.
+Define "Quark Flavor" and list the six types.
+Flavor is a quantum number of elementary particles; the six quark flavors are up, down, charm, strange, top, and bottom.
+What is the "hierarchy problem" in theoretical physics?
+The hierarchy problem concerns the large discrepancy between the weak force and gravity, or why the Higgs boson is so much lighter than the Planck mass.
+Explain the concept of "S-duality".
+S-duality is a symmetry relating a strongly coupled theory to a weakly coupled theory, providing a powerful tool for studying non-perturbative physics.
+What is the Clausius-Clapeyron equation used for?
+It characterizes the phase transition between two states of matter, such as liquid and gas, by relating the pressure and temperature along the phase boundary.
+What is the "Muon g-2" experiment measuring?
+It measures the anomalous magnetic dipole moment of the muon, testing the Standard Model's precision by looking for deviations that suggest new physics.
+Define "Entropy" in the context of information theory.
+Shannon entropy quantifies the amount of uncertainty or information content in a message or a random variable's possible outcomes.
+What are "Anyons" and where do they occur?
+Anyons are quasiparticles that exist only in two-dimensional systems, with statistics intermediate between fermions and bosons, relevant in the fractional quantum Hall effect.
+What is the "Big Crunch" scenario?
+A theoretical scenario for the ultimate fate of the universe where the expansion eventually reverses and the universe collapses back into a black hole singularity.
+Explain the "Meissner effect" in superconductors.
+The Meissner effect is the complete expulsion of magnetic fields from the interior of a superconductor as it transitions into the superconducting state.
+What is the significance of the "Top Quark"?
+The top quark is the most massive of all observed elementary particles, with a mass comparable to an atom of rhenium, and it decays before it can form hadrons.
+How does the "Equipartition Theorem" distribute energy?
+The theorem states that in thermal equilibrium, energy is shared equally among all of a system's independent degrees of freedom, with each contributing 1/2 k_B T.

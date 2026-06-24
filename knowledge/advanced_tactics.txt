@@ -1,0 +1,20 @@
+What is a SYN Flood attack?
+A SYN Flood is a type of Denial-of-Service (DoS) attack where an attacker sends a succession of SYN requests to a target's system in an attempt to consume enough server resources to make the system unresponsive to legitimate traffic.
+What is Nmap and how is it used?
+Nmap (Network Mapper) is an open-source tool for network discovery and security auditing. It is used to discover hosts and services on a computer network by sending packets and analyzing the responses.
+What is the Metasploit Framework?
+Metasploit is a penetration testing framework that helps security teams verify vulnerabilities, manage security assessments, and improve security awareness. It contains a vast database of exploits and payloads.
+What is social engineering?
+Social engineering is the psychological manipulation of people into performing actions or divulging confidential information. It is often the "human element" in a cyber attack.
+How do you control recoil in BGMI and PUBG?
+Recoil control is achieved by dragging down on the screen (mobile) or moving the mouse down (PC) at a rate that counters the weapon's upward kick. Attachments like Compensators and Vertical Foregrips also help.
+What is a 'drop shot' in Free Fire?
+A drop shot is a tactical move where a player quickly goes into a prone position while shooting. This catches the opponent off guard and makes the player a much smaller target.
+What is 'red dot' vs '4x scope' usage?
+Red dot sights are best for close-range engagements due to high visibility and low zoom. 4x scopes are better for mid-to-long range where precision is required to land headshots.
+How does Samsung Knox protect data?
+Samsung Knox uses a Trusted Execution Environment (TEE) called 'TrustZone' to isolate sensitive data and cryptographic keys from the main Android OS. It also features 'Real-time Kernel Protection' (RKP).
+What is the 'Direct Boot' window?
+Direct Boot is an Android feature that allows the device to boot to a locked state where only specific apps can run before the user enters their credentials to decrypt the full storage.
+What is mDNS flooding?
+mDNS (Multicast DNS) flooding involves sending a massive amount of DNS service discovery packets to a network, which can overwhelm the memory and CPU of devices trying to process the 'new' services.

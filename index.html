@@ -92,7 +92,7 @@
     </div>
 
     <script>
-        let API = '';
+        let API = 'https://produces-answering-fiscal-tcp.trycloudflare.com';
         let token = localStorage.getItem('sea_token');
         let username = localStorage.getItem('sea_user');
         let currentChatId = null;
@@ -265,7 +265,7 @@
             renderChats(allChats.filter(c => c.title.toLowerCase().includes(term)));
         };
 
-        fetch('/config.json').then(r=>r.json()).then(c=>{API=c.api_url;if(token&&username)verifyToken();else showLogin();}).catch(()=>{if(token&&username)verifyToken();else showLogin();});
+        if (token && username) verifyToken(); else showLogin();
     </script>
 </body>
 </html>

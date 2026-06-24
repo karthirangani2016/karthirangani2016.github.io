@@ -107,14 +107,14 @@
             </div>
 
             <div class="config-bar">
-                API: <input type="text" id="api-url" value="https://yourusername.pythonanywhere.com">
+                API: <input type="text" id="api-url" value="https://rlakshmamma11ha.pythonanywhere.com">
                 <button id="save-api-btn" style="background:var(--border);color:var(--text-dim);border:none;padding:3px 8px;font-family:inherit;cursor:pointer;border-radius:3px;font-size:0.65rem;">Set</button>
             </div>
         </main>
     </div>
 
     <script>
-        let API_BASE = localStorage.getItem('sea_api_url') || '';
+        let API_BASE = localStorage.getItem('sea_api_url') || 'https://rlakshmamma11ha.pythonanywhere.com';
         let apiInput = document.getElementById('api-url');
         if (API_BASE) apiInput.value = API_BASE;
 
@@ -266,12 +266,8 @@
         });
 
         window.onload = () => {
-            if (API_BASE) {
-                fetchChats();
-                addLog('[INIT] Connected to ' + API_BASE);
-            } else {
-                appendMessage('sea', 'Set your API URL in the bar below and click Set, Sir.');
-            }
+            fetchChats();
+            addLog('[INIT] Connected to ' + API_BASE);
             userInput.focus();
         };
     </script>

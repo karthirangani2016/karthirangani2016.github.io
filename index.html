@@ -92,7 +92,7 @@
     </div>
 
     <script>
-        const API = 'https://rlakshmamma11ha.pythonanywhere.com';
+        let API = '';
         let token = localStorage.getItem('sea_token');
         let username = localStorage.getItem('sea_user');
         let currentChatId = null;
@@ -265,8 +265,7 @@
             renderChats(allChats.filter(c => c.title.toLowerCase().includes(term)));
         };
 
-        if (token && username) verifyToken();
-        else showLogin();
+        fetch('/config.json').then(r=>r.json()).then(c=>{API=c.api_url;if(token&&username)verifyToken();else showLogin();}).catch(()=>{if(token&&username)verifyToken();else showLogin();});
     </script>
 </body>
 </html>

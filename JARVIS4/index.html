@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JARVIS4 | AI Interface</title>
+  <link rel="stylesheet" href="static/style.css" />
+</head>
+<body>
+  <div class="main-container">
+    <aside class="sidebar">
+      <button id="new-chat-btn">+ NEW CHAT</button>
+      <div class="search-container">
+        <input type="text" id="chat-search" placeholder="Search chats..." autocomplete="off" />
+      </div>
+      <div id="chat-list"></div>
+    </aside>
+
+    <main>
+      <header>
+        <div class="logo">SEA</div>
+        <div class="status-container">
+          <div id="status-dot" class="status-dot"></div>
+          <div id="status-text">SYSTEM: ONLINE</div>
+        </div>
+      </header>
+
+      <div class="workspace">
+        <div id="chat-window"></div>
+        <aside class="tactical-panel">
+          <div class="panel-header">TACTICAL DASHBOARD</div>
+          <div class="stat-group">
+            <div class="stat-label">TARGET IP:</div>
+            <div class="stat-value" id="target-ip">10.11.48.180</div>
+          </div>
+          <div class="stat-group">
+            <div class="stat-label">NETWORK STRESS:</div>
+            <div class="stat-bar"><div class="bar-fill" id="stress-bar" style="width: 12%"></div></div>
+          </div>
+          <div class="panel-header">SYSTEM LOGS</div>
+          <div id="mini-log">[INIT] Static AI core loaded.<br>[READY] JARVIS4 active.</div>
+        </aside>
+      </div>
+
+      <div class="input-area">
+        <input type="text" id="user-input" placeholder="Enter command..." autocomplete="off" />
+        <button id="send-btn">Transmit</button>
+      </div>
+    </main>
+  </div>
+
+  <div id="device-modal" class="modal">
+    <div class="modal-content">
+      <div class="panel-header">NETWORK SCAN</div>
+      <p style="font-size: 0.8rem; margin: 10px 0; color: var(--primary-blue);">SELECT TARGET DEVICE, SIR:</p>
+      <div id="device-list" class="device-list"></div>
+    </div>
+  </div>
+
+  <div class="globe-container"><div class="globe"></div></div>
+
+  <script>
+    const STORAGE_KEY = 'jarvis4_chats';
+    const chatWindow = document.getElementById('chat-window');
+    const userInput = document.getElementById('user-input');
+    const sendBtn = document.getElementById('send-btn');
+    const statusDot = document.getElementById('status-dot');
+    const statusText = document.getElementById('status-text');
+    const chatList = document.getElementById('chat-list');
+    const newChatBtn = document.getElementById('new-chat-btn');
+    const chatSearch = document.getElementById('chat-search');
+    const deviceModal = document.getElementById('device-modal');
+    const deviceList = document.getElementById('device-list');
+    const targetIp = document.getElementById('target-ip');
+    const stressBar = document.getElementById('stress-bar');
+    const miniLog = document.getElementById('mini-log');
+
+    const devices = [
+      { ip: '10.11.48.180', name: 'A06' },
+      { ip: '10.11.48.181', name: 'BETA-3' },
+      { ip: '10.11.48.182', name: 'NODE-7' }
+    ];
+
+    let currentChatId = null;
+    let allChats = {};
+
+    function setStatus(text, state = 'online') {
+      statusText.textContent = `SYSTEM: ${text}`;
+      statusDot.className = `status-dot ${state}`;
+    }
+
+    function addLog(message) {
+      miniLog.innerHTML += `${message}<br>`;
+      miniLog.scrollTop = miniLog.scrollHeight;
+    }
+
+    function loadChats() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      allChats = saved ? JSON.parse(saved) : {};
+      if (!Object.keys(allChats).length) {
+        const welcomeId = createChat('Main Hub');
+        currentChatId = welcomeId;
+      }
+      renderChatList();
+      renderCurrentChat();
+    }
+
+    function saveChats() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(allChats));
+    }
+
+    function createChat(name = `Chat ${Object.keys(allChats).length + 1}`) {
+      const id = `chat-${Date.now()}`;
+      allChats[id] = { id, name, messages: [{ role: 'system', text: 'JARVIS4 ready for commands.' }] };
+      saveChats();
+      return id;
+    }
+
+    function renderChatList() {
+      chatList.innerHTML = '';
+      const query = chatSearch.value.toLowerCase();
+      Object.values(allChats).forEach(chat => {
+        if (!chat.name.toLowerCase().includes(query)) return;
+        const item = document.createElement('div');
+        item.className = 'chat-item' + (chat.id === currentChatId ? ' active' : '');
+        item.textContent = chat.name;
+        item.onclick = () => { currentChatId = chat.id; renderCurrentChat(); renderChatList(); };
+        chatList.appendChild(item);
+      });
+    }
+
+    function renderCurrentChat() {
+      if (!currentChatId || !allChats[currentChatId]) {
+        currentChatId = Object.keys(allChats)[0];
+      }
+      const chat = allChats[currentChatId];
+      chatWindow.innerHTML = '';
+      chat.messages.forEach(message => {
+        const msg = document.createElement('div');
+        msg.className = `message ${message.role === 'user' ? 'user-message' : 'assistant-message'}`;
+        msg.innerHTML = `<strong>${message.role === 'user' ? 'USER' : 'JARVIS4'}:</strong> ${message.text}`;
+        chatWindow.appendChild(msg);
+      });
+      chatWindow.scrollTop = chatWindow.scrollHeight;
+    }
+
+    function getJarvisResponse(prompt) {
+      const normalized = prompt.trim().toLowerCase();
+      if (!normalized) return 'Please enter a command, sir.';
+      if (normalized.includes('scan')) {
+        openDeviceModal();
+        return 'Scanning network for active targets...';
+      }
+      if (normalized.includes('status')) {
+        return 'JARVIS4 systems nominal. All subsystems green.';
+      }
+      if (normalized.includes('attack') || normalized.includes('target')) {
+        const device = devices[Math.floor(Math.random() * devices.length)];
+        targetIp.textContent = device.ip;
+        stressBar.style.width = `${40 + Math.floor(Math.random() * 40)}%`;
+        return `Target locked: ${device.name} (${device.ip}). Preparing tactical payload.`;
+      }
+      return 'Command acknowledged. Executing adaptive simulation routine.';
+    }
+
+    function openDeviceModal() {
+      deviceModal.style.display = 'flex';
+      deviceList.innerHTML = '';
+      devices.forEach(device => {
+        const button = document.createElement('button');
+        button.textContent = `${device.name} — ${device.ip}`;
+        button.onclick = () => {
+          targetIp.textContent = device.ip;
+          deviceModal.style.display = 'none';
+          addLog(`[TARGET] Device ${device.name} selected.`);
+        };
+        deviceList.appendChild(button);
+      });
+    }
+
+    function closeDeviceModal() {
+      deviceModal.style.display = 'none';
+    }
+
+    function sendMessage() {
+      const text = userInput.value.trim();
+      if (!text) return;
+      const chat = allChats[currentChatId];
+      chat.messages.push({ role: 'user', text });
+      chat.messages.push({ role: 'assistant', text: getJarvisResponse(text) });
+      saveChats();
+      renderCurrentChat();
+      userInput.value = '';
+      addLog(`[CMD] ${text}`);
+    }
+
+    sendBtn.addEventListener('click', sendMessage);
+    userInput.addEventListener('keydown', event => {
+      if (event.key === 'Enter') sendMessage();
+    });
+    newChatBtn.addEventListener('click', () => {
+      currentChatId = createChat(`Session ${Object.keys(allChats).length + 1}`);
+      renderChatList();
+      renderCurrentChat();
+      addLog('[CHAT] New session created.');
+    });
+    chatSearch.addEventListener('input', renderChatList);
+
+    window.addEventListener('click', event => {
+      if (event.target === deviceModal) closeDeviceModal();
+    });
+
+    loadChats();
+  </script>
+</body>
+</html>

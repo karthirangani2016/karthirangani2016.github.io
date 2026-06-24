@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS4 — Karthikeya's Pi Battlestation</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0a0a1a;
+            color: #c0c0e0;
+            font-family: 'Courier New', monospace;
+            padding: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #00ff88;
+            font-size: 1.8rem;
+            border-bottom: 1px solid #00ff88;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        h1 span { color: #ff4444; }
+        .subtitle {
+            color: #8888aa;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+        .section h2 {
+            color: #ffaa00;
+            font-size: 1.1rem;
+            margin-bottom: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .file-list {
+            list-style: none;
+        }
+        .file-list li {
+            padding: 0.3rem 0;
+            border-bottom: 1px solid #1a1a3a;
+        }
+        .file-list a {
+            color: #00aaff;
+            text-decoration: none;
+        }
+        .file-list a:hover {
+            color: #00ddff;
+            text-decoration: underline;
+        }
+        .file-list .desc {
+            color: #666688;
+            font-size: 0.8rem;
+        }
+        .status {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            color: #333355;
+            font-size: 0.7rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>JARVIS4 <span>//</span> PI BATTLESTATION</h1>
+    <div class="subtitle">~ Karthikeya's Raspberry Pi 3B+ Project Repository ~</div>
+
+    <div class="section">
+        <h2>Python Files</h2>
+        <ul class="file-list">
+            <li><a href="echo_frequencies_movie.py">echo_frequencies_movie.py</a> <span class="desc">— THE ECHO FREQUENCIES movie (turtle + pyttsx3)</span></li>
+            <li><a href="chat.py">chat.py</a> <span class="desc">— SEA AI chat interface</span></li>
+            <li><a href="voice.py">voice.py</a> <span class="desc">— Voice module</span></li>
+            <li><a href="camera.py">camera.py</a> <span class="desc">— Camera module</span></li>
+            <li><a href="harvester.py">harvester.py</a> <span class="desc">— Data harvester</span></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Knowledge Base</h2>
+        <ul class="file-list">
+            <li><a href="theory.txt">theory.txt</a> <span class="desc">— Morris-Thorne wormholes, exotic matter, unified polarity</span></li>
+            <li><a href="knowledge/physics.txt">physics.txt</a></li>
+            <li><a href="knowledge/astrophysics_and_quantum.txt">astrophysics_and_quantum.txt</a></li>
+            <li><a href="knowledge/cybersecurity.txt">cybersecurity.txt</a></li>
+            <li><a href="knowledge/hacking.txt">hacking.txt</a></li>
+            <li><a href="knowledge/robotics.txt">robotics.txt</a></li>
+            <li><a href="knowledge/programming.txt">programming.txt</a></li>
+            <li><a href="knowledge/biology.txt">biology.txt</a></li>
+            <li><a href="knowledge/chemistry.txt">chemistry.txt</a></li>
+            <li><a href="knowledge/history.txt">history.txt</a></li>
+            <li><a href="knowledge/geography.txt">geography.txt</a></li>
+            <li><a href="knowledge/multiverse_and_scifi.txt">multiverse_and_scifi.txt</a></li>
+            <li><a href="knowledge/time_travel.txt">time_travel.txt</a></li>
+            <li><a href="knowledge/">[browse all]</a></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Chat Archive</h2>
+        <ul class="file-list">
+            <li><a href="chats/">chats/</a></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Web UI</h2>
+        <ul class="file-list">
+            <li><a href="templates/index.html">SEA Interface (Flask template)</a></li>
+            <li><a href="static/style.css">CSS (if served via Flask)</a></li>
+        </ul>
+    </div>
+
+    <div class="status">Raspberry Pi 3B+ | Debian 12 aarch64 | 1GB RAM | 195GiB free</div>
+</body>
+</html>

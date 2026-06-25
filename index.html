@@ -267,7 +267,8 @@
 
         async function sendMessage() {
             const msg = msgInput.value.trim();
-            if (!msg || !currentChatId) return;
+            if (!msg) return;
+            if (!currentChatId) { await newChat(); if (!currentChatId) return; }
             msgInput.value = '';
             const el = document.createElement('div');
             el.className = 'msg user'; el.textContent = msg;

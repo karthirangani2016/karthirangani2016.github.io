@@ -102,16 +102,18 @@ class LiteBrain:
     def think(self, user_input):
         input_lower = user_input.lower()
         input_words = set(input_lower.split())
-        best_score, best_answer = 0, "I don't have data on that yet."
+        best_score, best_answer = 0, "I don't have data on that yet, Sir."
         for question, answer in self.knowledge_base:
             q_words = set(question.split())
             if len(q_words) > 0 and len(input_words) > 0:
-                score = len(q_words & input_words) / max(len(q_words), len(input_words))
+                overlap = len(q_words & input_words)
+                score = overlap / max(len(q_words), len(input_words))
                 if score > best_score:
                     best_score = score
                     best_answer = answer
-        if best_score < 0.15:
-            return "Not enough data on that topic."
+        min_score = 0.3 if len(input_words) <= 2 else 0.15
+        if best_score < min_score:
+            return "I don't have data on that yet, Sir."
         return make_conversational(best_answer)
 
 brain = LiteBrain()
@@ -218,6 +220,19 @@ def ask(username):
             chat_data['title'] = message[:40]
         save_chat(username, chat_id, chat_data)
     return jsonify({"reply": reply})
+
+@app.route('/teach', methods=['POST'])
+@require_auth
+def teach(username):
+    data = request.get_json()
+    question = data.get('question', '').strip()
+    answer = data.get('answer', '').strip()
+    if not question or not answer:
+        return jsonify({"error": "Need both question and answer"}), 400
+    with open(os.path.join(KNOWLEDGE_DIR, "custom_taught.txt"), "a", encoding="utf-8") as f:
+        f.write(f"{question}\n{answer}\n")
+    brain.knowledge_base.append((question.lower(), answer))
+    return jsonify({"status": "learned", "question": question, "answer": answer})
 
 if __name__ == "__main__":
     brain.train()
